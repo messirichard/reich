@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Play:400,700&display=swap');
 
-@mons : 'Montserrat', sans-serif;
+@play : 'Play', sans-serif;
 
 html,body{
     position: relative;
@@ -9,7 +9,7 @@ html,body{
 }
 
 h1,h2,h3,h4,h5,h6,p,a{
-    font-family: @mons;
+    font-family: @play;
     margin-bottom: 0;
 }
 
@@ -18,70 +18,170 @@ h1,h2,h3,h4,h5,h6,p,a{
 }
 
 section.home-sec-1{
-    padding-top: 120px;
-    .title-top{
-        padding-bottom: 45px;
-        margin: 0 auto;
-        p{
-            font-size: 28px;color: #505050;font-weight: 700;
-        }
-    }
-    .title{
-        padding-top: 20px;
-        p{
-            text-align: center;
-            font-size: 24px;color: #2b275c;font-weight: 700;
-        }
-    }
-    .lihat_kat{
+    .box-content.top{
         text-align: center;
-        a{
-            text-transform: uppercase;
-            text-decoration: none;
-            color: #747474;font-weight: 700;text-align: center;font-size: 10px;
+        padding-top: 165px;
+        padding-bottom: 80px;
+
+        .title{
+            font-size: 30px;
+            color: #ed1c24;
+            padding-bottom: 25px;
         }
+        .subtitle{
+            font-size: 15px;
+            color: #606060;
+
+        }
+    }
+    .image{
+        width: 100%;
+        position: relative;
+        padding-bottom: 30px;
+        max-width: 1476px;
+        p{
+            font-size: 30px;
+            color: #ffffff;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+        }
+
+    }
+    .image.bottom{
+        width: 100%;
+        position: relative;
+        padding-bottom: 145px;
+        p{
+            font-size: 30px;
+            color: #ffffff;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+        }
+
     }
 }
 
 section.home-sec-2{
-    padding-top: 120px;
-    .title{
-        padding-bottom: 45px;
+    background: url('../images/our-partner-home.jpg') center center;
+    min-height: 440px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: table;
+    vertical-align: middle;
+    height: 100%;
+    width: 100%;
+
+    .prelative.container2 {
+        vertical-align: middle;
+        height: 100%;
+        max-width: 1400px;
         margin: 0 auto;
-        p{
-            text-align: center;
-            font-size: 28px;color: #505050;font-weight: 700;
-        }
     }
-    .box-content{
-        // padding-bottom: 50px;
-        .judul{
-            padding-top: 20px;
-            p{
-                font-size: 15px;font-weight: 700;
-                color: #2b275c;text-align: center;
-            }
-        }
-        .lihat{
-            text-align: center;
-            padding-bottom: 20px;
-            a{
-                text-transform: uppercase;
-                text-decoration: none;
-                color: #747474;font-weight: 700;text-align: center;font-size: 10px;
-            }
-        }
+    .caption{
+        font-size: 28px;
+        color: #ffffff;
+        padding-top: 105px;
     }
-    .lihat-semua{
-        // margin: 0 auto;
-        text-align: center;
-        margin-top: 50px;
+    .subtitle{
+        font-size: 15px;
+        color: #e8e8e8;
+        padding-top: 35px;
+    }
+    .click{
+        padding-top: 55px;
         a{
             text-decoration: none;
-            text-transform: uppercase;
-            background: #2b275c;
-            padding: 10px 25px;
-            font-size: 14px;color: #ffffff;
+            text-decoration-line: underline;
+            font-size: 12px;
+            color: #ffffff;
+            font-weight: 700;
         }
     }
+}
+
+section.home-sec-3{
+    min-height: 670px;
+    .box-content.quality{
+        text-align: center;
+        padding-bottom: 60px;
+        padding-top: 140px;
+        .title{
+            font-size: 30px;
+            padding-bottom: 20px;
+        }
+        .subtitle{
+            font-size: 18px;
+            color: #606060;
+        }
+    }
+    .image{
+        position: relative;
+        text-align: center;
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+    .caption{
+        color: #606060;
+        font-size: 18px;
+        font-weight: 700;
+        text-align: center;
+        padding-top: 20px;
+    }
+}
+
+section.footer{
+    background: url('../images/footer.jpg') center center;
+    min-height: 307px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: table;
+    vertical-align: middle;
+    height: 100%;
+    width: 100%;
+    .image{
+        padding-top: 45px;
+        position: relative;
+        width: 100%;
+        p{
+            display: inline-block;
+            position: relative;
+            top: 20px;
+            padding-left: 30px;
+            font-size: 12px;
+            color: #fff;
+        }
+    }
+    .box-content.menu{
+        float: left;
+        max-width: 165px;
+        padding-top: 25px;
+        margin: 0 auto;
+        p{
+            font-weight: 700;
+            color: #fff;
+            font-size: 14px;
+        }
+    }
+    .box-content.wa{
+        float: right;
+        padding-top: 20px;
+        img{
+            margin: 0 15px;
+        }
+        p{
+            font-size: 18px;
+            color: #fff;
+            display: inline-block;
+            position: relative;
+        }
+
+    }
+    .garis-formhome {
+        background: #4d4d4d;
+        width: 100%;
+        height: 2px;
+        margin: 15px 0;
+      }
 }
