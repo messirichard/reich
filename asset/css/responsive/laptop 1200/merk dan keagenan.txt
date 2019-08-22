@@ -1,0 +1,16 @@
+section.merk-sec-1 .prelative.container .container2 .row .content h3 {
+    text-align: center;
+    font-size: 25px;
+    font-weight: lighter;
+    color: #606060;
+    padding: 0 15px;
+}
+
+section.merk-sec-1 .prelative.container .container2 .row p {
+    text-align: center;
+    font-size: 16px;
+    color: #606060;
+    font-family: 'Encode Sans',sans-serif;
+    font-weight: lighter;
+    padding: 0 15px;
+}

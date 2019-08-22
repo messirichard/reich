@@ -1,0 +1,22 @@
+section.agen-sec-1 .prelative.container .container2 .row .content h3 {
+    text-align: center;
+    font-size: 22px;
+    font-weight: lighter;
+    color: #606060;
+    padding: 0 15px;
+}
+
+section.agen-sec-1 .prelative.container .container2 .row .content-isi p {
+    font-size: 17px;
+    color: #606060;
+    font-family: 'Encode Sans',sans-serif;
+    font-weight: lighter;
+    padding: 0 15px;
+}
+
+section.footer-sec-3 .prelative.container .row .bawah-layanan p {
+    font-size: 12px;
+    color: #989898;
+    font-family: 'Encode Sans',sans-serif;
+    font-weight: 300;
+}

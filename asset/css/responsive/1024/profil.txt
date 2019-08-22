@@ -1,0 +1,18 @@
+section.about-sec-1 .prelative.container .container2 .row .content h3 {
+    text-align: center;
+    font-size: 24px;
+    color: #606060;
+    font-family: 'Encode Sans',sans-serif;
+    font-weight: lighter;
+    padding: 0 15px;
+}
+
+section.about-sec-1 .prelative.container .container2 .row .content p {
+    text-align: center;
+    font-size: 16px;
+    color: #606060;
+    font-family: 'Encode Sans',sans-serif;
+    font-weight: lighter;
+    padding: 0 15px;
+}
+

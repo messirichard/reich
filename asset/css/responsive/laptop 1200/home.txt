@@ -1,0 +1,4 @@
+header.head .prelative.container .row ul li {
+    display: inline;
+    padding: 0 5px;
+}

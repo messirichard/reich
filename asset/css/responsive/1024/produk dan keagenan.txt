@@ -1,0 +1,14 @@
+section.home-sec-1 .prelative.container .container2 .content p {
+    margin-bottom: 0;
+    text-align: center;
+    font-family: 'Encode Sans',sans-serif;
+    font-weight: lighter;
+    color: #606060;
+    font-size: 20px;
+    padding: 0 15px;
+}
+
+header.head {
+    min-height: 85px;
+    height: auto;
+}

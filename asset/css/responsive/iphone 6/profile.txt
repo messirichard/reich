@@ -1,0 +1,40 @@
+section.about-sec-1 .prelative.container .container2 .row .content h3 {
+    text-align: center;
+    font-size: 20px;
+    color: #606060;
+    font-family: 'Encode Sans',sans-serif;
+    font-weight: lighter;
+    padding: 0 15px;
+}
+
+section.about-sec-1 .prelative.container .container2 .row .content p {
+    text-align: center;
+    font-size: 17px;
+    color: #606060;
+    font-family: 'Encode Sans',sans-serif;
+    font-weight: lighter;
+    padding: 0 15px;
+}
+
+section.about-sec-2 .prelative.container .row .content-table .content h2 {
+    font-size: 25px;
+    color: #f37021;
+    font-family: 'Encode Sans',sans-serif;
+    font-weight: 700;
+}
+
+section.about-sec-2 .prelative.container .row .content-table .content h2 {
+    font-size: 25px;
+    color: #f37021;
+    font-family: 'Encode Sans',sans-serif;
+    font-weight: 700;
+    padding-top: 20px;
+}
+
+section.about-sec-3 .prelative.container .row .content .title p {
+    font-size: 35px;
+    color: #fff;
+    font-family: 'Encode Sans',sans-serif;
+    font-weight: 100;
+}
+

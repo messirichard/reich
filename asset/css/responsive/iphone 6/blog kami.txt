@@ -1,0 +1,15 @@
+section.cover-blog .prelative.container .container2 .row h2 {
+    font-size: 31px;
+    font-family: 'Encode Sans',sans-serif;
+    font-weight: 500;
+    color: #606060;
+    max-width: 775px;
+    padding: 0 15px;
+}
+
+section.blog-detail .prelative.container .row .title h1 {
+    font-size: 27px;
+    font-weight: 400;
+    font-family: 'Encode Sans',sans-serif;
+    color: #606060;
+}

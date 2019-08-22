@@ -1,0 +1,21 @@
+section.footer-sec-1 .prelative.container .row .content p {
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Encode Sans',sans-serif;
+    font-weight: 400;
+    color: #fff;
+    padding-top: 80px;
+}
+
+
+section.footer-sec-2 .prelative.container .row .contentb-grey1 .content4 a p {
+    text-align: center;
+    display: block;
+    position: relative;
+    padding: 14px 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    color: #606060;
+    font-family: 'Encode Sans',sans-serif;
+    font-weight: 500;
+}

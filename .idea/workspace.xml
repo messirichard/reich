@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="aa1e868c-86c6-4a25-a402-131d51b2d193" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/asset/css/styles.less" beforeDir="false" afterPath="$PROJECT_DIR$/asset/css/styles.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/views/home/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/home/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/views/layouts/_footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/layouts/_footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/views/layouts/column2.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/layouts/column2.php" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1PiTB0OLNy8uOZfrBB2lk5uXuTJ" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="aa1e868c-86c6-4a25-a402-131d51b2d193" name="Default Changelist" comment="" />
+      <created>1566355778835</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1566355778835</updated>
+      <workItem from="1566355789606" duration="36000" />
+    </task>
+    <servers />
+  </component>
+</project>

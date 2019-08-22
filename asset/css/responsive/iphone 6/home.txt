@@ -1,0 +1,41 @@
+section.home-sec-1 .prelative.container .container2 .content p {
+    margin-bottom: 0;
+    text-align: center;
+    font-family: 'Encode Sans',sans-serif;
+    font-weight: lighter;
+    color: #606060;
+    font-size: 21px;
+    padding: 0 15px;
+}
+
+section.home-sec-2 .prelative.container .container2 .row h3 {
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Encode Sans',sans-sserif;
+    color: #373737;
+    font-weight: 700;
+    padding: 0 15px;
+}
+
+section.home-sec-3 .prelative.container .container2 .content h3 {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    color: #393939;
+    font-family: 'Encode Sans',sans-serif;
+    font-weight: 700;
+    padding: 0 15px;
+}
+
+section.footer-sec-1 .prelative.container .row button {
+    display: block;
+    background: #fff;
+    color: #f37021;
+    padding: 6px 40px;
+    margin: 0 auto;
+}
+
+div#back-top {
+    display: none !important;
+}

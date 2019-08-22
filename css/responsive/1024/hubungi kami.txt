@@ -1,0 +1,7 @@
+section.hubungi-sec-1 .prelative.container .container2 .row .content p {
+    padding: 0 15px;
+    font-size: 20px;
+    color: #606060;
+    font-weight: 700;
+    font-family: 'Encode Sans',sans-serif;
+}
