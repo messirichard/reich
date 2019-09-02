@@ -50,5 +50,28 @@
             </div>
         </div>
         <div class="garis-formhome"></div>
+        <div class="row">
+            <div class="col-md-30">
+                <div class="box-content socialmedia">
+                    <p>Reich Social Media</p>
+                    <img src="<?php echo $this->assetBaseurl; ?>ig-footer.png" alt="">
+                    <img src="<?php echo $this->assetBaseurl; ?>fb-footer.png" alt="">
+                    <img src="<?php echo $this->assetBaseurl; ?>in-footer.png" alt="">
+                </div>
+            </div>
+            <div class="col-md-30">
+                <div class="box-content copyright">
+                    <p><p>Copyright © 2019 - Suzanna Babyshop. All rights reserved.</p></p>
+                </div>
+            </div>
+        </div>
+        <div class="garis-formhome"></div>
+        <div class="row">
+            <div class="col-md-60">
+                <div class="box-content by">
+                    <p>Website design by <a href="https://www.markdesign.net/">Mark Design</a></p>
+                </div>
+            </div>
+        </div>
     </div>
 </section>

@@ -7,7 +7,7 @@
                         <h4>Reich Architecture & Hardware Accessories Category</h4>
                     </div>
                     <div class="subtitle">
-                        <p>Click here to view all products.</p>
+                        <p><a href="#">Click here to view all products.</a></p>
                     </div>
                 </div>
             </div>
