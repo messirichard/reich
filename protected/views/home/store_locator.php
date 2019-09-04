@@ -1,127 +1,156 @@
 <?php
-$session = new CHttpSession;
-$session->open();
-$login_member = $session['login_member'];
-?> 
-<?php
-$session = new CHttpSession;
-$session->open();
-$login_member = $session['login_member'];
+$store_showroom = [
+	1 => [
+        'kota' => '',
+		'name_store' => '',
+		'alamat' => '',
+        'phone' => '',
+        'email' => ''
+	],
+	[
+		'kota' => 'Jakarta',
+		'name_store' => 'REICH Hardware',
+		'alamat' => 'Jl. Haji Nawi 126, Jakarta Selatan',
+        'phone' => 'Tel. 021 22658585',
+        'email' => 'Email. jakarta@the-reich.com'
+	],
+	[
+		'kota' => 'Surabaya',
+		'name_store' => 'Makmur Abadi Hardware Store',
+		'alamat' => 'Jl. Baliwerti 74, Alun alun contong',
+        'phone' => 'Tel. 031 5348088',
+        'email' => 'Email. surabaya@the-reich.com'
+	],
+	[
+		'kota' => '',
+		'name_store' => '',
+		'alamat' => '',
+        'phone' => '',
+        'email' => ''
+	]
+];
 ?>
 
-<section class="default-sc inside-page product-details"> 
-    <section class="top-product-detail">
-        <div class="container defaults">
-            <div class="tops">
-                <div class="row">
-                    <div class="col-md-40">
-                        <div class="shn-back-products">
-                            <a href="javascript:void(-1);"><i class="fa fa-long-arrow-left"></i> &nbsp;BACK</a> 
-                            <span class="new-back-product"><div class="separators_linetop"></div> <span class="new-back-product">HOME / STORE LOCATOR
-                            </span>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="col-md-20">
-                        <div class="box-search">
-                            <form class="form-inline">
-                            <label for="inlineFormInputNN2">SEARCH</label>
-                            <div class="blob-input">
-                                <input type="text" class="form-control mb-2" id="inlineFormInputNN2" placeholder="">
-                                <button type="submit" class="btn mb-2"><i class="fa fa-search"></i></button>
-                            </div>
-                            </form>
-                        </div>
+<section class="store-sec-1">
+    <div class="prelative container">
+        <div class="row">
+            <div class="col-md-60">
+                <div class="box-content-atas">
+                    <div class="title">
+                        <h3>Store & Showroom</h3>
                     </div>
                 </div>
-                <div class="clear height-50"></div>
-                <div class="clear height-20"></div>
-                <div class="row">
-                    <div class="col-md-60">
-                        <div class="contactus-header-top">
-                            Store Locator
-                            <div class="clear height-30"></div>
-                            <div class="contactus-header-mid">
-                                Find Jackson Fashion Shoes, Clothing & Accessories near your location
-                            </div>
-                        </div>
-                        <div class="clear height-40"></div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-60">
-                        <div class="form-group select-store">
-                            <div class="row justify-content-center">   
-                                <div class="col-lg-15">
-                                    <select class="form-control baru" id="">
-                                        <option >SELECT PROVINCE</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
-                                    </select>   
-                                </div>
-                                <div class="col-lg-15">
-                                    <select class="form-control baru" id="">
-                                        <option>SELECT CITY</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
-                                    </select>   
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="clear height-50"></div>
-                <div class="map-store">
-                    
-                </div>
-                <div class="clear height-30"></div>
-                <div class="clear height-30"></div>
-                <div class="click-view">
-                    Click “View Location” on your choosen location to display the map.
-                </div>
-                <div class="clear height-55"></div>
-                <div class="penta-shoes">
-                    PT. Penta Shoes
-                </div>
-                <div class="clear height-20"></div>
-                <div class="alamat-penta">
-                    The Icon Business Park Ruko C Blok G/3 Lantai 2 BSD City Tangerang <br>P. 0882-1091-9772
-                </div>
-                
-                <div class="clear height-20"></div>
-                <div class="clear height-20"></div>
-                <div class="view-loc">
-                    VIEW LOCATION
-                </div>
-                <div class="clear height-50"></div>
-                <div class="clear height-20"></div>
-                <div class="above-view-loc">
-                    If you found difficulties finding the right experts near you or need further assistance , please call our customer service hotline at (031) 3889955
-                </div>
-                
-                <div class="clear height-55"></div>
-                <div class="row">
-                    <div class="col-md-30" style="border-right: 2px #cccccc solid">
-                        <div class="contact-follow">
-                            Follow Us <br>
-                            <div class="clear height-20"></div>
-                            <i class="fa fa-instagram" aria-hidden="true"></i><span class="icon-followus"><i class="fa fa-facebook" aria-hidden="true"></i></span>
-                        </div>
-                    </div>
-                    <div class="col-md-30">
-                        <div class="contact-follow">
-                            Our Merchant Partner <br>
-                            <div class="clear height-20"></div>
-                            <img src="<?php echo Yii::app()->baseUrl.Yii::app()->theme->baseUrl; ?>/images/design2-contact_84.jpg" alt="" class="img-fluid">
-                        </div>
-                    </div>
-                </div>
-        
-    
+            </div>
         </div>
-    </section>
+        <div class="row">
+            <?php foreach($store_showroom as $key => $value): ?>
+            <div class="col-md-15">
+                <div class="box-content-bawah">
+                    <div class="kota">
+                        <p><?php echo $value['kota'] ?></p>
+                    </div>
+                    <div class="name_store">
+                        <p><?php echo $value['name_store'] ?></p>
+                    </div>
+                    <div class="alamat">
+                        <p><?php echo $value['alamat'] ?></p>
+                    </div>
+                    <div class="phone">
+                        <p><?php echo $value['phone'] ?></p>
+                    </div>
+                    <div class="email">
+                        <p><?php echo $value['email'] ?></p>
+                    </div>
+                </div>
+            </div>
+            <?php endforeach ?>
+        </div>
+    </div>
+</section>
+
+<?php
+$product_display = [
+	1 => [
+        'kota' => 'Surabaya',
+		'name_store' => 'Mitra 10',
+		'alamat' => 'Jl. Kedungdoro 121',
+        'phone' => 'Tel. 031 22658585',
+        'email' => 'Email. surabaya@the-reich.com'
+	],
+	[
+		'kota' => 'Bali',
+		'name_store' => 'Depo Bangunan',
+		'alamat' => 'Jl. Imam Bonjol 124, Denpasar',
+        'phone' => 'Tel. 0341 885545',
+        'email' => 'Email. bali@the-reich.com'
+	],
+	[
+		'kota' => 'Jakarta',
+		'name_store' => 'Mitra 10',
+		'alamat' => 'Jl. TB Simatupang 12, Jakarta Selatan',
+        'phone' => 'Tel. 021 52677555',
+        'email' => 'Email. jakarta@the-reich.com'
+	],
+	[
+		'kota' => 'Bandung',
+		'name_store' => 'Mitra 10',
+		'alamat' => 'Jl. IR Juanda 2, Bandung',
+        'phone' => 'Tel. 0221 6848088',
+        'email' => 'Email. bandung@the-reich.com'
+	]
+];
+?>
+
+<section class="store-sec-2">
+    <div class="prelative container">
+        <div class="row">
+            <div class="col-md-60">
+                <div class="box-content-atas">
+                    <div class="title">
+                        <h3>Product Display</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <?php foreach($product_display as $key => $value): ?>
+            <div class="col-md-15">
+                <div class="box-content-bawah">
+                    <div class="kota">
+                        <p><?php echo $value['kota'] ?></p>
+                    </div>
+                    <div class="name_store">
+                        <p><?php echo $value['name_store'] ?></p>
+                    </div>
+                    <div class="alamat">
+                        <p><?php echo $value['alamat'] ?></p>
+                    </div>
+                    <div class="phone">
+                        <p><?php echo $value['phone'] ?></p>
+                    </div>
+                    <div class="email">
+                        <p><?php echo $value['email'] ?></p>
+                    </div>
+                </div>
+            </div>
+            <?php endforeach ?>
+        </div>
+    </div>
+</section>
+
+<section class="about-sec-4">
+    <div class="prelative container">
+        <div class="row">
+            <div class="col-md-60">
+                <div class="box-content">
+                    <div class="interest">
+                        <p>Interested for a partnership opportunity with Reich?</p>
+                    </div>
+                    <div class="by">
+                        <p><a href="#">Click here</a> to find out many possibilities ahead.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
