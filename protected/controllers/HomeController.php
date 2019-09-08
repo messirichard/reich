@@ -147,7 +147,7 @@ class HomeController extends Controller
 		// $model = new ContactForm;
 		// $model->scenario = 'insert';
 
-		$this->layout='//layouts/column1';
+		$this->layout='//layouts/column2';
 		$this->render('index', array(
 			// 'product'=>$product,
 			// 'model'=>$model,

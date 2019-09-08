@@ -61,7 +61,7 @@
             </div>
             <div class="col-md-30">
                 <div class="box-content copyright">
-                    <p><p>Copyright © 2019 - Suzanna Babyshop. All rights reserved.</p></p>
+                    <p><p>Copyright © 2019 Reich - Indonesia. All rights reserved.</p></p>
                 </div>
             </div>
         </div>

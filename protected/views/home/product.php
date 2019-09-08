@@ -1,138 +1,121 @@
-<?php
-  $criteria=new CDbCriteria;
-  $criteria->with = array('description', 'category', 'brand');
-  $criteria->order = 'date DESC';
-  $criteria->addCondition('status = "1"');
-  $criteria->addCondition('terlaris = "1"');
-  $criteria->addCondition('description.language_id = :language_id');
-  $criteria->params[':language_id'] = $this->languageID;
-  // $pageSize = 12;
-  $criteria->group = 't.id';
-  $dataProduct = PrdProduct::model()->findAll($criteria);
-?>
+<section class="product-sec-1">
+	<div class="prelative container">
+		<div class="row">
+			<div class="col-md-60">
+				<div class="box-content">
+					<div class="title">
+						<h3>Our Product Collections</h3>
+						<div class="line-category"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 
-<div class="clear"></div>
-<div class="subpage static_about">
-  
-  <section class="blocks_middle_Products default_sc">
-    <div class="prelatife container">
+<section class="breadcrumb-det">
+    <div class="prelative container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Houseware Collection</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Keranjang Anyam Besar</li>
+            </ol>
+            <div class="back">
+                <a href="#"><p>Kembali</p></a>
+            </div>
+        </nav>
+	  </div>
+</section>
 
-        <div class="block_product_data_wrap">
-          <div class="top text-center">
-            <h6>LIHAT PRECISE BLACK COLLECTION</h6>
-          </div>
-          <div class="clear"></div>
-          <div class="blocks_bxFilters_topPage_prd">
-              <div class="row default">
-                <div class="col-md-5">
-                  <h2 class="views_pagn">MENAMPILKAN 16 DARI 72 PRODUK PRECISE</h2>
-                </div>
-                <div class="col-md-7">
-                  <div class="flot_filter_top_productPg">
-                    <div class="d-inline block_itm">
-                      <form action="#" method="get">
-                        <div class="form-group">
-                        <label for="">URUTKAN BERDASAR</label>
-                        <select name="#" id="" class="form-control">
-                          <option value="">Terbaru</option>
-                          <option value="">Option 1</option>
-                          <option value="">Option 2</option>
-                          <option value="">Option 3</option>
-                          <option value="">Option 4</option>
-                        </select>
-                        </div>
-                      </form>
+<section class="product-sec-2">
+    <div class="prelative container">
+        <div class="row">
+            <div class="col-md-30">
+                <div class="box-content">
+                    <div class="image">
+                        <img class="img img-fluid w-100" src="<?php echo $this->assetBaseurl; ?>home1.jpg" alt="">
+                        <p>Aluminium related solution</p>
                     </div>
-                    <div class="d-inline block_itm filter_pagin">
-                      HALAMAN&nbsp;&nbsp;&nbsp;&nbsp;   
-                      <a href="#">1</a>&nbsp;&nbsp;
-                      <a href="#">2</a>&nbsp;&nbsp;
-                      <a href="#">3</a>
+                </div>
+            </div>
+            <div class="col-md-30">
+                <div class="box-content">
+                    <div class="image">
+                        <img class="img img-fluid w-100" src="<?php echo $this->assetBaseurl; ?>home2.jpg" alt="">
+                        <p>Digital door locks</p>
                     </div>
-                    <div class="clear"></div>
-                  </div>
                 </div>
-              </div> <div class="clear"></div>
-            <div class="clear"></div>
-          </div>
-          <div class="clear height-10"></div>
-
-          <div id="owl-demo" class="lists_product_data row">
-            <?php for ($i=1; $i < 9; $i++) { ?>
-            <?php foreach ($dataProduct as $key => $value): ?>
-            <div class="col-md-3 col-sm-6">
-              <div class="items">
-                <div class="picture prelatife">
-                  <?php if ($key == 0): ?>
-                  <div class="boxs_inf_head_n1"></div>
-                  <?php endif ?>
-                  <?php /*<a href="<?php //echo CHtml::normalizeUrl(array('/product/detail', 'id'=>$value->id)); ?>#">*/ ?>
-                  <?php // echo Yii::app()->baseUrl.ImageHelper::thumb(321,321, '/images/product/'.$value->image , array('method' => 'adaptiveResize', 'quality' => '90')) ?>
-                  <a href="<?php echo CHtml::normalizeUrl(array('/home/productDetail')); ?>">
-                  <?php if ($key == 0): ?>
-                  <img src="<?php echo $this->assetBaseurl ?>ex_pict-prd-1.jpg" class="img-responsive" alt="">
-                  <?php else: ?>
-                  <img src="<?php echo $this->assetBaseurl ?>ex_pict-prd-2.jpg" class="img-responsive" alt="">
-                  <?php endif ?>
-                  </a>
+            </div>
+            <div class="col-md-20">
+                <div class="box-content">
+                    <div class="image">
+                        <img class="img img-fluid w-100" src="<?php echo $this->assetBaseurl; ?>home3.jpg" alt="">
+                        <p>Slim drawer solution</p>
+                    </div>
                 </div>
-                <div class="info description">
-                  <span class="names">DERON BLUE ORANGE</span>
-                  <div class="clear"></div>
-                  <span class="category">Precise Men</span>
-                  <div class="clear"></div>
-                  <span class="price">RP 559,000,-</span>
+            </div>
+            <div class="col-md-20">
+                <div class="box-content">
+                    <div class="image">
+                        <img class="img img-fluid w-100" src="<?php echo $this->assetBaseurl; ?>home4.jpg" alt="">
+                        <p>Glass related solution</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-20">
+                <div class="box-content">
+                    <div class="image">
+                        <img class="img img-fluid w-100" src="<?php echo $this->assetBaseurl; ?>home5.jpg" alt="">
+                        <p>Wood related solution</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-20">
+              <div class="box-content">
+                <div class="image">
+                  <img class="img img-fluid w-100" src="<?php echo $this->assetBaseurl; ?>product1.jpg" alt="">
+                  <p>Handles & Knobs</p>
                 </div>
               </div>
             </div>
-            <?php endforeach; } ?>
-          </div>
-          <div class="clear height-15"></div>
-            <div class="blocks_bxFilters_topPage_prd">
-              <div class="row default">
-                <div class="col-md-5">
-                  <h2 class="views_pagn">MENAMPILKAN 16 DARI 72 PRODUK PRECISE</h2>
+            <div class="col-md-20">
+              <div class="box-content">
+                <div class="image">
+                  <img class="img img-fluid w-100" src="<?php echo $this->assetBaseurl; ?>product2.jpg" alt="">
+                  <p>Locks & accessories</p>
                 </div>
-                <div class="col-md-7">
-                  <div class="flot_filter_top_productPg">
-                    <div class="d-inline block_itm">
-                      <form action="#" method="get">
-                        <div class="form-group">
-                        <label for="">URUTKAN BERDASAR</label>
-                        <select name="#" id="" class="form-control">
-                          <option value="">Terbaru</option>
-                          <option value="">Option 1</option>
-                          <option value="">Option 2</option>
-                          <option value="">Option 3</option>
-                          <option value="">Option 4</option>
-                        </select>
-                        </div>
-                      </form>
-                    </div>
-                    <div class="d-inline block_itm filter_pagin">
-                      HALAMAN&nbsp;&nbsp;&nbsp;&nbsp;   
-                      <a href="#">1</a>&nbsp;&nbsp;
-                      <a href="#">2</a>&nbsp;&nbsp;
-                      <a href="#">3</a>
-                    </div>
-                    <div class="clear"></div>
-                  </div>
+              </div>
+            </div>
+            <div class="col-md-20">
+              <div class="box-content">
+                <div class="image">
+                  <img class="img img-fluid w-100" src="<?php echo $this->assetBaseurl; ?>product3.jpg" alt="">
+                  <p>Bathroom Accessories</p>
                 </div>
-              </div> <div class="clear"></div>
-            <div class="clear"></div>
-          </div>
-          
-
-          <div class="clear"></div>
+              </div>
+            </div>
         </div>
-
-        <div class="clear"></div>
-      </div>
-
-      <div class="clear"></div>
     </div>
+</section>
 
-  </section>
-
-  <div class="clear"></div>
-</div>
+<section class="product-sec-3">
+    <div class="prelative container">
+        <div class="row">
+            <div class="col-md-60">
+                <div class="box-content">
+                    <div class="interest">
+                        <p>Couldn’t find what you’re looking for?</p>
+                    </div>
+                    <div class="by">
+                        <p>Please consult to our product specialist, we will help you find the right products.</p>
+					</div>
+					<div class="box-content-wa">
+						<h6>Whatsapp Hotline & Chat</h6>
+						<img class="wa-footer" src="<?php echo $this->assetBaseurl; ?>wa-logo-footer.png" alt="">
+						<a href="#"><p>081 5530 78875 (Click To Chat)</p></a>
+                	</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

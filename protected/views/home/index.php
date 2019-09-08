@@ -14,7 +14,7 @@
             <div class="col-md-30">
                 <div class="box-content">
                     <div class="image">
-                        <img src="<?php echo $this->assetBaseurl; ?>home1.jpg" alt="">
+                        <img class="img img-fluid w-100" src="<?php echo $this->assetBaseurl; ?>home1.jpg" alt="">
                         <p>Aluminium related solution</p>
                     </div>
                 </div>
@@ -22,7 +22,7 @@
             <div class="col-md-30">
                 <div class="box-content">
                     <div class="image">
-                        <img src="<?php echo $this->assetBaseurl; ?>home2.jpg" alt="">
+                        <img class="img img-fluid w-100" src="<?php echo $this->assetBaseurl; ?>home2.jpg" alt="">
                         <p>Digital door locks</p>
                     </div>
                 </div>
@@ -30,7 +30,7 @@
             <div class="col-md-20">
                 <div class="box-content">
                     <div class="image bottom">
-                        <img src="<?php echo $this->assetBaseurl; ?>home3.jpg" alt="">
+                        <img class="img img-fluid w-100" src="<?php echo $this->assetBaseurl; ?>home3.jpg" alt="">
                         <p>Slim drawer solution</p>
                     </div>
                 </div>
@@ -38,7 +38,7 @@
             <div class="col-md-20">
                 <div class="box-content">
                     <div class="image bottom">
-                        <img src="<?php echo $this->assetBaseurl; ?>home4.jpg" alt="">
+                        <img class="img img-fluid w-100" src="<?php echo $this->assetBaseurl; ?>home4.jpg" alt="">
                         <p>Glass related solution</p>
                     </div>
                 </div>
@@ -46,7 +46,7 @@
             <div class="col-md-20">
                 <div class="box-content">
                     <div class="image bottom">
-                        <img src="<?php echo $this->assetBaseurl; ?>home5.jpg" alt="">
+                        <img class="img img-fluid w-100" src="<?php echo $this->assetBaseurl; ?>home5.jpg" alt="">
                         <p>Wood related solution</p>
                     </div>
                 </div>

@@ -1,89 +1,118 @@
-<div class="clear height-20"></div>
-<div class="prelatife container">
-	
-	<div class="blocks_product_lists_default">
-		<div class="tops">
-			<div class="row">
-				<div class="col-md-5">
-					<div class="b_breadcrumbs">
-						<ol class="breadcrumb">
-						  <li><a href="#">Home</a></li>
-						  <li class="active">Toys</li>
-						</ol>
-						<div class="clear"></div>
-					</div>
-				</div>
-				<div class="col-md-7 rights_cont_filterproduct_tp">
-					<div class="d-inline text-right padding-right-25">
-						Sort by &nbsp; 
-						<form action="#" class="form-inline">
-							<div class="form-group">
-								<select name="" id="" class="form-control">
-									<option value="">Price: LOW to HIGH</option>
-									<option value="">Price: LOW to HIGH</option>
-									<option value="">Price: LOW to HIGH</option>
-								</select>
-							</div>	
-						</form>
-					</div>
-					<div class="d-inline">
-						VIEW &nbsp;&nbsp;<a href="#">15</a>&nbsp;&nbsp;<a href="#">30</a>
-						&nbsp;&nbsp;|&nbsp;&nbsp;
-						<div class="n_paginations">
-							<ul class="pagination">
-							    <li><a class="selected" href="#">1</a></li>
-							    <li><a href="#">2</a></li>
-							    <li><a href="#">3</a></li>
-							    <li><a href="#">4</a></li>
-							    <li>
-							      <a href="#" aria-label="Next">
-							        NEXT
-							      </a>
-							    </li>
-							  </ul>
-							<div class="clear"></div>
-						</div>
-						<div class="clear"></div>
+<section class="category-sec-1">
+	<div class="prelative container">
+		<div class="row">
+			<div class="col-md-60">
+				<div class="box-content">
+					<div class="title">
+						<h6>Our Product Collections</h6>
+						<div class="line-category"></div>
+						<h2>Digital Door Locks</h2>
 					</div>
 				</div>
 			</div>
-			<div class="clear"></div>
 		</div>
-			<div class="clear"></div>
-
-		<div class="middle">
-
-			<div class="lists_default_products_data">
-				<div class="row">
-					<?php for ($i=0; $i < 9; $i++) {?>
-					<div class="col-md-4">
-						<div class="items">
-							<div class="pict">
-								<a href="<?php echo CHtml::normalizeUrl(array('/home/productDetail')); ?>"><img src="<?php echo $this->assetBaseurl ?>ex-product_1.jpg" alt="" class="img-responsive"></a>
-							</div>
-							<div class="descs">
-								<div class="t_name"><a href="<?php echo CHtml::normalizeUrl(array('/home/productDetail')); ?>">BMW ride on toy with rechargable fuel cell - Black</a></div>
-								<div class="clear"></div>
-								<div class="block_price">
-									<span class="price_line">RP 2.150.000,-</span>
-									<div class="clear"></div>
-									<span class="price">RP 1.500.000,-</span>
-								</div>
-								<div class="clear"></div>
-							</div>
-						</div>
-					</div>
-					<?php } ?>
-				</div>
-				<div class="clear"></div>
-			</div>
-
-			<div class="clear"></div>
-		</div>
-
-		<div class="clear"></div>
+		<div class="row"></div>
 	</div>
+</section>
 
-	<div class="clear"></div>
-</div>
-<div class="clear height-50"></div>
+<section class="breadcrumb-det">
+    <div class="prelative container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Houseware Collection</a></li>
+				<li class="breadcrumb-item"><a href="#">Houseware Collection</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Keranjang Anyam Besar</li>
+            </ol>
+            <div class="back">
+                <a href="#">
+                <p>Kembali</p>
+                </a>
+            </div>
+        </nav>
+	</div>
+</section>
+
+<?php
+$category = [
+    1 => [
+        'gambar' => 'category1.jpg',
+		'judul' => 'Reich EZ008 Digital Door Lock &
+		Handle With Keypad',
+    ],
+    [
+        'gambar' => 'category2.jpg',
+		'judul' => 'Reich EZ002 Digital Door Lock',
+    ],
+    [
+        'gambar' => 'category1.jpg',
+		'judul' => 'Reich EZ008 Digital Door Lock &
+		Handle With Keypad',
+    ],
+    [
+        'gambar' => 'category2.jpg',
+		'judul' => 'Reich EZ002 Digital Door Lock',
+    ],
+    [
+        'gambar' => 'category1.jpg',
+		'judul' => 'Reich EZ008 Digital Door Lock &
+		Handle With Keypad',
+    ],
+    [
+        'gambar' => 'category2.jpg',
+		'judul' => 'Reich EZ002 Digital Door Lock',
+    ],
+    [
+        'gambar' => 'category1.jpg',
+		'judul' => 'Reich EZ008 Digital Door Lock &
+		Handle With Keypad',
+    ],
+    [
+        'gambar' => 'category2.jpg',
+		'judul' => 'Reich EZ002 Digital Door Lock',
+    ]
+];
+?>
+
+<section class="category-sec-2">
+	<div class="prelative container">
+		<div class="row">
+			<?php foreach($category as $key => $value): ?>
+			<div class="col-md-15">
+				<div class="box-content">
+					<div class="image">
+						<img class="img img-fluid w-100" src="<?php echo $this->assetBaseurl; ?><?php echo $value['gambar'] ?>" alt="">
+					</div>
+					<div class="title">
+						<p><?php echo $value['judul']?></p>
+					</div>
+					<div class="subtitle">
+						<a href="#"><p>View More</p></a>
+					</div>
+				</div>
+			</div>
+			<?php endforeach ?>
+		</div>
+	</div>
+</section>
+
+<section class="category-sec-3">
+    <div class="prelative container">
+        <div class="row">
+            <div class="col-md-60">
+                <div class="box-content">
+                    <div class="interest">
+                        <p>Couldn’t find what you’re looking for?</p>
+                    </div>
+                    <div class="by">
+                        <p>Please consult to our product specialist, we will help you find the right products.</p>
+					</div>
+					<div class="box-content-wa">
+						<h6>Whatsapp Hotline & Chat</h6>
+						<img class="wa-footer" src="<?php echo $this->assetBaseurl; ?>wa-logo-footer.png" alt="">
+						<a href="#"><p>081 5530 78875 (Click To Chat)</p></a>
+                	</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
