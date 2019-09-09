@@ -10676,3 +10676,1290 @@ in C:\xampp\htdocs\reich\protected\views\layouts\column2.php (11)
 in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (514)
 2019/09/08 15:31:48 [trace] [system.CModule] Loading "assetManager" application component
 in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (514)
+2019/09/09 13:57:15 [trace] [system.CModule] Loading "log" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 13:57:15 [trace] [system.CModule] Loading "request" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 13:57:15 [trace] [system.CModule] Loading "urlManager" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 13:57:15 [trace] [system.CModule] Loading "cache" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 13:57:15 [trace] [system.caching.CFileCache] Serving "Yii.CUrlManager.rules" from cache
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 13:57:16 [trace] [system.CModule] Loading "coreMessages" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 13:57:16 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "product_detail". in C:\xampp\htdocs\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(271): CController->missingAction('product_detail')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('product_detail')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('home/product_de...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\reich\index.php(21): CApplication->run()
+#5 {main}
+REQUEST_URI=/reich/home/product_detail
+---
+2019/09/09 13:57:16 [trace] [system.CModule] Loading "errorHandler" application component
+2019/09/09 13:57:17 [trace] [system.CModule] Loading "db" application component
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 13:57:17 [trace] [system.db.CDbConnection] Opening DB connection
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 13:57:19 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `language`
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 13:57:20 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `language`
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 13:57:20 [trace] [system.db.ar.CActiveRecord] Language.find()
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 13:57:20 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `language` `t` WHERE code = :code LIMIT 1
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 13:57:20 [trace] [system.caching.CFileCache] Serving "setting_en" from cache
+in C:\xampp\htdocs\reich\protected\components\Controller.php (43)
+2019/09/09 13:57:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `prd_product`
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (493)
+2019/09/09 13:57:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `prd_product`
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (493)
+2019/09/09 13:57:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `prd_category`
+in C:\xampp\htdocs\reich\protected\models\PrdCategory.php (23)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 13:57:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `prd_category`
+in C:\xampp\htdocs\reich\protected\models\PrdCategory.php (23)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 13:57:21 [trace] [system.db.ar.CActiveRecord] PrdCategory.findAll()
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 13:57:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `prd_category_description`
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 13:57:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `prd_category_description`
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 13:57:21 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`id` AS `t0_c0`, `t`.`parent_id` AS `t0_c1`, `t`.`sort` AS `t0_c2`, `t`.`image` AS `t0_c3`, `t`.`image2` AS `t0_c4`, `t`.`image3` AS `t0_c5`, `t`.`type` AS `t0_c6`, `t`.`data` AS `t0_c7`, `description`.`id` AS `t1_c0`, `description`.`category_id` AS `t1_c1`, `description`.`language_id` AS `t1_c2`, `description`.`name` AS `t1_c3`, `description`.`desc` AS `t1_c4`, `description`.`data` AS `t1_c5` FROM `prd_category` `t`  LEFT OUTER JOIN `prd_category_description` `description` ON (`description`.`category_id`=`t`.`id`)  WHERE ((t.parent_id = :parent_id) AND (t.type = :type)) ORDER BY sort ASC LIMIT 3
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 13:57:21 [trace] [system.CModule] Loading "themeManager" application component
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (514)
+2019/09/09 13:57:21 [trace] [system.CModule] Loading "widgetFactory" application component
+in C:\xampp\htdocs\reich\protected\views\layouts\column2.php (2)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (514)
+2019/09/09 13:57:24 [trace] [system.CModule] Loading "clientScript" application component
+in C:\xampp\htdocs\reich\protected\views\layouts\main.php (36)
+in C:\xampp\htdocs\reich\protected\views\layouts\column2.php (11)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (514)
+2019/09/09 13:57:24 [trace] [system.CModule] Loading "assetManager" application component
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (514)
+2019/09/09 13:57:29 [trace] [system.CModule] Loading "log" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 13:57:29 [trace] [system.CModule] Loading "request" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 13:57:29 [trace] [system.CModule] Loading "urlManager" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 13:57:29 [trace] [system.CModule] Loading "cache" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 13:57:29 [trace] [system.caching.CFileCache] Serving "Yii.CUrlManager.rules" from cache
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 13:57:29 [trace] [system.CModule] Loading "coreMessages" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 13:57:29 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "asset/images". in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('asset/images')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reich\index.php(21): CApplication->run()
+#3 {main}
+REQUEST_URI=/reich/asset/images/favicon.png
+HTTP_REFERER=http://localhost/reich/home/product_detail
+---
+2019/09/09 13:57:29 [trace] [system.CModule] Loading "errorHandler" application component
+2019/09/09 13:57:29 [trace] [system.CModule] Loading "db" application component
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 13:57:29 [trace] [system.db.CDbConnection] Opening DB connection
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 13:57:29 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `language`
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 13:57:29 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `language`
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 13:57:29 [trace] [system.db.ar.CActiveRecord] Language.find()
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 13:57:29 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `language` `t` WHERE code = :code LIMIT 1
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 13:57:29 [trace] [system.caching.CFileCache] Serving "setting_en" from cache
+in C:\xampp\htdocs\reich\protected\components\Controller.php (43)
+2019/09/09 13:57:29 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `prd_product`
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (493)
+2019/09/09 13:57:29 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `prd_product`
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (493)
+2019/09/09 13:57:29 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `prd_category`
+in C:\xampp\htdocs\reich\protected\models\PrdCategory.php (23)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 13:57:29 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `prd_category`
+in C:\xampp\htdocs\reich\protected\models\PrdCategory.php (23)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 13:57:29 [trace] [system.db.ar.CActiveRecord] PrdCategory.findAll()
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 13:57:29 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `prd_category_description`
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 13:57:29 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `prd_category_description`
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 13:57:29 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`id` AS `t0_c0`, `t`.`parent_id` AS `t0_c1`, `t`.`sort` AS `t0_c2`, `t`.`image` AS `t0_c3`, `t`.`image2` AS `t0_c4`, `t`.`image3` AS `t0_c5`, `t`.`type` AS `t0_c6`, `t`.`data` AS `t0_c7`, `description`.`id` AS `t1_c0`, `description`.`category_id` AS `t1_c1`, `description`.`language_id` AS `t1_c2`, `description`.`name` AS `t1_c3`, `description`.`desc` AS `t1_c4`, `description`.`data` AS `t1_c5` FROM `prd_category` `t`  LEFT OUTER JOIN `prd_category_description` `description` ON (`description`.`category_id`=`t`.`id`)  WHERE ((t.parent_id = :parent_id) AND (t.type = :type)) ORDER BY sort ASC LIMIT 3
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 13:57:29 [trace] [system.CModule] Loading "themeManager" application component
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (514)
+2019/09/09 13:57:29 [trace] [system.CModule] Loading "widgetFactory" application component
+in C:\xampp\htdocs\reich\protected\views\layouts\column2.php (2)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (514)
+2019/09/09 13:57:29 [trace] [system.CModule] Loading "clientScript" application component
+in C:\xampp\htdocs\reich\protected\views\layouts\main.php (36)
+in C:\xampp\htdocs\reich\protected\views\layouts\column2.php (11)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (514)
+2019/09/09 13:57:29 [trace] [system.CModule] Loading "assetManager" application component
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (514)
+2019/09/09 13:59:00 [trace] [system.CModule] Loading "log" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 13:59:00 [trace] [system.CModule] Loading "request" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 13:59:00 [trace] [system.CModule] Loading "urlManager" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 13:59:00 [trace] [system.CModule] Loading "cache" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 13:59:00 [trace] [system.caching.CFileCache] Serving "Yii.CUrlManager.rules" from cache
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 13:59:00 [trace] [system.CModule] Loading "coreMessages" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 13:59:00 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "product_details". in C:\xampp\htdocs\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(271): CController->missingAction('product_details')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('product_details')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('home/product_de...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\reich\index.php(21): CApplication->run()
+#5 {main}
+REQUEST_URI=/reich/home/product_details
+---
+2019/09/09 13:59:00 [trace] [system.CModule] Loading "errorHandler" application component
+2019/09/09 13:59:00 [trace] [system.CModule] Loading "db" application component
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 13:59:00 [trace] [system.db.CDbConnection] Opening DB connection
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 13:59:00 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `language`
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 13:59:00 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `language`
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 13:59:00 [trace] [system.db.ar.CActiveRecord] Language.find()
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 13:59:00 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `language` `t` WHERE code = :code LIMIT 1
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 13:59:00 [trace] [system.caching.CFileCache] Serving "setting_en" from cache
+in C:\xampp\htdocs\reich\protected\components\Controller.php (43)
+2019/09/09 13:59:00 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `prd_product`
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (493)
+2019/09/09 13:59:00 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `prd_product`
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (493)
+2019/09/09 13:59:00 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `prd_category`
+in C:\xampp\htdocs\reich\protected\models\PrdCategory.php (23)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 13:59:00 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `prd_category`
+in C:\xampp\htdocs\reich\protected\models\PrdCategory.php (23)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 13:59:00 [trace] [system.db.ar.CActiveRecord] PrdCategory.findAll()
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 13:59:00 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `prd_category_description`
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 13:59:00 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `prd_category_description`
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 13:59:00 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`id` AS `t0_c0`, `t`.`parent_id` AS `t0_c1`, `t`.`sort` AS `t0_c2`, `t`.`image` AS `t0_c3`, `t`.`image2` AS `t0_c4`, `t`.`image3` AS `t0_c5`, `t`.`type` AS `t0_c6`, `t`.`data` AS `t0_c7`, `description`.`id` AS `t1_c0`, `description`.`category_id` AS `t1_c1`, `description`.`language_id` AS `t1_c2`, `description`.`name` AS `t1_c3`, `description`.`desc` AS `t1_c4`, `description`.`data` AS `t1_c5` FROM `prd_category` `t`  LEFT OUTER JOIN `prd_category_description` `description` ON (`description`.`category_id`=`t`.`id`)  WHERE ((t.parent_id = :parent_id) AND (t.type = :type)) ORDER BY sort ASC LIMIT 3
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 13:59:00 [trace] [system.CModule] Loading "themeManager" application component
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (514)
+2019/09/09 13:59:00 [trace] [system.CModule] Loading "widgetFactory" application component
+in C:\xampp\htdocs\reich\protected\views\layouts\column2.php (2)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (514)
+2019/09/09 13:59:00 [trace] [system.CModule] Loading "clientScript" application component
+in C:\xampp\htdocs\reich\protected\views\layouts\main.php (36)
+in C:\xampp\htdocs\reich\protected\views\layouts\column2.php (11)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (514)
+2019/09/09 13:59:00 [trace] [system.CModule] Loading "assetManager" application component
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (514)
+2019/09/09 13:59:11 [trace] [system.CModule] Loading "log" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 13:59:11 [trace] [system.CModule] Loading "request" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 13:59:11 [trace] [system.CModule] Loading "urlManager" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 13:59:11 [trace] [system.CModule] Loading "cache" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 13:59:11 [trace] [system.caching.CFileCache] Serving "Yii.CUrlManager.rules" from cache
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 13:59:11 [trace] [system.CModule] Loading "coreMessages" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 13:59:11 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "product_details". in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('product_details')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reich\index.php(21): CApplication->run()
+#3 {main}
+REQUEST_URI=/reich/product_details
+---
+2019/09/09 13:59:11 [trace] [system.CModule] Loading "errorHandler" application component
+2019/09/09 13:59:11 [trace] [system.CModule] Loading "db" application component
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 13:59:11 [trace] [system.db.CDbConnection] Opening DB connection
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 13:59:11 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `language`
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 13:59:11 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `language`
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 13:59:11 [trace] [system.db.ar.CActiveRecord] Language.find()
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 13:59:11 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `language` `t` WHERE code = :code LIMIT 1
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 13:59:11 [trace] [system.caching.CFileCache] Serving "setting_en" from cache
+in C:\xampp\htdocs\reich\protected\components\Controller.php (43)
+2019/09/09 13:59:11 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `prd_product`
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (493)
+2019/09/09 13:59:11 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `prd_product`
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (493)
+2019/09/09 13:59:11 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `prd_category`
+in C:\xampp\htdocs\reich\protected\models\PrdCategory.php (23)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 13:59:11 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `prd_category`
+in C:\xampp\htdocs\reich\protected\models\PrdCategory.php (23)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 13:59:11 [trace] [system.db.ar.CActiveRecord] PrdCategory.findAll()
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 13:59:11 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `prd_category_description`
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 13:59:11 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `prd_category_description`
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 13:59:11 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`id` AS `t0_c0`, `t`.`parent_id` AS `t0_c1`, `t`.`sort` AS `t0_c2`, `t`.`image` AS `t0_c3`, `t`.`image2` AS `t0_c4`, `t`.`image3` AS `t0_c5`, `t`.`type` AS `t0_c6`, `t`.`data` AS `t0_c7`, `description`.`id` AS `t1_c0`, `description`.`category_id` AS `t1_c1`, `description`.`language_id` AS `t1_c2`, `description`.`name` AS `t1_c3`, `description`.`desc` AS `t1_c4`, `description`.`data` AS `t1_c5` FROM `prd_category` `t`  LEFT OUTER JOIN `prd_category_description` `description` ON (`description`.`category_id`=`t`.`id`)  WHERE ((t.parent_id = :parent_id) AND (t.type = :type)) ORDER BY sort ASC LIMIT 3
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 13:59:11 [trace] [system.CModule] Loading "themeManager" application component
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (514)
+2019/09/09 13:59:11 [trace] [system.CModule] Loading "widgetFactory" application component
+in C:\xampp\htdocs\reich\protected\views\layouts\column2.php (2)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (514)
+2019/09/09 13:59:11 [trace] [system.CModule] Loading "clientScript" application component
+in C:\xampp\htdocs\reich\protected\views\layouts\main.php (36)
+in C:\xampp\htdocs\reich\protected\views\layouts\column2.php (11)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (514)
+2019/09/09 13:59:11 [trace] [system.CModule] Loading "assetManager" application component
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (514)
+2019/09/09 14:07:50 [trace] [system.CModule] Loading "log" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:07:50 [trace] [system.CModule] Loading "request" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:07:50 [trace] [system.CModule] Loading "urlManager" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:07:50 [trace] [system.CModule] Loading "cache" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:07:50 [trace] [system.caching.CFileCache] Serving "Yii.CUrlManager.rules" from cache
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:07:50 [trace] [system.CModule] Loading "coreMessages" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:07:50 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "productdetails". in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('productdetails')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reich\index.php(21): CApplication->run()
+#3 {main}
+REQUEST_URI=/reich/productdetails
+---
+2019/09/09 14:07:50 [trace] [system.CModule] Loading "errorHandler" application component
+2019/09/09 14:07:51 [trace] [system.CModule] Loading "db" application component
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 14:07:51 [trace] [system.db.CDbConnection] Opening DB connection
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 14:07:52 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `language`
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 14:07:52 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `language`
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 14:07:52 [trace] [system.db.ar.CActiveRecord] Language.find()
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 14:07:52 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `language` `t` WHERE code = :code LIMIT 1
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 14:07:52 [trace] [system.caching.CFileCache] Serving "setting_en" from cache
+in C:\xampp\htdocs\reich\protected\components\Controller.php (43)
+2019/09/09 14:07:52 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `prd_product`
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (493)
+2019/09/09 14:07:52 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `prd_product`
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (493)
+2019/09/09 14:07:52 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `prd_category`
+in C:\xampp\htdocs\reich\protected\models\PrdCategory.php (23)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 14:07:52 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `prd_category`
+in C:\xampp\htdocs\reich\protected\models\PrdCategory.php (23)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 14:07:52 [trace] [system.db.ar.CActiveRecord] PrdCategory.findAll()
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 14:07:52 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `prd_category_description`
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 14:07:52 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `prd_category_description`
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 14:07:52 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`id` AS `t0_c0`, `t`.`parent_id` AS `t0_c1`, `t`.`sort` AS `t0_c2`, `t`.`image` AS `t0_c3`, `t`.`image2` AS `t0_c4`, `t`.`image3` AS `t0_c5`, `t`.`type` AS `t0_c6`, `t`.`data` AS `t0_c7`, `description`.`id` AS `t1_c0`, `description`.`category_id` AS `t1_c1`, `description`.`language_id` AS `t1_c2`, `description`.`name` AS `t1_c3`, `description`.`desc` AS `t1_c4`, `description`.`data` AS `t1_c5` FROM `prd_category` `t`  LEFT OUTER JOIN `prd_category_description` `description` ON (`description`.`category_id`=`t`.`id`)  WHERE ((t.parent_id = :parent_id) AND (t.type = :type)) ORDER BY sort ASC LIMIT 3
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 14:07:52 [trace] [system.CModule] Loading "themeManager" application component
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (514)
+2019/09/09 14:07:52 [trace] [system.CModule] Loading "widgetFactory" application component
+in C:\xampp\htdocs\reich\protected\views\layouts\column2.php (2)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (514)
+2019/09/09 14:07:52 [trace] [system.CModule] Loading "clientScript" application component
+in C:\xampp\htdocs\reich\protected\views\layouts\main.php (36)
+in C:\xampp\htdocs\reich\protected\views\layouts\column2.php (11)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (514)
+2019/09/09 14:07:53 [trace] [system.CModule] Loading "assetManager" application component
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (514)
+2019/09/09 14:08:34 [trace] [system.CModule] Loading "log" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:08:34 [trace] [system.CModule] Loading "request" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:08:34 [trace] [system.CModule] Loading "urlManager" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:08:34 [trace] [system.CModule] Loading "cache" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:08:34 [trace] [system.caching.CFileCache] Serving "Yii.CUrlManager.rules" from cache
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:08:34 [trace] [system.CModule] Loading "coreMessages" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:08:34 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "productdet". in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('productdet')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reich\index.php(21): CApplication->run()
+#3 {main}
+REQUEST_URI=/reich/productdet
+---
+2019/09/09 14:08:34 [trace] [system.CModule] Loading "errorHandler" application component
+2019/09/09 14:08:34 [trace] [system.CModule] Loading "db" application component
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 14:08:34 [trace] [system.db.CDbConnection] Opening DB connection
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 14:08:34 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `language`
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 14:08:34 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `language`
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 14:08:34 [trace] [system.db.ar.CActiveRecord] Language.find()
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 14:08:34 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `language` `t` WHERE code = :code LIMIT 1
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 14:08:34 [trace] [system.caching.CFileCache] Serving "setting_en" from cache
+in C:\xampp\htdocs\reich\protected\components\Controller.php (43)
+2019/09/09 14:08:34 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `prd_product`
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (493)
+2019/09/09 14:08:34 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `prd_product`
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (493)
+2019/09/09 14:08:34 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `prd_category`
+in C:\xampp\htdocs\reich\protected\models\PrdCategory.php (23)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 14:08:34 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `prd_category`
+in C:\xampp\htdocs\reich\protected\models\PrdCategory.php (23)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 14:08:34 [trace] [system.db.ar.CActiveRecord] PrdCategory.findAll()
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 14:08:34 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `prd_category_description`
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 14:08:34 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `prd_category_description`
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 14:08:34 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`id` AS `t0_c0`, `t`.`parent_id` AS `t0_c1`, `t`.`sort` AS `t0_c2`, `t`.`image` AS `t0_c3`, `t`.`image2` AS `t0_c4`, `t`.`image3` AS `t0_c5`, `t`.`type` AS `t0_c6`, `t`.`data` AS `t0_c7`, `description`.`id` AS `t1_c0`, `description`.`category_id` AS `t1_c1`, `description`.`language_id` AS `t1_c2`, `description`.`name` AS `t1_c3`, `description`.`desc` AS `t1_c4`, `description`.`data` AS `t1_c5` FROM `prd_category` `t`  LEFT OUTER JOIN `prd_category_description` `description` ON (`description`.`category_id`=`t`.`id`)  WHERE ((t.parent_id = :parent_id) AND (t.type = :type)) ORDER BY sort ASC LIMIT 3
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 14:08:34 [trace] [system.CModule] Loading "themeManager" application component
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (514)
+2019/09/09 14:08:34 [trace] [system.CModule] Loading "widgetFactory" application component
+in C:\xampp\htdocs\reich\protected\views\layouts\column2.php (2)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (514)
+2019/09/09 14:08:34 [trace] [system.CModule] Loading "clientScript" application component
+in C:\xampp\htdocs\reich\protected\views\layouts\main.php (36)
+in C:\xampp\htdocs\reich\protected\views\layouts\column2.php (11)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (514)
+2019/09/09 14:08:34 [trace] [system.CModule] Loading "assetManager" application component
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (514)
+2019/09/09 14:08:48 [trace] [system.CModule] Loading "log" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:08:48 [trace] [system.CModule] Loading "request" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:08:48 [trace] [system.CModule] Loading "urlManager" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:08:48 [trace] [system.CModule] Loading "cache" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:08:48 [trace] [system.caching.CFileCache] Serving "Yii.CUrlManager.rules" from cache
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:08:48 [trace] [system.CModule] Loading "coreMessages" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:08:48 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "produk". in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('produk')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reich\index.php(21): CApplication->run()
+#3 {main}
+REQUEST_URI=/reich/produk
+---
+2019/09/09 14:08:48 [trace] [system.CModule] Loading "errorHandler" application component
+2019/09/09 14:08:48 [trace] [system.CModule] Loading "db" application component
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 14:08:48 [trace] [system.db.CDbConnection] Opening DB connection
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 14:08:48 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `language`
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 14:08:48 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `language`
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 14:08:48 [trace] [system.db.ar.CActiveRecord] Language.find()
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 14:08:48 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `language` `t` WHERE code = :code LIMIT 1
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 14:08:48 [trace] [system.caching.CFileCache] Serving "setting_en" from cache
+in C:\xampp\htdocs\reich\protected\components\Controller.php (43)
+2019/09/09 14:08:48 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `prd_product`
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (493)
+2019/09/09 14:08:48 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `prd_product`
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (493)
+2019/09/09 14:08:48 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `prd_category`
+in C:\xampp\htdocs\reich\protected\models\PrdCategory.php (23)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 14:08:49 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `prd_category`
+in C:\xampp\htdocs\reich\protected\models\PrdCategory.php (23)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 14:08:49 [trace] [system.db.ar.CActiveRecord] PrdCategory.findAll()
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 14:08:49 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `prd_category_description`
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 14:08:49 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `prd_category_description`
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 14:08:49 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`id` AS `t0_c0`, `t`.`parent_id` AS `t0_c1`, `t`.`sort` AS `t0_c2`, `t`.`image` AS `t0_c3`, `t`.`image2` AS `t0_c4`, `t`.`image3` AS `t0_c5`, `t`.`type` AS `t0_c6`, `t`.`data` AS `t0_c7`, `description`.`id` AS `t1_c0`, `description`.`category_id` AS `t1_c1`, `description`.`language_id` AS `t1_c2`, `description`.`name` AS `t1_c3`, `description`.`desc` AS `t1_c4`, `description`.`data` AS `t1_c5` FROM `prd_category` `t`  LEFT OUTER JOIN `prd_category_description` `description` ON (`description`.`category_id`=`t`.`id`)  WHERE ((t.parent_id = :parent_id) AND (t.type = :type)) ORDER BY sort ASC LIMIT 3
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 14:08:49 [trace] [system.CModule] Loading "themeManager" application component
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (514)
+2019/09/09 14:08:49 [trace] [system.CModule] Loading "widgetFactory" application component
+in C:\xampp\htdocs\reich\protected\views\layouts\column2.php (2)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (514)
+2019/09/09 14:08:49 [trace] [system.CModule] Loading "clientScript" application component
+in C:\xampp\htdocs\reich\protected\views\layouts\main.php (36)
+in C:\xampp\htdocs\reich\protected\views\layouts\column2.php (11)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (514)
+2019/09/09 14:08:49 [trace] [system.CModule] Loading "assetManager" application component
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (514)
+2019/09/09 14:08:58 [trace] [system.CModule] Loading "log" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:08:58 [trace] [system.CModule] Loading "request" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:08:58 [trace] [system.CModule] Loading "urlManager" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:08:58 [trace] [system.CModule] Loading "cache" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:08:58 [trace] [system.caching.CFileCache] Serving "Yii.CUrlManager.rules" from cache
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:08:58 [trace] [system.CModule] Loading "db" application component
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:08:58 [trace] [system.db.CDbConnection] Opening DB connection
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:08:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `language`
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:08:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `language`
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:08:58 [trace] [system.db.ar.CActiveRecord] Language.find()
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:08:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `language` `t` WHERE code = :code LIMIT 1
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:08:58 [trace] [system.caching.CFileCache] Serving "setting_en" from cache
+in C:\xampp\htdocs\reich\protected\components\Controller.php (43)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:08:58 [trace] [system.CModule] Loading "themeManager" application component
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (563)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:08:58 [trace] [system.CModule] Loading "widgetFactory" application component
+in C:\xampp\htdocs\reich\protected\views\layouts\column2.php (2)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (563)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:08:58 [trace] [system.CModule] Loading "clientScript" application component
+in C:\xampp\htdocs\reich\protected\views\layouts\main.php (36)
+in C:\xampp\htdocs\reich\protected\views\layouts\column2.php (11)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (563)
+2019/09/09 14:08:58 [trace] [system.CModule] Loading "assetManager" application component
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (563)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:08:58 [trace] [system.CModule] Loading "log" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:08:58 [trace] [system.CModule] Loading "request" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:08:58 [trace] [system.CModule] Loading "urlManager" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:08:58 [trace] [system.CModule] Loading "cache" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:08:58 [trace] [system.caching.CFileCache] Serving "Yii.CUrlManager.rules" from cache
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:08:58 [trace] [system.CModule] Loading "coreMessages" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:08:58 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "asset/images". in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('asset/images')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reich\index.php(21): CApplication->run()
+#3 {main}
+REQUEST_URI=/reich/asset/images/2-produk_03.jpg
+HTTP_REFERER=http://localhost/reich/home/produk
+---
+2019/09/09 14:08:58 [trace] [system.CModule] Loading "errorHandler" application component
+2019/09/09 14:08:58 [trace] [system.CModule] Loading "db" application component
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 14:08:58 [trace] [system.db.CDbConnection] Opening DB connection
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 14:08:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `language`
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 14:08:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `language`
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 14:08:58 [trace] [system.db.ar.CActiveRecord] Language.find()
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 14:08:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `language` `t` WHERE code = :code LIMIT 1
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 14:08:58 [trace] [system.caching.CFileCache] Serving "setting_en" from cache
+in C:\xampp\htdocs\reich\protected\components\Controller.php (43)
+2019/09/09 14:08:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `prd_product`
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (493)
+2019/09/09 14:08:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `prd_product`
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (493)
+2019/09/09 14:08:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `prd_category`
+in C:\xampp\htdocs\reich\protected\models\PrdCategory.php (23)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 14:08:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `prd_category`
+in C:\xampp\htdocs\reich\protected\models\PrdCategory.php (23)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 14:08:58 [trace] [system.db.ar.CActiveRecord] PrdCategory.findAll()
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 14:08:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `prd_category_description`
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 14:08:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `prd_category_description`
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 14:08:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`id` AS `t0_c0`, `t`.`parent_id` AS `t0_c1`, `t`.`sort` AS `t0_c2`, `t`.`image` AS `t0_c3`, `t`.`image2` AS `t0_c4`, `t`.`image3` AS `t0_c5`, `t`.`type` AS `t0_c6`, `t`.`data` AS `t0_c7`, `description`.`id` AS `t1_c0`, `description`.`category_id` AS `t1_c1`, `description`.`language_id` AS `t1_c2`, `description`.`name` AS `t1_c3`, `description`.`desc` AS `t1_c4`, `description`.`data` AS `t1_c5` FROM `prd_category` `t`  LEFT OUTER JOIN `prd_category_description` `description` ON (`description`.`category_id`=`t`.`id`)  WHERE ((t.parent_id = :parent_id) AND (t.type = :type)) ORDER BY sort ASC LIMIT 3
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 14:08:58 [trace] [system.CModule] Loading "themeManager" application component
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (514)
+2019/09/09 14:08:58 [trace] [system.CModule] Loading "widgetFactory" application component
+in C:\xampp\htdocs\reich\protected\views\layouts\column2.php (2)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (514)
+2019/09/09 14:08:58 [trace] [system.CModule] Loading "clientScript" application component
+in C:\xampp\htdocs\reich\protected\views\layouts\main.php (36)
+in C:\xampp\htdocs\reich\protected\views\layouts\column2.php (11)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (514)
+2019/09/09 14:08:58 [trace] [system.CModule] Loading "assetManager" application component
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (514)
+2019/09/09 14:09:11 [trace] [system.CModule] Loading "log" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:09:11 [trace] [system.CModule] Loading "request" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:09:11 [trace] [system.CModule] Loading "urlManager" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:09:11 [trace] [system.CModule] Loading "cache" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:09:11 [trace] [system.caching.CFileCache] Serving "Yii.CUrlManager.rules" from cache
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:09:11 [trace] [system.CModule] Loading "db" application component
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:09:11 [trace] [system.db.CDbConnection] Opening DB connection
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:09:11 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `language`
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:09:11 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `language`
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:09:11 [trace] [system.db.ar.CActiveRecord] Language.find()
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:09:11 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `language` `t` WHERE code = :code LIMIT 1
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:09:11 [trace] [system.caching.CFileCache] Serving "setting_en" from cache
+in C:\xampp\htdocs\reich\protected\components\Controller.php (43)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:09:11 [trace] [system.CModule] Loading "themeManager" application component
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (545)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:09:11 [trace] [system.CModule] Loading "widgetFactory" application component
+in C:\xampp\htdocs\reich\protected\views\layouts\column2.php (2)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (545)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:09:11 [trace] [system.CModule] Loading "clientScript" application component
+in C:\xampp\htdocs\reich\protected\views\layouts\main.php (36)
+in C:\xampp\htdocs\reich\protected\views\layouts\column2.php (11)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (545)
+2019/09/09 14:09:11 [trace] [system.CModule] Loading "assetManager" application component
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (545)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:09:51 [trace] [system.CModule] Loading "log" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:09:51 [trace] [system.CModule] Loading "request" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:09:51 [trace] [system.CModule] Loading "urlManager" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:09:51 [trace] [system.CModule] Loading "cache" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:09:51 [trace] [system.caching.CFileCache] Serving "Yii.CUrlManager.rules" from cache
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:09:51 [trace] [system.CModule] Loading "db" application component
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:09:51 [trace] [system.db.CDbConnection] Opening DB connection
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:09:51 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `language`
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:09:51 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `language`
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:09:51 [trace] [system.db.ar.CActiveRecord] Language.find()
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:09:51 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `language` `t` WHERE code = :code LIMIT 1
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:09:51 [trace] [system.caching.CFileCache] Serving "setting_en" from cache
+in C:\xampp\htdocs\reich\protected\components\Controller.php (43)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:09:51 [trace] [system.CModule] Loading "themeManager" application component
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (545)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:09:51 [trace] [system.CModule] Loading "widgetFactory" application component
+in C:\xampp\htdocs\reich\protected\views\layouts\column2.php (2)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (545)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:09:51 [trace] [system.CModule] Loading "clientScript" application component
+in C:\xampp\htdocs\reich\protected\views\layouts\main.php (36)
+in C:\xampp\htdocs\reich\protected\views\layouts\column2.php (11)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (545)
+2019/09/09 14:09:51 [trace] [system.CModule] Loading "assetManager" application component
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (545)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:09:53 [trace] [system.CModule] Loading "log" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:09:53 [trace] [system.CModule] Loading "request" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:09:53 [trace] [system.CModule] Loading "urlManager" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:09:53 [trace] [system.CModule] Loading "cache" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:09:53 [trace] [system.caching.CFileCache] Serving "Yii.CUrlManager.rules" from cache
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:09:53 [trace] [system.CModule] Loading "coreMessages" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:09:53 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "asset/images". in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('asset/images')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reich\index.php(21): CApplication->run()
+#3 {main}
+REQUEST_URI=/reich/asset/images/favicon.png
+HTTP_REFERER=http://localhost/reich/home/productdet
+---
+2019/09/09 14:09:53 [trace] [system.CModule] Loading "errorHandler" application component
+2019/09/09 14:09:53 [trace] [system.CModule] Loading "db" application component
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 14:09:53 [trace] [system.db.CDbConnection] Opening DB connection
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 14:09:53 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `language`
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 14:09:53 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `language`
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 14:09:53 [trace] [system.db.ar.CActiveRecord] Language.find()
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 14:09:53 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `language` `t` WHERE code = :code LIMIT 1
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 14:09:53 [trace] [system.caching.CFileCache] Serving "setting_en" from cache
+in C:\xampp\htdocs\reich\protected\components\Controller.php (43)
+2019/09/09 14:09:53 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `prd_product`
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (493)
+2019/09/09 14:09:53 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `prd_product`
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (493)
+2019/09/09 14:09:53 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `prd_category`
+in C:\xampp\htdocs\reich\protected\models\PrdCategory.php (23)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 14:09:53 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `prd_category`
+in C:\xampp\htdocs\reich\protected\models\PrdCategory.php (23)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 14:09:53 [trace] [system.db.ar.CActiveRecord] PrdCategory.findAll()
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 14:09:53 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `prd_category_description`
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 14:09:53 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `prd_category_description`
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 14:09:53 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`id` AS `t0_c0`, `t`.`parent_id` AS `t0_c1`, `t`.`sort` AS `t0_c2`, `t`.`image` AS `t0_c3`, `t`.`image2` AS `t0_c4`, `t`.`image3` AS `t0_c5`, `t`.`type` AS `t0_c6`, `t`.`data` AS `t0_c7`, `description`.`id` AS `t1_c0`, `description`.`category_id` AS `t1_c1`, `description`.`language_id` AS `t1_c2`, `description`.`name` AS `t1_c3`, `description`.`desc` AS `t1_c4`, `description`.`data` AS `t1_c5` FROM `prd_category` `t`  LEFT OUTER JOIN `prd_category_description` `description` ON (`description`.`category_id`=`t`.`id`)  WHERE ((t.parent_id = :parent_id) AND (t.type = :type)) ORDER BY sort ASC LIMIT 3
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 14:09:53 [trace] [system.CModule] Loading "themeManager" application component
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (514)
+2019/09/09 14:09:53 [trace] [system.CModule] Loading "widgetFactory" application component
+in C:\xampp\htdocs\reich\protected\views\layouts\column2.php (2)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (514)
+2019/09/09 14:09:53 [trace] [system.CModule] Loading "clientScript" application component
+in C:\xampp\htdocs\reich\protected\views\layouts\main.php (36)
+in C:\xampp\htdocs\reich\protected\views\layouts\column2.php (11)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (514)
+2019/09/09 14:09:53 [trace] [system.CModule] Loading "assetManager" application component
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (514)
+2019/09/09 14:10:13 [trace] [system.CModule] Loading "log" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:10:13 [trace] [system.CModule] Loading "request" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:10:13 [trace] [system.CModule] Loading "urlManager" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:10:13 [trace] [system.CModule] Loading "cache" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:10:13 [trace] [system.caching.CFileCache] Serving "Yii.CUrlManager.rules" from cache
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:10:13 [trace] [system.CModule] Loading "db" application component
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:10:13 [trace] [system.db.CDbConnection] Opening DB connection
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:10:13 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `language`
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:10:13 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `language`
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:10:13 [trace] [system.db.ar.CActiveRecord] Language.find()
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:10:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `language` `t` WHERE code = :code LIMIT 1
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:10:13 [trace] [system.caching.CFileCache] Serving "setting_en" from cache
+in C:\xampp\htdocs\reich\protected\components\Controller.php (43)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:10:13 [trace] [system.CModule] Loading "themeManager" application component
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (545)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:10:13 [trace] [system.CModule] Loading "widgetFactory" application component
+in C:\xampp\htdocs\reich\protected\views\layouts\column2.php (2)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (545)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:10:13 [trace] [system.CModule] Loading "clientScript" application component
+in C:\xampp\htdocs\reich\protected\views\layouts\main.php (36)
+in C:\xampp\htdocs\reich\protected\views\layouts\column2.php (11)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (545)
+2019/09/09 14:10:13 [trace] [system.CModule] Loading "assetManager" application component
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (545)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:10:14 [trace] [system.CModule] Loading "log" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:10:14 [trace] [system.CModule] Loading "request" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:10:14 [trace] [system.CModule] Loading "urlManager" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:10:14 [trace] [system.CModule] Loading "cache" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:10:14 [trace] [system.caching.CFileCache] Serving "Yii.CUrlManager.rules" from cache
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:10:14 [trace] [system.CModule] Loading "coreMessages" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:10:14 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "asset/images". in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('asset/images')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reich\index.php(21): CApplication->run()
+#3 {main}
+REQUEST_URI=/reich/asset/images/favicon.png
+HTTP_REFERER=http://localhost/reich/home/productdet
+---
+2019/09/09 14:10:14 [trace] [system.CModule] Loading "errorHandler" application component
+2019/09/09 14:10:14 [trace] [system.CModule] Loading "db" application component
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 14:10:14 [trace] [system.db.CDbConnection] Opening DB connection
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 14:10:14 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `language`
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 14:10:14 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `language`
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 14:10:14 [trace] [system.db.ar.CActiveRecord] Language.find()
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 14:10:14 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `language` `t` WHERE code = :code LIMIT 1
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 14:10:14 [trace] [system.caching.CFileCache] Serving "setting_en" from cache
+in C:\xampp\htdocs\reich\protected\components\Controller.php (43)
+2019/09/09 14:10:14 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `prd_product`
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (493)
+2019/09/09 14:10:14 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `prd_product`
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (493)
+2019/09/09 14:10:14 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `prd_category`
+in C:\xampp\htdocs\reich\protected\models\PrdCategory.php (23)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 14:10:14 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `prd_category`
+in C:\xampp\htdocs\reich\protected\models\PrdCategory.php (23)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 14:10:14 [trace] [system.db.ar.CActiveRecord] PrdCategory.findAll()
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 14:10:14 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `prd_category_description`
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 14:10:14 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `prd_category_description`
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 14:10:14 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`id` AS `t0_c0`, `t`.`parent_id` AS `t0_c1`, `t`.`sort` AS `t0_c2`, `t`.`image` AS `t0_c3`, `t`.`image2` AS `t0_c4`, `t`.`image3` AS `t0_c5`, `t`.`type` AS `t0_c6`, `t`.`data` AS `t0_c7`, `description`.`id` AS `t1_c0`, `description`.`category_id` AS `t1_c1`, `description`.`language_id` AS `t1_c2`, `description`.`name` AS `t1_c3`, `description`.`desc` AS `t1_c4`, `description`.`data` AS `t1_c5` FROM `prd_category` `t`  LEFT OUTER JOIN `prd_category_description` `description` ON (`description`.`category_id`=`t`.`id`)  WHERE ((t.parent_id = :parent_id) AND (t.type = :type)) ORDER BY sort ASC LIMIT 3
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 14:10:14 [trace] [system.CModule] Loading "themeManager" application component
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (514)
+2019/09/09 14:10:14 [trace] [system.CModule] Loading "widgetFactory" application component
+in C:\xampp\htdocs\reich\protected\views\layouts\column2.php (2)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (514)
+2019/09/09 14:10:14 [trace] [system.CModule] Loading "clientScript" application component
+in C:\xampp\htdocs\reich\protected\views\layouts\main.php (36)
+in C:\xampp\htdocs\reich\protected\views\layouts\column2.php (11)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (514)
+2019/09/09 14:10:14 [trace] [system.CModule] Loading "assetManager" application component
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (514)
+2019/09/09 14:23:26 [trace] [system.CModule] Loading "log" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:23:26 [trace] [system.CModule] Loading "request" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:23:26 [trace] [system.CModule] Loading "urlManager" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:23:27 [trace] [system.CModule] Loading "cache" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:23:27 [trace] [system.caching.CFileCache] Serving "Yii.CUrlManager.rules" from cache
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:23:28 [trace] [system.CModule] Loading "db" application component
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:23:28 [trace] [system.db.CDbConnection] Opening DB connection
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:23:28 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `language`
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:23:28 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `language`
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:23:28 [trace] [system.db.ar.CActiveRecord] Language.find()
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:23:28 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `language` `t` WHERE code = :code LIMIT 1
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:23:28 [trace] [system.caching.CFileCache] Serving "setting_en" from cache
+in C:\xampp\htdocs\reich\protected\components\Controller.php (43)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:23:28 [trace] [system.CModule] Loading "themeManager" application component
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (545)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:23:28 [trace] [system.CModule] Loading "widgetFactory" application component
+in C:\xampp\htdocs\reich\protected\views\layouts\column2.php (2)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (545)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:23:29 [trace] [system.CModule] Loading "clientScript" application component
+in C:\xampp\htdocs\reich\protected\views\layouts\main.php (36)
+in C:\xampp\htdocs\reich\protected\views\layouts\column2.php (11)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (545)
+2019/09/09 14:23:29 [trace] [system.CModule] Loading "assetManager" application component
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (545)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:24:06 [trace] [system.CModule] Loading "log" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:24:06 [trace] [system.CModule] Loading "request" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:24:06 [trace] [system.CModule] Loading "urlManager" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:24:06 [trace] [system.CModule] Loading "cache" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:24:06 [trace] [system.caching.CFileCache] Serving "Yii.CUrlManager.rules" from cache
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:24:06 [trace] [system.CModule] Loading "db" application component
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:24:06 [trace] [system.db.CDbConnection] Opening DB connection
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:24:06 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `language`
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:24:06 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `language`
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:24:06 [trace] [system.db.ar.CActiveRecord] Language.find()
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:24:06 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `language` `t` WHERE code = :code LIMIT 1
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:24:06 [trace] [system.caching.CFileCache] Serving "setting_en" from cache
+in C:\xampp\htdocs\reich\protected\components\Controller.php (43)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:24:06 [trace] [system.CModule] Loading "themeManager" application component
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (545)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:24:06 [trace] [system.CModule] Loading "widgetFactory" application component
+in C:\xampp\htdocs\reich\protected\views\layouts\column2.php (2)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (545)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:24:06 [trace] [system.CModule] Loading "clientScript" application component
+in C:\xampp\htdocs\reich\protected\views\layouts\main.php (36)
+in C:\xampp\htdocs\reich\protected\views\layouts\column2.php (11)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (545)
+2019/09/09 14:24:06 [trace] [system.CModule] Loading "assetManager" application component
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (545)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:24:07 [trace] [system.CModule] Loading "log" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:24:07 [trace] [system.CModule] Loading "request" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:24:07 [trace] [system.CModule] Loading "urlManager" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:24:07 [trace] [system.CModule] Loading "cache" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:24:07 [trace] [system.caching.CFileCache] Serving "Yii.CUrlManager.rules" from cache
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:24:07 [trace] [system.CModule] Loading "coreMessages" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:24:08 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "asset/images". in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('asset/images')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reich\index.php(21): CApplication->run()
+#3 {main}
+REQUEST_URI=/reich/asset/images/favicon.png
+HTTP_REFERER=http://localhost/reich/home/productdet
+---
+2019/09/09 14:24:08 [trace] [system.CModule] Loading "errorHandler" application component
+2019/09/09 14:24:08 [trace] [system.CModule] Loading "db" application component
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 14:24:08 [trace] [system.db.CDbConnection] Opening DB connection
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 14:24:08 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `language`
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 14:24:08 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `language`
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 14:24:08 [trace] [system.db.ar.CActiveRecord] Language.find()
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 14:24:08 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `language` `t` WHERE code = :code LIMIT 1
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 14:24:08 [trace] [system.caching.CFileCache] Serving "setting_en" from cache
+in C:\xampp\htdocs\reich\protected\components\Controller.php (43)
+2019/09/09 14:24:08 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `prd_product`
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (493)
+2019/09/09 14:24:08 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `prd_product`
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (493)
+2019/09/09 14:24:08 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `prd_category`
+in C:\xampp\htdocs\reich\protected\models\PrdCategory.php (23)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 14:24:08 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `prd_category`
+in C:\xampp\htdocs\reich\protected\models\PrdCategory.php (23)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 14:24:08 [trace] [system.db.ar.CActiveRecord] PrdCategory.findAll()
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 14:24:08 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `prd_category_description`
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 14:24:08 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `prd_category_description`
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 14:24:08 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`id` AS `t0_c0`, `t`.`parent_id` AS `t0_c1`, `t`.`sort` AS `t0_c2`, `t`.`image` AS `t0_c3`, `t`.`image2` AS `t0_c4`, `t`.`image3` AS `t0_c5`, `t`.`type` AS `t0_c6`, `t`.`data` AS `t0_c7`, `description`.`id` AS `t1_c0`, `description`.`category_id` AS `t1_c1`, `description`.`language_id` AS `t1_c2`, `description`.`name` AS `t1_c3`, `description`.`desc` AS `t1_c4`, `description`.`data` AS `t1_c5` FROM `prd_category` `t`  LEFT OUTER JOIN `prd_category_description` `description` ON (`description`.`category_id`=`t`.`id`)  WHERE ((t.parent_id = :parent_id) AND (t.type = :type)) ORDER BY sort ASC LIMIT 3
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 14:24:08 [trace] [system.CModule] Loading "themeManager" application component
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (514)
+2019/09/09 14:24:08 [trace] [system.CModule] Loading "widgetFactory" application component
+in C:\xampp\htdocs\reich\protected\views\layouts\column2.php (2)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (514)
+2019/09/09 14:24:08 [trace] [system.CModule] Loading "clientScript" application component
+in C:\xampp\htdocs\reich\protected\views\layouts\main.php (36)
+in C:\xampp\htdocs\reich\protected\views\layouts\column2.php (11)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (514)
+2019/09/09 14:24:08 [trace] [system.CModule] Loading "assetManager" application component
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (514)
+2019/09/09 14:25:03 [trace] [system.CModule] Loading "log" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:25:03 [trace] [system.CModule] Loading "request" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:25:03 [trace] [system.CModule] Loading "urlManager" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:25:04 [trace] [system.CModule] Loading "cache" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:25:04 [trace] [system.caching.CFileCache] Serving "Yii.CUrlManager.rules" from cache
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:25:04 [trace] [system.CModule] Loading "db" application component
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:25:04 [trace] [system.db.CDbConnection] Opening DB connection
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:25:04 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `language`
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:25:04 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `language`
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:25:04 [trace] [system.db.ar.CActiveRecord] Language.find()
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:25:04 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `language` `t` WHERE code = :code LIMIT 1
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:25:04 [trace] [system.caching.CFileCache] Serving "setting_en" from cache
+in C:\xampp\htdocs\reich\protected\components\Controller.php (43)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:25:04 [trace] [system.CModule] Loading "themeManager" application component
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (545)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:25:04 [trace] [system.CModule] Loading "widgetFactory" application component
+in C:\xampp\htdocs\reich\protected\views\layouts\column2.php (2)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (545)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:25:04 [trace] [system.CModule] Loading "clientScript" application component
+in C:\xampp\htdocs\reich\protected\views\layouts\main.php (36)
+in C:\xampp\htdocs\reich\protected\views\layouts\column2.php (11)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (545)
+2019/09/09 14:25:04 [trace] [system.CModule] Loading "assetManager" application component
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (545)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:25:11 [trace] [system.CModule] Loading "log" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:25:11 [trace] [system.CModule] Loading "request" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:25:11 [trace] [system.CModule] Loading "urlManager" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:25:11 [trace] [system.CModule] Loading "cache" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:25:11 [trace] [system.caching.CFileCache] Serving "Yii.CUrlManager.rules" from cache
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:25:11 [trace] [system.CModule] Loading "coreMessages" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:25:11 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "asset/images". in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('asset/images')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reich\index.php(21): CApplication->run()
+#3 {main}
+REQUEST_URI=/reich/asset/images/favicon.png
+HTTP_REFERER=http://localhost/reich/home/productdet
+---
+2019/09/09 14:25:11 [trace] [system.CModule] Loading "errorHandler" application component
+2019/09/09 14:25:11 [trace] [system.CModule] Loading "db" application component
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 14:25:11 [trace] [system.db.CDbConnection] Opening DB connection
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 14:25:11 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `language`
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 14:25:11 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `language`
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 14:25:11 [trace] [system.db.ar.CActiveRecord] Language.find()
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 14:25:11 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `language` `t` WHERE code = :code LIMIT 1
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 14:25:11 [trace] [system.caching.CFileCache] Serving "setting_en" from cache
+in C:\xampp\htdocs\reich\protected\components\Controller.php (43)
+2019/09/09 14:25:11 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `prd_product`
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (493)
+2019/09/09 14:25:11 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `prd_product`
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (493)
+2019/09/09 14:25:11 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `prd_category`
+in C:\xampp\htdocs\reich\protected\models\PrdCategory.php (23)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 14:25:11 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `prd_category`
+in C:\xampp\htdocs\reich\protected\models\PrdCategory.php (23)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 14:25:11 [trace] [system.db.ar.CActiveRecord] PrdCategory.findAll()
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 14:25:11 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `prd_category_description`
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 14:25:11 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `prd_category_description`
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 14:25:11 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`id` AS `t0_c0`, `t`.`parent_id` AS `t0_c1`, `t`.`sort` AS `t0_c2`, `t`.`image` AS `t0_c3`, `t`.`image2` AS `t0_c4`, `t`.`image3` AS `t0_c5`, `t`.`type` AS `t0_c6`, `t`.`data` AS `t0_c7`, `description`.`id` AS `t1_c0`, `description`.`category_id` AS `t1_c1`, `description`.`language_id` AS `t1_c2`, `description`.`name` AS `t1_c3`, `description`.`desc` AS `t1_c4`, `description`.`data` AS `t1_c5` FROM `prd_category` `t`  LEFT OUTER JOIN `prd_category_description` `description` ON (`description`.`category_id`=`t`.`id`)  WHERE ((t.parent_id = :parent_id) AND (t.type = :type)) ORDER BY sort ASC LIMIT 3
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 14:25:11 [trace] [system.CModule] Loading "themeManager" application component
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (514)
+2019/09/09 14:25:11 [trace] [system.CModule] Loading "widgetFactory" application component
+in C:\xampp\htdocs\reich\protected\views\layouts\column2.php (2)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (514)
+2019/09/09 14:25:11 [trace] [system.CModule] Loading "clientScript" application component
+in C:\xampp\htdocs\reich\protected\views\layouts\main.php (36)
+in C:\xampp\htdocs\reich\protected\views\layouts\column2.php (11)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (514)
+2019/09/09 14:25:11 [trace] [system.CModule] Loading "assetManager" application component
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (514)
+2019/09/09 14:28:14 [trace] [system.CModule] Loading "log" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:28:15 [trace] [system.CModule] Loading "request" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:28:15 [trace] [system.CModule] Loading "urlManager" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:28:15 [trace] [system.CModule] Loading "cache" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:28:16 [trace] [system.caching.CFileCache] Serving "Yii.CUrlManager.rules" from cache
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:28:17 [trace] [system.CModule] Loading "db" application component
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:28:17 [trace] [system.db.CDbConnection] Opening DB connection
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:28:18 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `language`
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:28:18 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `language`
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:28:18 [trace] [system.db.ar.CActiveRecord] Language.find()
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:28:18 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `language` `t` WHERE code = :code LIMIT 1
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:28:18 [trace] [system.caching.CFileCache] Serving "setting_en" from cache
+in C:\xampp\htdocs\reich\protected\components\Controller.php (43)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:28:18 [trace] [system.CModule] Loading "themeManager" application component
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (545)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:28:18 [trace] [system.CModule] Loading "widgetFactory" application component
+in C:\xampp\htdocs\reich\protected\views\layouts\column2.php (2)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (545)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:28:19 [trace] [system.CModule] Loading "clientScript" application component
+in C:\xampp\htdocs\reich\protected\views\layouts\main.php (36)
+in C:\xampp\htdocs\reich\protected\views\layouts\column2.php (11)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (545)
+2019/09/09 14:28:19 [trace] [system.CModule] Loading "assetManager" application component
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (545)
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:28:22 [trace] [system.CModule] Loading "log" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:28:22 [trace] [system.CModule] Loading "request" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:28:22 [trace] [system.CModule] Loading "urlManager" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:28:22 [trace] [system.CModule] Loading "cache" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:28:22 [trace] [system.caching.CFileCache] Serving "Yii.CUrlManager.rules" from cache
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:28:22 [trace] [system.CModule] Loading "coreMessages" application component
+in C:\xampp\htdocs\reich\index.php (21)
+2019/09/09 14:28:22 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "asset/images". in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('asset/images')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reich\index.php(21): CApplication->run()
+#3 {main}
+REQUEST_URI=/reich/asset/images/favicon.png
+HTTP_REFERER=http://localhost/reich/home/productdet
+---
+2019/09/09 14:28:22 [trace] [system.CModule] Loading "errorHandler" application component
+2019/09/09 14:28:22 [trace] [system.CModule] Loading "db" application component
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 14:28:22 [trace] [system.db.CDbConnection] Opening DB connection
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 14:28:22 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `language`
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 14:28:22 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `language`
+in C:\xampp\htdocs\reich\protected\models\Language.php (22)
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 14:28:22 [trace] [system.db.ar.CActiveRecord] Language.find()
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 14:28:22 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `language` `t` WHERE code = :code LIMIT 1
+in C:\xampp\htdocs\reich\protected\components\Controller.php (41)
+2019/09/09 14:28:22 [trace] [system.caching.CFileCache] Serving "setting_en" from cache
+in C:\xampp\htdocs\reich\protected\components\Controller.php (43)
+2019/09/09 14:28:22 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `prd_product`
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (493)
+2019/09/09 14:28:22 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `prd_product`
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (493)
+2019/09/09 14:28:22 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `prd_category`
+in C:\xampp\htdocs\reich\protected\models\PrdCategory.php (23)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 14:28:22 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `prd_category`
+in C:\xampp\htdocs\reich\protected\models\PrdCategory.php (23)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 14:28:22 [trace] [system.db.ar.CActiveRecord] PrdCategory.findAll()
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 14:28:22 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `prd_category_description`
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 14:28:22 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `prd_category_description`
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 14:28:22 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`id` AS `t0_c0`, `t`.`parent_id` AS `t0_c1`, `t`.`sort` AS `t0_c2`, `t`.`image` AS `t0_c3`, `t`.`image2` AS `t0_c4`, `t`.`image3` AS `t0_c5`, `t`.`type` AS `t0_c6`, `t`.`data` AS `t0_c7`, `description`.`id` AS `t1_c0`, `description`.`category_id` AS `t1_c1`, `description`.`language_id` AS `t1_c2`, `description`.`name` AS `t1_c3`, `description`.`desc` AS `t1_c4`, `description`.`data` AS `t1_c5` FROM `prd_category` `t`  LEFT OUTER JOIN `prd_category_description` `description` ON (`description`.`category_id`=`t`.`id`)  WHERE ((t.parent_id = :parent_id) AND (t.type = :type)) ORDER BY sort ASC LIMIT 3
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (506)
+2019/09/09 14:28:22 [trace] [system.CModule] Loading "themeManager" application component
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (514)
+2019/09/09 14:28:22 [trace] [system.CModule] Loading "widgetFactory" application component
+in C:\xampp\htdocs\reich\protected\views\layouts\column2.php (2)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (514)
+2019/09/09 14:28:22 [trace] [system.CModule] Loading "clientScript" application component
+in C:\xampp\htdocs\reich\protected\views\layouts\main.php (36)
+in C:\xampp\htdocs\reich\protected\views\layouts\column2.php (11)
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (514)
+2019/09/09 14:28:22 [trace] [system.CModule] Loading "assetManager" application component
+in C:\xampp\htdocs\reich\protected\controllers\HomeController.php (514)

@@ -536,12 +536,12 @@ class HomeController extends Controller
 		));
 	}
 
-	public function actionProducthwDet()
+	public function actionProductDet()
 	{
 		$this->pageTitle = 'About Us - '.$this->pageTitle;
 		$this->layout='//layouts/column2';
 
-		$this->render('product_houseware_detail', array(	
+		$this->render('product_details', array(	
 		));
 	}
 
