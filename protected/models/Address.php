@@ -41,11 +41,11 @@ class Address extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nama, kota, prov, lat, lng, type', 'required'),
+			array('nama, kota, prov, type', 'required'),
 			array('nama, kota', 'length', 'max'=>225),
 			array('address_1, address_2, telp, fax, email', 'length', 'max'=>100),
 			
-			array('sort, link', 'safe'),
+			array('sort, link, lat, lng', 'safe'),
 
 			// array('image', 'file', 'types'=>'jpg, gif, png', 'allowEmpty'=>FALSE, 'on'=>'insert', 'except'=>array('createTemp', 'copy')),
 			// array('image', 'file', 'types'=>'jpg, gif, png', 'allowEmpty'=>TRUE, 'on'=>'update', 'except'=>array('createTemp', 'copy')),

@@ -1,13 +1,13 @@
 <?php
 $this->breadcrumbs=array(
 	'setting'=>array('/admin/setting/index'),
-	'Contact Us',
+	'Hubungi Kami',
 );
 
 $this->pageHeader=array(
 	'icon'=>'fa fa-phone',
 	'title'=>'Setting',
-	'subtitle'=>'Contact Us',
+	'subtitle'=>'Hubungi Kami',
 );
 ?>
 <?php $form=$this->beginWidget('bootstrap.widgets.TbActiveForm',array(
@@ -77,19 +77,6 @@ $this->pageHeader=array(
 					</div>
 				<?php endforeach ?>
 
-				<?php $type = 'contact_hero_subtitle' ?>
-				<?php Common::createSetting($type, 'Sub Title', 'text', 'y') ?>
-				<?php foreach (Language::model()->getLanguage() as $key => $value): ?>
-					<div class="pj-multilang-wrap myLanguage control-group" style="display: <?php if ($value->code==$this->setting['lang_deff']): ?>block<?php else: ?>none<?php endif ?>;" data-id="<?php echo $value->id ?>">
-						<label class="control-label required" for="Setting_<?php echo $type ?>_<?php echo $value->code ?>"><?php echo $model[$type]['data']->label ?><span class="required"></span></label>
-						<textarea id="Setting_<?php echo $type ?>_<?php echo $value->code ?>" name="Setting[<?php echo $type ?>][<?php echo $value->code ?>]" class="span11 redactor" rows="4"><?php echo $model[$type]['desc'][$value->code]->value ?></textarea>
-
-					    <span class="pj-multilang-input"><img src="<?php echo Yii::app()->baseUrl.'/asset/backend/language/'.$value->code.'.png' ?>"></span>
-					    <span class="help-inline _em_" style="display: none;">Please correct the error</span>
-					</div>
-				<?php endforeach ?>
-				
-
 				<div class="divider10"></div>
 				<?php $this->widget('bootstrap.widgets.TbButton', array(
 					'buttonType'=>'submit',
@@ -118,24 +105,11 @@ $this->pageHeader=array(
 					    <span class="help-inline _em_" style="display: none;">Please correct the error</span>
 					</div>
 				<?php endforeach ?>
-				<div class="divider10"></div>
-
-				<?php $type = 'contact_feature_image' ?>
-				<?php Common::createSetting($type, 'Picture', 'image', 'n') ?>
-				<label for="Setting_<?php echo $model[$type]['data']->name ?>" class="control-label required"><?php echo $model[$type]['data']->label ?><span class="required"></span></label>
-				<?php echo CHtml::fileField('Setting['.$model[$type]['data']->name.']', $model[$type]['data']->value, array('class'=>'span12')) ?>
-				<p class="help-block">NOTE: Picture landscape maxheight 332px.</p>
-				<?php if ($model[$type]['data']->value): ?>
-				<div style="">
-				<img style="height: auto; max-width: 300px;" src="<?php echo Yii::app()->baseUrl; ?>/images/static/<?php echo $model[$type]['data']->value; ?>" alt="">
-				</div>
-				<div class="clearfix" style="height: 15px;"></div>
-				<div class="clearfix" style="height: 1px;"></div>
-				<?php endif ?>
 
 				<div class="divider10"></div>
+
 				<?php $type = 'contact_content2' ?>
-				<?php Common::createSetting($type, 'Content', 'text', 'y') ?>
+				<?php Common::createSetting($type, 'Content Address', 'text', 'y') ?>
 				<?php foreach (Language::model()->getLanguage() as $key => $value): ?>
 					<div class="pj-multilang-wrap myLanguage control-group" style="display: <?php if ($value->code==$this->setting['lang_deff']): ?>block<?php else: ?>none<?php endif ?>;" data-id="<?php echo $value->id ?>">
 						<label class="control-label required" for="Setting_<?php echo $type ?>_<?php echo $value->code ?>"><?php echo $model[$type]['data']->label ?><span class="required"></span></label>
@@ -165,13 +139,18 @@ $this->pageHeader=array(
 				<?php endforeach ?>
 			</div>
 			<div class="divider5"></div>
-				<?php $type = 'contact1_links_map' ?>
+				<?php /*$type = 'contact1_links_map' ?>
 				<?php Common::createSetting($type, 'Googles Map', 'text', 'n') ?>
 				<label for="Setting_<?php echo $model[$type]['data']->name ?>" class="control-label required"><?php echo $model[$type]['data']->label ?><span class="required"></span></label>
-				<?php echo CHtml::textField('Setting['.$model[$type]['data']->name.']', $model[$type]['data']->value, array('class'=>'span12')) ?>
+				<?php echo CHtml::textField('Setting['.$model[$type]['data']->name.']', $model[$type]['data']->value, array('class'=>'span12')) */ ?>
 
 				<?php $type = 'contact_phone' ?>
 				<?php Common::createSetting($type, 'Phone', 'text', 'n') ?>
+				<label for="Setting_<?php echo $model[$type]['data']->name ?>" class="control-label required"><?php echo $model[$type]['data']->label ?><span class="required"></span></label>
+				<?php echo CHtml::textField('Setting['.$model[$type]['data']->name.']', $model[$type]['data']->value, array('class'=>'span12')) ?>
+
+				<?php $type = 'email' ?>
+				<?php Common::createSetting($type, 'Form Email', 'text', 'n') ?>
 				<label for="Setting_<?php echo $model[$type]['data']->name ?>" class="control-label required"><?php echo $model[$type]['data']->label ?><span class="required"></span></label>
 				<?php echo CHtml::textField('Setting['.$model[$type]['data']->name.']', $model[$type]['data']->value, array('class'=>'span12')) ?>
 
@@ -180,8 +159,8 @@ $this->pageHeader=array(
 				<label for="Setting_<?php echo $model[$type]['data']->name ?>" class="control-label required"><?php echo $model[$type]['data']->label ?><span class="required"></span></label>
 				<?php echo CHtml::textField('Setting['.$model[$type]['data']->name.']', $model[$type]['data']->value, array('class'=>'span12')) ?>
 
-				<?php $type = 'email' ?>
-				<?php Common::createSetting($type, 'Form Email', 'text', 'n') ?>
+				<?php $type = 'contact_opening_time' ?>
+				<?php Common::createSetting($type, 'Opening Time', 'text', 'n') ?>
 				<label for="Setting_<?php echo $model[$type]['data']->name ?>" class="control-label required"><?php echo $model[$type]['data']->label ?><span class="required"></span></label>
 				<?php echo CHtml::textField('Setting['.$model[$type]['data']->name.']', $model[$type]['data']->value, array('class'=>'span12')) ?>
 
@@ -201,16 +180,17 @@ $this->pageHeader=array(
 				<?php Common::createSetting($type, 'URL Facebook', 'text', 'n') ?>
 				<label for="Setting_<?php echo $model[$type]['data']->name ?>" class="control-label required"><?php echo $model[$type]['data']->label ?><span class="required"></span></label>
 				<?php echo CHtml::textField('Setting['.$model[$type]['data']->name.']', $model[$type]['data']->value, array('class'=>'span12')) ?>
+				
+				<?php $type = 'url_instagram' ?>
+				<?php Common::createSetting($type, 'URL Instagram', 'text', 'n') ?>
+				<label for="Setting_<?php echo $model[$type]['data']->name ?>" class="control-label required"><?php echo $model[$type]['data']->label ?><span class="required"></span></label>
+				<?php echo CHtml::textField('Setting['.$model[$type]['data']->name.']', $model[$type]['data']->value, array('class'=>'span12')) ?>
 
 				<?php /*$type = 'url_twitter' ?>
 				<?php Common::createSetting($type, 'URL Twitter', 'text', 'n') ?>
 				<label for="Setting_<?php echo $model[$type]['data']->name ?>" class="control-label required"><?php echo $model[$type]['data']->label ?><span class="required"></span></label>
 				<?php echo CHtml::textField('Setting['.$model[$type]['data']->name.']', $model[$type]['data']->value, array('class'=>'span12'));*/ ?>
 
-				<?php $type = 'url_instagram' ?>
-				<?php Common::createSetting($type, 'URL Instagram', 'text', 'n') ?>
-				<label for="Setting_<?php echo $model[$type]['data']->name ?>" class="control-label required"><?php echo $model[$type]['data']->label ?><span class="required"></span></label>
-				<?php echo CHtml::textField('Setting['.$model[$type]['data']->name.']', $model[$type]['data']->value, array('class'=>'span12')) ?>
 				
 				<?php /*$type = 'url_instagram_2' ?>
 				<?php Common::createSetting($type, 'URL Instagram 2', 'text', 'n') ?>

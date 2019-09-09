@@ -118,7 +118,7 @@ $this->breadcrumbs=array(
                 <div class="alert alert-block">
                       <button data-dismiss="alert" class="close" type="button">&times;</button>
                       <p style="margin: 8px 0">Download User Guide</p>
-                      <p style="margin: 8px 0">Lihat User Guide <a href="<?php echo Yii::app()->baseUrl.'/images/user-guide.pdf' ?>">di sini</a> </p>
+                      <!-- <p style="margin: 8px 0">Lihat User Guide <a href="<?php echo Yii::app()->baseUrl.'/images/user-guide.pdf' ?>">di sini</a> </p> -->
                 </div>
                 
                 <br />

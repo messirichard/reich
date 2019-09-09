@@ -10,7 +10,7 @@ $this->pageHeader=array(
 );
 
 $this->menu=array(
-	array('label'=>'Add PDF', 'icon'=>'plus-sign','url'=>array('create')),
+	// array('label'=>'Add PDF', 'icon'=>'plus-sign','url'=>array('create')),
 );
 ?>
 
@@ -36,11 +36,12 @@ $this->menu=array(
 		// 'id',
 		// 'ib_bank',
 		'nama',
-		'sort',
+		// 'sort',
 		'file',
 		array(
 			'class'=>'bootstrap.widgets.TbButtonColumn',
-			'template'=>'{update} &nbsp; {delete}',
+			// 'template'=>'{update} &nbsp; {delete}',
+			'template'=>'{update}',
 			// 'deleteButtonUrl'=>'CHtml::normalizeUrl(array("delete", "id"=>$data->id, "category"=>"'.$_GET['category'].'"))',
 			// 'updateButtonUrl'=>'CHtml::normalizeUrl(array("update", "id"=>$data->id, "category"=>"'.$_GET['category'].'"))',
 		),

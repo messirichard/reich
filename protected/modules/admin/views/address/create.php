@@ -1,17 +1,17 @@
 <?php
 $this->breadcrumbs=array(
-	'Dealer Shop Location'=>array('index'),
+	'Store Location'=>array('index'),
 	'Add',
 );
 
 $this->pageHeader=array(
 	'icon'=>'fa fa-bank',
-	'title'=>'Dealer Shop Location',
-	'subtitle'=>'Add Dealer Shop Location',
+	'title'=>'Store Location',
+	'subtitle'=>'Add Store Location',
 );
 
 $this->menu=array(
-	array('label'=>'List Dealer Shop Location', 'icon'=>'th-list','url'=>array('index')),
+	array('label'=>'List Store Location', 'icon'=>'th-list','url'=>array('index')),
 );
 ?>
 

@@ -5,5 +5,5 @@ $dt_DB = array();
  		'server' => 'localhost',
  		'username' => 'root',
  		'password' => '',
- 		'database' => 'dsgm', 		
+ 		'database' => 'reich', 		
 	);

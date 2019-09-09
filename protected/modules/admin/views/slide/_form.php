@@ -156,7 +156,7 @@
 		<div class="divider15"></div>
 		<div class="widgetbox block-rightcontent">                        
 		    <div class="headtitle">
-		        <h4 class="widgettitle">Gambar Utama</h4>
+		        <h4 class="widgettitle">Picture Primary</h4>
 		    </div>
 		    <div class="widgetcontent">
 				<?php echo $form->fileFieldRow($model,'image',array(
@@ -167,21 +167,19 @@
 		    </div>
 		</div>
 		
-		<?php /*
 		<div class="divider15"></div>
 		<div class="widgetbox block-rightcontent">                        
 		    <div class="headtitle">
-		        <h4 class="widgettitle">Gambar Responsive</h4>
+		        <h4 class="widgettitle">Picture Mobile</h4>
 		    </div>
 		    <div class="widgetcontent">
 				<?php echo $form->fileFieldRow($model,'image2',array(
-				'hint'=>'<b>Note:</b> Image size is 800 x 900px. Larger image will be automatically cropped.', 'style'=>"width: 100%")); ?>
+				'hint'=>'<b>Note:</b> Image size is 774 x 867px. Larger image will be automatically cropped.', 'style'=>"width: 100%")); ?>
 				<?php if ($model->scenario == 'update'): ?>
-				<img style="width: 100%;" src="<?php echo Yii::app()->baseUrl.ImageHelper::thumb(800,900, '/images/slide/'.$model->image2 , array('method' => 'adaptiveResize', 'quality' => '90')) ?>"/>
+				<img style="width: 100%;" src="<?php echo Yii::app()->baseUrl.ImageHelper::thumb(774,867, '/images/slide/'.$model->image2 , array('method' => 'adaptiveResize', 'quality' => '90')) ?>"/>
 				<?php endif; ?>
 		    </div>
 		</div>
-		*/ ?>
 
 	</div>
 </div>

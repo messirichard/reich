@@ -342,7 +342,10 @@ jQuery(document).ready(function($) {
 						<?php echo $form->textFieldRow($model,'harga',array('class'=>'input-block-level')); ?>
 					</div>
 					<div class="span3">
-						<?php echo $form->textFieldRow($model,'harga_coret',array('class'=>'input-block-level')); ?>
+						<?php echo $form->textFieldRow($model,'data[qty_pack]',array('class'=>'input-block-level')); ?>
+					</div>
+					<div class="span3">
+						<?php echo $form->textFieldRow($model,'data[satuan_pack]',array('class'=>'input-block-level')); ?>
 					</div>
 					<?php /*
 					<div class="span3">
@@ -353,10 +356,10 @@ jQuery(document).ready(function($) {
 				</div>
 				<div class="row-fluid">
 					<div class="span3">
-						<?php echo $form->textFieldRow($model,'data[warna]',array('class'=>'input-block-level')); ?>
+						<?php echo $form->textFieldRow($model,'data[material]',array('class'=>'input-block-level')); ?>
 					</div>
 					<div class="span3">
-						<?php echo $form->textFieldRow($model,'data[kemasan]',array('class'=>'input-block-level')); ?>
+						<?php echo $form->textFieldRow($model,'data[size]',array('class'=>'input-block-level')); ?>
 					</div>
 					
 					<div class="span6">

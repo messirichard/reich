@@ -93,9 +93,9 @@
 			// 	$res_product[$value->id] = $value->description->name;
 			// }
 			$res_product = array(
-							1=>'Tips & Trik',
+							// 1=>'Tips & Trik',
 							2=>'Artikel',
-							3=>'Berita',
+							3=>'Event',
 							);
 			?>
 			<?php echo $form->textFieldRow($model, 'link', array('class'=>'form-control span6',)); ?>
@@ -104,7 +104,7 @@
 
 
 			<?php echo $form->fileFieldRow($model,'image',array(
-			'hint'=>'<b>Note:</b> Ukuran gambar adalah 1080 x 725px. Gambar yang lebih besar akan ter-crop otomatis, tolong upload foto ukuran horizontal')); ?>
+			'hint'=>'<b>Note:</b> Ukuran gambar adalah 907 x 590px. Gambar yang lebih besar akan ter-crop otomatis, tolong upload foto ukuran horizontal')); ?>
 			<?php if ($model->scenario == 'update'): ?>
 			<div class="control-group">
 				<label class="control-label">&nbsp;</label>

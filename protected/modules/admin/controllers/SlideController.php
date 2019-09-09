@@ -93,12 +93,21 @@ class SlideController extends ControllerAdmin
 
 			$image = CUploadedFile::getInstance($model,'image');
 			$model->image = substr(md5(time()),0,5).'-'.$image->name;
+			
+			$image2 = CUploadedFile::getInstance($model,'image2');
+			if ($image2->name != '') {
+				$model->image2 = substr(md5(time()),0,5).'-'.$image2->name;
+			}
 
 			if($model->validate() AND $valid){
 				$transaction=$model->dbConnection->beginTransaction();
 				try
 				{
 					$image->saveAs(Yii::getPathOfAlias('webroot').'/images/slide/'.$model->image);
+					if ($image2->name != '') {
+						$image2->saveAs(Yii::getPathOfAlias('webroot').'/images/slide/'.$model->image2);
+					}
+
 					// $model->date_input = date("Y-m-d H:i:s");
 					$model->date_update = date("Y-m-d H:i:s");
 					$model->insert_by = Yii::app()->user->name;
@@ -161,11 +170,11 @@ class SlideController extends ControllerAdmin
 		if(isset($_POST['Slide']))
 		{
 			$image = $model->image;//mengamankan nama file
-			// $image2 = $model->image2;//mengamankan nama file
+			$image2 = $model->image2;//mengamankan nama file
 			// $file = $model->file;//mengamankan nama file
 			$model->attributes=$_POST['Slide'];//setting semua nilai
 			$model->image = $image;//mengembalikan nama file
-			// $model->image2 = $image2;//mengembalikan nama file
+			$model->image2 = $image2;//mengembalikan nama file
 
 			unset($modelDesc);
 			$valid=true;
@@ -184,10 +193,10 @@ class SlideController extends ControllerAdmin
 				$model->image = substr(md5(time()),0,5).'-'.$image->name;
 			}
 
-			// $image2 = CUploadedFile::getInstance($model,'image2');
-			// if ($image2->name != '') {
-			// 	$model->image2 = substr(md5(time()),0,5).'-'.$image2->name;
-			// }
+			$image2 = CUploadedFile::getInstance($model,'image2');
+			if ($image2->name != '') {
+				$model->image2 = substr(md5(time()),0,5).'-'.$image2->name;
+			}
 
 			// $model->image = $session['upload_foto_edit'][1];
 
@@ -200,9 +209,9 @@ class SlideController extends ControllerAdmin
 					if ($image->name != '') {
 						$image->saveAs(Yii::getPathOfAlias('webroot').'/images/slide/'.$model->image);
 					}
-					// if ($image2->name != '') {
-					// 	$image2->saveAs(Yii::getPathOfAlias('webroot').'/images/slide/'.$model->image2);
-					// }
+					if ($image2->name != '') {
+						$image2->saveAs(Yii::getPathOfAlias('webroot').'/images/slide/'.$model->image2);
+					}
 
 					$model->date_update = date("Y-m-d H:i:s");
 					$model->last_update_by = Yii::app()->user->name;

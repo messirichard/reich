@@ -915,11 +915,16 @@ class ProductController extends ControllerAdmin
 		}
 	}
 
+	
 	public function actionCSV()
 	{
-		$names_excel = 'products_exl.csv';
+		echo "done import csv to db";
+		exit;
+		set_time_limit(0);
+		ini_set('memory_limit', '2056M');
+
+		$names_excel = 'excel-luckystar.csv';
 		// if ($_GET['file'] != '') {
-			set_time_limit(0);
 
 			if (($handle = fopen(Yii::getPathOfAlias('webroot').'/images/csv/'.urldecode($names_excel), "r")) !== FALSE) {
 				$row = 0;
@@ -935,26 +940,33 @@ class ProductController extends ControllerAdmin
 			    unset($dataCsv[0]);
 			}
 			
-			echo "<pre>";
-			print_r($dataCsv);
-			echo "</pre>";
-			exit;
+			// preg_replace('/\s+/', ' ', $sentence)
+			// echo "<pre>";
+			// print_r($dataCsv);
+			// echo "</pre>";
+			// exit;
 
 			foreach ($dataCsv as $key => $value) {
+				if ($value[0] != '') {
+					$dataCsv = new PrdExcel;
+					// $inp_nopen = (int) filter_var(trim($value[0]), FILTER_SANITIZE_NUMBER_INT);
+					// $dataCsv->nama_produk = $value[0];
+					// $dataCsv->kategori = $value[1];
+					// $dataCsv->file_gambar = $value[2];
+					// $dataCsv->harga = $value[3];
+					// $dataCsv->label_warna = $value[4];
+					// $dataCsv->label_kemasan = $value[5];
+					// $dataCsv->deskripsi = $value[6];
+					// $dataCsv->status = $value[7];
+					// $dataCsv->onsale = $value[8];
+					// $dataCsv->trending = $value[9];
+					$dataCsv->kategori = $value[0];
+					$dataCsv->nama_produk = preg_replace('/\s+/', ' ', $value[1]);
+					$dataCsv->kode = $value[2];
+					$dataCsv->label_size = $value[3];
 
-				$dataCsv = new PrdExcel;
-				// $inp_nopen = (int) filter_var(trim($value[0]), FILTER_SANITIZE_NUMBER_INT);
-				$dataCsv->nama_produk = $value[0];
-				$dataCsv->kategori = $value[1];
-				$dataCsv->file_gambar = $value[2];
-				$dataCsv->harga = $value[3];
-				$dataCsv->label_warna = $value[4];
-				$dataCsv->label_kemasan = $value[5];
-				$dataCsv->deskripsi = $value[6];
-				$dataCsv->status = $value[7];
-				$dataCsv->onsale = $value[8];
-				$dataCsv->trending = $value[9];
-				$dataCsv->save(false);
+					$dataCsv->save(false);
+				}
 			}
 			
 			echo "Sukses input Data";
@@ -971,24 +983,42 @@ class ProductController extends ControllerAdmin
 
 	public function actionProductCSV()
 	{
-		// echo "Csv products done";
-		// exit;
+		echo "Csv products done";
+		exit;
 		// $criteria = new CDbCriteria;
 		// $criteria->addCondition('status = "1"');
 		// $criteria->group = 'kategori';
 		$data = PrdExcel::model()->findAll();
 
 		// foreach ($data as $key => $value) {
-		// 	$categorys = new PrdCategory;
+		// 	$criteria = new CDbCriteria;
+		// 	$criteria->with = array('description');
+		// 	$criteria->addCondition('description.name = :names');
+		// 	$criteria->params[':names'] = $value->kategori;
+		// 	$criteria->addCondition('t.type = :type');
+		// 	$criteria->params[':type'] = 'category';
+		// 	$criteria->addCondition('description.language_id = :language_id');
+		// 	$criteria->params[':language_id'] = 2;
+		// 	$categorys = PrdCategory::model()->find($criteria);
+
+		// 	if ( count($categorys) <= 0 ) {
+		// 		$categorys = new PrdCategory;
+		// 		$catDesc = new PrdCategoryDescription;
+		// 	}else{
+		// 		$catDesc = PrdCategoryDescription::model()->find('t.category_id = :ids', array(':ids'=> $categorys->id));
+		// 	}
+
 		// 	$categorys->type = 'category';
 		// 	$categorys->save(false);
 
-		// 	$catDesc = new PrdCategoryDescription;
 		// 	$catDesc->category_id = $categorys->id;
 		// 	$catDesc->language_id = 2;
 		// 	$catDesc->name = $value->kategori;
 		// 	$catDesc->save(false);
 		// }
+		// echo "save categorys";
+		// exit;
+
 		// $product->tag = 'category=Granite Tile, category=12,';
 		// $product->filter = 'category=Granite Tile||category=12||';
 
@@ -997,21 +1027,23 @@ class ProductController extends ControllerAdmin
 
 			$product = new PrdProduct;
 			$product->category_id = $value->kategori;
-			$product->image = $value->file_gambar;
+			$product->image = '';
 			$product->date_input = date("Y-m-d H:i:s");
 			$product->date_update = date("Y-m-d H:i:s");
 			
 			// if ($value->harga == '') {
-			$product->harga = $value->harga;
+			$product->harga = 0;
 			$product->harga_coret = 0;
 			// }
 
-			$product->kode = 'ARS-'. mt_rand(10, 750);
+			// $product->kode = 'ARS-'. mt_rand(10, 750);
+			$product->kode = $value->kode;
 			$product->data = serialize(array(
-				'warna' => $value->label_warna,
-				'kemasan' => $value->label_kemasan,
+				// 'warna' => $value->label_warna,
+				// 'kemasan' => $value->label_kemasan,
+				 	'size' => $value->label_size,
 			));
-			$product->status = $value->status;
+			$product->status = 1;
 			$product->onsale = $value->onsale;
 			$product->rekomendasi = $value->trending;
 			$product->save(false);
@@ -1033,7 +1065,6 @@ class ProductController extends ControllerAdmin
 
 			$dataTag[] = 'category='.$find_category->id;
 			$dataTag[] = 'category='.$find_category->description->name;
-
 
 			$product->tag = implode(', ', $dataTag).',';
 			$product->filter = implode('||', $dataTag).'||';

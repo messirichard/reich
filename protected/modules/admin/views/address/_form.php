@@ -56,94 +56,100 @@
 			
 			<?php echo $form->textFieldRow($model,'nama',array('class'=>'span12')); ?>
 
-			<?php echo $form->textFieldRow($model,'link',array('class'=>'span12', 'hint'=>'Example: http://www.urldealer.com/')); ?>
+			<?php // echo $form->textFieldRow($model,'link',array('class'=>'span12', 'hint'=>'Example: http://www.urldealer.com/')); ?>
 
-			<?php /*echo $form->dropDownListRow($model,'type', array(
-				'dealer'=>'Dealer',
-				// 'asp'=>'ASP',
-			),array('class'=>'span12'));*/ ?>
+			<?php echo $form->dropDownListRow($model,'type', array(
+				'store-showroom'=>'Store Showroom',
+				'product-display'=>'Product Display',
+			), array('class'=>'span12')); ?>
 			
-			<?php echo $form->textFieldRow($model,'address_1',array('class'=>'span12')); ?>
+			<?php echo $form->textFieldRow($model,'address_1', array('class'=>'span12')); ?>
 
-			<?php echo $form->textFieldRow($model,'address_2',array('class'=>'span12')); ?>
+			<?php echo $form->textFieldRow($model,'address_2', array('class'=>'span12')); ?>
 
-			<?php echo $form->textFieldRow($model,'telp',array('class'=>'span12')); ?>
+			<?php echo $form->textFieldRow($model,'telp', array('class'=>'span12')); ?>
 
-			<?php echo $form->textFieldRow($model,'fax',array('class'=>'span12')); ?>
+			<?php echo $form->textFieldRow($model,'fax', array('class'=>'span12')); ?>
 
-			<?php echo $form->textFieldRow($model,'email',array('class'=>'span12')); ?>
+			<?php echo $form->textFieldRow($model,'email', array('class'=>'span12')); ?>
 			
-			<?php echo $form->textFieldRow($model,'sort',array('class'=>'span12')); ?>
+			<?php echo $form->textFieldRow($model,'sort', array('class'=>'span12')); ?>
 
-			<?php echo $form->textFieldRow($model,'latlng',array('class'=>'span12')); ?>
+			<?php // echo $form->textFieldRow($model,'latlng',array('class'=>'span12')); ?>
 
 <!-- <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js"></script> -->
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnVYV9PU2hDS4GMEJ_TZ2Hy-zy1iXfQX0&callback=initialize"></script>
-<div id="map_canvas" style="width:100%; height:400px;"></div>
+
+<!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnVYV9PU2hDS4GMEJ_TZ2Hy-zy1iXfQX0&callback=initialize"></script>
+<div id="map_canvas" style="width:100%; height:400px;"></div> -->
 <p>Drag and drop pin, untuk memindahkan lokasi</p>
 <div class="height-20"></div>
 <script type="text/javascript">
-var map;
-var marker;
-function initialize() {
-  <?php if ($model->scenario == 'update' AND $model->lat != 0): ?>
-  var myLatlng = new google.maps.LatLng(<?php echo $model->lat ?>,<?php echo $model->lng ?>);
-  var myOptions = {
-     zoom: 17,
-     center: myLatlng,
-     mapTypeId: google.maps.MapTypeId.ROADMAP
-     }
-  <?php else: ?>
-  var myLatlng = new google.maps.LatLng(-7.355905, 109.987140);
-  var myOptions = {
-     zoom: 6,
-     center: myLatlng,
-     mapTypeId: google.maps.MapTypeId.ROADMAP
-     }
-  <?php endif ?>
+// var map;
+// var marker;
+// function initialize() {
+//   <?php if ($model->scenario == 'update' AND $model->lat != 0): ?>
+//   var myLatlng = new google.maps.LatLng(<?php echo $model->lat ?>,<?php echo $model->lng ?>);
+//   var myOptions = {
+//      zoom: 17,
+//      center: myLatlng,
+//      mapTypeId: google.maps.MapTypeId.ROADMAP
+//      }
+//   <?php else: ?>
+//   var myLatlng = new google.maps.LatLng(-7.355905, 109.987140);
+//   var myOptions = {
+//      zoom: 6,
+//      center: myLatlng,
+//      mapTypeId: google.maps.MapTypeId.ROADMAP
+//      }
+//   <?php endif ?>
 
 
-  map = new google.maps.Map(document.getElementById("map_canvas"), myOptions); 
+//   map = new google.maps.Map(document.getElementById("map_canvas"), myOptions); 
 
-  marker = new google.maps.Marker({
-    draggable: true,
-    position: myLatlng, 
-    map: map,
-  title: "Your location"
-  });
+//   marker = new google.maps.Marker({
+//     draggable: true,
+//     position: myLatlng, 
+//     map: map,
+//   title: "Your location"
+//   });
 
-  google.maps.event.addListener(marker, 'dragend', function (event) {
-      document.getElementById("Address_lat").value = this.getPosition().lat();
-      document.getElementById("Address_lng").value = this.getPosition().lng();
-      document.getElementById("Address_latlng").value = this.getPosition().lat() + ', ' +this.getPosition().lng();
-  });
+//   google.maps.event.addListener(marker, 'dragend', function (event) {
+//       document.getElementById("Address_lat").value = this.getPosition().lat();
+//       document.getElementById("Address_lng").value = this.getPosition().lng();
+//       document.getElementById("Address_latlng").value = this.getPosition().lat() + ', ' +this.getPosition().lng();
+//   });
 
-	google.maps.event.addDomListener(document.getElementById("Address_latlng"), 'change', function() {
-		position = document.getElementById("Address_latlng").value.split(',');
-		// alert(position[0]);
-	      var pos = {
-	        lat: position[0],
-	        lng: position[1]
-	      };
-	    var myLatlng = new google.maps.LatLng(position[0],position[1]);
-		map.setCenter(myLatlng);
-		// setMapOnAll(null);
-		marker.setMap(null);
-		marker = null;
-		marker = new google.maps.Marker({
-	        draggable: true,
-	        position: myLatlng, 
-	        map: map,
-	        title: "Your location"
-	    });
-	    marker.setMap(map);
-		  google.maps.event.addListener(marker, 'dragend', function (event) {
-		      document.getElementById("Address_lat").value = this.getPosition().lat();
-		      document.getElementById("Address_lng").value = this.getPosition().lng();
-		      document.getElementById("Address_latlng").value = this.getPosition().lat() + ', ' +this.getPosition().lng();
-		  });
+// 	google.maps.event.addDomListener(document.getElementById("Address_latlng"), 'change', function() {
+// 		position = document.getElementById("Address_latlng").value.split(',');
+// 		// alert(position[0]);
+// 	      var pos = {
+// 	        lat: position[0],
+// 	        lng: position[1]
+// 	      };
+// 	    var myLatlng = new google.maps.LatLng(position[0],position[1]);
+// 		map.setCenter(myLatlng);
+// 		// setMapOnAll(null);
+// 		marker.setMap(null);
+// 		marker = null;
+// 		marker = new google.maps.Marker({
+// 	        draggable: true,
+// 	        position: myLatlng, 
+// 	        map: map,
+// 	        title: "Your location"
+// 	    });
+// 	    marker.setMap(map);
+// 		  google.maps.event.addListener(marker, 'dragend', function (event) {
+// 		      document.getElementById("Address_lat").value = this.getPosition().lat();
+// 		      document.getElementById("Address_lng").value = this.getPosition().lng();
+// 		      document.getElementById("Address_latlng").value = this.getPosition().lat() + ', ' +this.getPosition().lng();
+// 		  });
 
-	});
+// 	});
+	// hide temporary
+
+
+
+
 
 
   // if (navigator.geolocation) {

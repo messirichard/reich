@@ -1,16 +1,16 @@
 <?php
 $this->breadcrumbs=array(
-	'Dealer Shop Location',
+	'Store Location',
 );
 
 $this->pageHeader=array(
 	'icon'=>'fa fa-bank',
-	'title'=>'Dealer Shop Location',
-	'subtitle'=>'Data Dealer Shop Location',
+	'title'=>'Store Location',
+	'subtitle'=>'Data Store Location',
 );
 
 $this->menu=array(
-	array('label'=>'Add Dealer Shop Location', 'icon'=>'plus-sign','url'=>array('create')),
+	array('label'=>'Add Store Location', 'icon'=>'plus-sign','url'=>array('create')),
 );
 ?>
 
@@ -60,7 +60,7 @@ $this->menu=array(
 <?php $this->endWidget(); ?>
 
 
-<h1>Dealer Shop Location</h1>
+<h1>Store Location</h1>
 <?php $this->widget('bootstrap.widgets.TbGridView',array(
 	'id'=>'bank-grid',
 	'dataProvider'=>$model->search(),
