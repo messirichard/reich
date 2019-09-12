@@ -43,13 +43,12 @@
         <li>&nbsp;</li>
         <li class="dropdown"><a href="#"><span class="fa fa-folder"></span> <?php echo Tt::t('admin', 'Static Page') ?></a>
             <ul>
-                <!-- <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/static/home')); ?>">Homepage</a></li> -->
-                <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/static/about')); ?>">Profil</a></li>
+                <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/static/home')); ?>">Homepage</a></li>
+                <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/static/about')); ?>">About</a></li>
+                <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/static/store')); ?>">Store</a></li>
                 <li>
-                    <a href="<?php echo CHtml::normalizeUrl(array('/admin/static/merek')); ?>">Mitra</a>
-                </li>
-                <li>
-                    <a href="<?php echo CHtml::normalizeUrl(array('/admin/static/contact')); ?>">Hubungi</a>
+                    <a href="<?php echo CHtml::normalizeUrl(array('/admin/static/partner')); ?>">Partner</a>
+                    <a href="<?php echo CHtml::normalizeUrl(array('/admin/static/howorder')); ?>">How To Order</a>
                 </li>
             </ul>
         </li>

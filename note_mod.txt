@@ -1,3 +1,11 @@
+homepage
+about
+partner
+store
+how to order
+
+---------------------------------------------------------
+
 how to order
 
 how_hero_image
@@ -42,7 +50,7 @@ about_hero_image
 about_hero_title
 about_hero_subtitle
 
-about_content_1
+about1_content
 
 about2_pictures_1
 about2_titles_1
@@ -68,7 +76,6 @@ home2_content
 
 home3_title
 home3_subtitle
-
 home3_icons_picture_1
 home3_icons_title_1 * 4
 

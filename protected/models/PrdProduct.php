@@ -57,7 +57,7 @@ class PrdProduct extends CActiveRecord
 			array('harga, harga_coret', 'numerical'),
 			array('image, image2', 'length', 'max'=>200),
 			array('kode', 'length', 'max'=>50),
-			array('tag, data[size], data[packing], data[return], data[shipping], data[color], data[feature], data[qty_pack], data[garansi_teks], data[garansi_nilai], data[warna], data[kemasan], filter, harga_coret, image2, gallery_id, urutan', 'safe'),
+			array('tag, data[size], data[packing], data[return], data[shipping], data[color], data[feature], data[qty_pack], data[garansi_teks], data[garansi_nilai], data[warna], data[kemasan], data[finish], data[download], filter, harga_coret, image2, gallery_id, urutan', 'safe'),
 
 			array('image, image2', 'file', 'types'=>'jpg, gif, png', 'allowEmpty'=>FALSE, 'on'=>'insert', 'except'=>array('createTemp', 'copy')),
 			array('image, image2', 'file', 'types'=>'jpg, gif, png', 'allowEmpty'=>TRUE, 'on'=>'update', 'except'=>array('createTemp', 'copy')),
@@ -125,6 +125,10 @@ class PrdProduct extends CActiveRecord
 			'data[qty_pack]' => 'Pick up At Store Text',
 			'data[garansi_teks]' => 'Teks Garansi',
 			'data[garansi_nilai]' => 'Harga Garansi (Rp)',
+			
+			'data[finish]' => 'Finish',
+			'data[download]' => 'Download',
+
 			'gallery_id' => 'Gallery Spotlight',
 			'urutan' => 'Sort Product',
 		);

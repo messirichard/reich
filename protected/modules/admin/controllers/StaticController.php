@@ -164,29 +164,38 @@ class StaticController extends ControllerAdmin
 		));
 	}
 
-	public function actionMerek()
+	public function actionPartner()
 	{
 		$model = Setting::model()->getModelSetting('data');
 
 		$model = $this->loadData($model);
 
-		$this->render('merek',array(
+		$this->render('partner',array(
 			'model'=>$model,
 		));
 	}
 
-	public function actionAgen()
+	public function actionStore()
 	{
 		$model = Setting::model()->getModelSetting('data');
 
 		$model = $this->loadData($model);
 
-		$this->render('agen',array(
+		$this->render('store',array(
 			'model'=>$model,
 		));
 	}
 	
+	public function actionHoworder()
+	{
+		$model = Setting::model()->getModelSetting('data');
 
+		$model = $this->loadData($model);
+
+		$this->render('howto',array(
+			'model'=>$model,
+		));
+	}
 	public function actionContact()
 	{
 		$model = Setting::model()->getModelSetting('data');

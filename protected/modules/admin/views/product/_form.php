@@ -342,10 +342,10 @@ jQuery(document).ready(function($) {
 						<?php echo $form->textFieldRow($model,'harga',array('class'=>'input-block-level')); ?>
 					</div>
 					<div class="span3">
-						<?php echo $form->textFieldRow($model,'data[qty_pack]',array('class'=>'input-block-level')); ?>
+						<?php echo $form->textFieldRow($model,'data[finish]',array('class'=>'input-block-level')); ?>
 					</div>
 					<div class="span3">
-						<?php echo $form->textFieldRow($model,'data[satuan_pack]',array('class'=>'input-block-level')); ?>
+						<?php echo $form->textFieldRow($model,'data[download]',array('class'=>'input-block-level')); ?>
 					</div>
 					<?php /*
 					<div class="span3">
@@ -358,13 +358,14 @@ jQuery(document).ready(function($) {
 					<div class="span3">
 						<?php echo $form->textFieldRow($model,'data[material]',array('class'=>'input-block-level')); ?>
 					</div>
-					<div class="span3">
-						<?php echo $form->textFieldRow($model,'data[size]',array('class'=>'input-block-level')); ?>
-					</div>
-					
 					<div class="span6">
 						<?php echo $form->textFieldRow($model,'berat',array('class'=>'input-block-level',
 						'hint'=>'Note: Measurement in grams, for delivery estimation')); ?>
+						<?php // echo $form->textFieldRow($model,'data[size]',array('class'=>'input-block-level')); ?>
+					</div>
+					
+					<div class="span3">
+
 					</div>
 				</div>
 
@@ -441,17 +442,14 @@ jQuery(document).ready(function($) {
 		</div>
 		
 		<!-- ----------------- Add Option ----------------- -->
+		<?php /*
 		<div class="divider15"></div>
 		<div class="widgetbox block-rightcontent">                        
 		    <div class="headtitle">
 		        <h4 class="widgettitle">Add Product Variations</h4>
 		    </div>
 		    <div class="widgetcontent">
-<!-- 				<div class="alert">
-				  <button type="button" class="close" data-dismiss="alert">×</button>
-				  Berfungsi untuk memberikan pilihan-pilihan khusus untuk di setting, ex: Ukuran: L, Warna: Hitam, stock: 10, harga: 70.000
-				</div>
- -->				
+
                 <h4 class="widgettitle">Product Variations</h4>
                 <table class="table table-bordered responsive">
                     <thead>
@@ -519,7 +517,7 @@ jQuery(document).ready(function($) {
 		    </div>
 		</div>
 
-		<?php /*
+		
 		<div class="divider15"></div>
 		<div class="widgetbox block-rightcontent">                        
 		    <div class="headtitle">
@@ -676,6 +674,8 @@ jQuery(document).ready(function($) {
 				<?php endif; ?>
 		    </div>
 		</div>
+		
+		<?php /*
 		<div class="divider15"></div>
 		<div class="widgetbox block-rightcontent">                        
 		    <div class="headtitle">
@@ -689,9 +689,9 @@ jQuery(document).ready(function($) {
 				<?php endif; ?>
 		    </div>
 		</div>
+		*/ ?>
 
 		<!-- ----------------- Gambar Tambahan ----------------- -->
-		<?PHP /*
 		<div class="divider15"></div>
 		<div class="widgetbox block-rightcontent">                        
 		    <div class="headtitle">
@@ -743,7 +743,6 @@ jQuery(document).ready(function($) {
 				</div>
 		    </div>
 	    </div>
-	    */ ?>
 
 		<?php /*
 		<!-- ----------------- Warna ----------------- -->
