@@ -15,41 +15,11 @@
   </div>
 </section>
 
-
-<?php
-$mod_kategori = [
-    1 => [
-        'judul' => 'Handles & Knobs',
-    ],
-    [
-        'judul' => 'Digital Door Locks',
-    ],
-    [
-        'judul' => 'Aluminium Related Solutions',
-    ],
-    [
-        'judul' => 'Wood Related Solutions',
-    ],
-    [
-        'judul' => 'Glass Related Solutions',
-    ],
-    [
-        'judul' => 'Slim Drawer Solution',
-    ],
-    [
-        'judul' => 'Locks & Accessories',
-    ],
-    [
-        'judul' => 'Bathroom Accessories',
-    ]
-];
-?>
-
 <div class="kategori-produk">
     <div class="prelative container">
         <ul>
-            <?php foreach ($mod_kategori as $key => $value): ?>
-                <li><a href="<?php echo CHtml::normalizeUrl(array('/home/category')); ?>"><?php echo $value['judul'] ?></a></li>
+            <?php foreach ($all_categorys as $key => $value): ?>
+                <li><a href="<?php echo CHtml::normalizeUrl(array('/product/index', 'category'=> $value->id)); ?>"><?php echo $value->description->name ?></li>
             <?php endforeach ?>
         </ul>
     </div>
@@ -59,9 +29,9 @@ $mod_kategori = [
     <div class="prelative container">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-        <li class="breadcrumb-item"><a href="#">Our Product Collections</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Digital Door Locks</li>
+                <li class="breadcrumb-item"><a href="<?php echo CHtml::normalizeUrl(array('/home/index')); ?>">Home</a></li>
+                <li class="breadcrumb-item"><a href="<?php echo CHtml::normalizeUrl(array('/home/products')); ?>">Our Product Collections</a></li>
+                <li class="breadcrumb-item active" aria-current="page"><?php echo $strCategory->description->name ?></li>
             </ol>
         </nav>
   </div>
@@ -74,63 +44,47 @@ $category = [
     'judul' => 'Reich EZ008 Digital Door Lock &
     Handle With Keypad',
     ],
-    [
-        'gambar' => 'category2.jpg',
-    'judul' => 'Reich EZ002 Digital Door Lock',
-    ],
-    [
-        'gambar' => 'category1.jpg',
-    'judul' => 'Reich EZ008 Digital Door Lock &
-    Handle With Keypad',
-    ],
-    [
-        'gambar' => 'category2.jpg',
-    'judul' => 'Reich EZ002 Digital Door Lock',
-    ],
-    [
-        'gambar' => 'category1.jpg',
-    'judul' => 'Reich EZ008 Digital Door Lock &
-    Handle With Keypad',
-    ],
-    [
-        'gambar' => 'category2.jpg',
-    'judul' => 'Reich EZ002 Digital Door Lock',
-    ],
-    [
-        'gambar' => 'category1.jpg',
-    'judul' => 'Reich EZ008 Digital Door Lock &
-    Handle With Keypad',
-    ],
-    [
-        'gambar' => 'category2.jpg',
-    'judul' => 'Reich EZ002 Digital Door Lock',
-    ]
 ];
 ?>
 
 <section class="category-sec-2">
   <div class="prelative container">
     <div class="row">
-      <?php foreach($category as $key => $value): ?>
+      <?php foreach($product->getData() as $key => $value): ?>
       <div class="col-md-15">
         <div class="box-content">
           <div class="image">
-                        <a href="<?php echo CHtml::normalizeUrl(array('/home/productdet')); ?>">
-                            <img class="img img-fluid w-100" src="<?php echo $this->assetBaseurl; ?><?php echo $value['gambar'] ?>" alt="">
-                        </a>
+            <a href="<?php echo CHtml::normalizeUrl(array('/product/detail', 'id'=> $value->id )); ?>">
+                <img class="img img-fluid w-100" src="<?php echo Yii::app()->baseUrl.'/images/product/'. $value->image ?>" alt="">
+            </a>
           </div>
           <div class="title">
-                        <a href="<?php echo CHtml::normalizeUrl(array('/home/productdet')); ?>">
-                            <p><?php echo $value['judul']?></p>
-                        </a>
+            <a href="<?php echo CHtml::normalizeUrl(array('/product/detail', 'id'=> $value->id )); ?>">
+                <p><?php echo $value->description->name ?></p>
+            </a>
           </div>
           <div class="subtitle">
-            <a href="<?php echo CHtml::normalizeUrl(array('/home/productdet')); ?>"><p>View product</p></a>
+            <a href="<?php echo CHtml::normalizeUrl(array('/product/detail', 'id'=> $value->id )); ?>"><p>View product</p></a>
           </div>
         </div>
       </div>
       <?php endforeach ?>
     </div>
+
+    <?php 
+         $this->widget('CLinkPager', array(
+            'pages' => $product->getPagination(),
+            'header'=>'',
+            'footer'=>'',
+            'lastPageCssClass' => 'd-none',
+            'firstPageCssClass' => 'd-none',
+            'nextPageCssClass' => 'd-none',
+            'previousPageCssClass' => 'd-none',
+            'itemCount'=> $product->totalItemCount,
+            'htmlOptions'=>array('class'=>'pagination pagination-sm'),
+            'selectedPageCssClass'=>'active',
+        ));
+     ?>
   </div>
 </section>
 

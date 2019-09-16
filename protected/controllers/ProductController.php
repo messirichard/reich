@@ -156,6 +156,13 @@ class ProductController extends Controller
 		$this->layout='//layouts/column2';
 		$this->pageTitle = $strCategory->description->name. (($strParentCategory != null) ? ' - '.$strParentCategory->description->name.' - ' : ' ' ).$this->pageTitle;
 
+		$criteria4 = new CDbCriteria;
+		$criteria4->with = array('description');
+		$criteria4->addCondition('t.type = :type');
+		$criteria4->params[':type'] = 'category';
+		$criteria4->order = 'sort ASC';
+		$all_categorys = PrdCategory::model()->findAll($criteria4);
+
 		$this->render('index_list', array(
 			'product'=>$product,
 			'strCategory'=>$strCategory,
@@ -164,6 +171,7 @@ class ProductController extends Controller
 			'strChildCategory'=>$strChildCategory,
 			'dataBrand'=>$dataBrand,
 			'typeLabel'=>$typeLabel,
+			'all_categorys'=>$all_categorys,
 		)); 
 	}
 
@@ -292,7 +300,7 @@ class ProductController extends Controller
 		$criteria->addCondition('description.language_id = :language_id');
 		$criteria->params[':language_id'] = $this->languageID;
 		$criteria->addCondition('t.id = :id');
-		$criteria->params[':id'] = $id;
+		$criteria->params[':id'] = (int) intval($id);
 		$data = PrdProduct::model()->find($criteria);
 		if($data===null)
 			throw new CHttpException(404,'The requested page does not exist.');
