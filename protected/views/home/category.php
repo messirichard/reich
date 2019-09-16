@@ -15,19 +15,54 @@
 	</div>
 </section>
 
+
+<?php
+$mod_kategori = [
+    1 => [
+        'judul' => 'Handles & Knobs',
+    ],
+    [
+        'judul' => 'Digital Door Locks',
+    ],
+    [
+        'judul' => 'Aluminium Related Solutions',
+    ],
+    [
+        'judul' => 'Wood Related Solutions',
+    ],
+    [
+        'judul' => 'Glass Related Solutions',
+    ],
+    [
+        'judul' => 'Slim Drawer Solution',
+    ],
+    [
+        'judul' => 'Locks & Accessories',
+    ],
+    [
+        'judul' => 'Bathroom Accessories',
+    ]
+];
+?>
+
+<div class="kategori-produk">
+    <div class="prelative container">
+        <ul>
+            <?php foreach ($mod_kategori as $key => $value): ?>
+                <li><a href="#"><?php echo $value['judul'] ?></a></li>
+            <?php endforeach ?>
+        </ul>
+    </div>
+</div>
+
 <section class="breadcrumb-det">
     <div class="prelative container">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Houseware Collection</a></li>
-				<li class="breadcrumb-item"><a href="#">Houseware Collection</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Keranjang Anyam Besar</li>
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+				<li class="breadcrumb-item"><a href="#">Our Product Collections</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Digital Door Locks</li>
             </ol>
-            <div class="back">
-                <a href="#">
-                <p>Kembali</p>
-                </a>
-            </div>
         </nav>
 	</div>
 </section>
@@ -86,7 +121,7 @@ $category = [
 						<p><?php echo $value['judul']?></p>
 					</div>
 					<div class="subtitle">
-						<a href="#"><p>View More</p></a>
+						<a href="<?php echo CHtml::normalizeUrl(array('/home/products_details')); ?>"><p>View product</p></a>
 					</div>
 				</div>
 			</div>

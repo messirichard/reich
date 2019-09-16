@@ -8,7 +8,6 @@
 	</div>
 </section>
 
-
 <section class="about-sec-1">
     <div class="prelative container">
         <div class="row">
@@ -105,4 +104,5 @@
             </div>
         </div>
     </div>
+    <div class="clear"></div>
 </section>

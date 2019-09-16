@@ -17,71 +17,146 @@
 
 <?php
 $mod_prodisi = [
-    1 => [
-        'title' => 'ITEM CODE',
-        'isi' => 'HW0021',
-    ],
-    [
-        'title' => 'SIZE',
-        'isi' => '36 x 34.5 x 46 cm',
-    ],
+    1 => 
     [
         'title' => 'MATERIAL',
-        'isi' => 'Plastic PP',
+        'isi' => 'Aluminium and acrylic',
     ],
     [
-        'title' => 'DESCRIPTION',
-        'isi' => 'Keranjang anyam besar plastik Lucky Star diproduksi dengan
-        menggunakan material plastik dan teknologi produksi yang terbaik. Seluruh permukaan produk Lucky Star Plastic akan memiliki fitur plastik yang mulus, bersih, kuat dan nyaman dipegang serta mudah dibersihkan. Dengan desain yang atraktif dan warna yang menarik, produk ini akan cocok dalam segala situasi di rumah anda.',
+        'title' => 'FINISH',
+        'isi' => 'Matt varnish, hairline',
+    ],
+    [
+        'title' => 'DOWNLOAD',
+        'isi' => 'Material Data Sheet & Technical Measurement (Click to download)',
     ]
 ];
 ?>
 
+
+<?php
+$mod_kategori = [
+    1 => [
+        'judul' => 'Handles & Knobs',
+    ],
+    [
+        'judul' => 'Digital Door Locks',
+    ],
+    [
+        'judul' => 'Aluminium Related Solutions',
+    ],
+    [
+        'judul' => 'Wood Related Solutions',
+    ],
+    [
+        'judul' => 'Glass Related Solutions',
+    ],
+    [
+        'judul' => 'Slim Drawer Solution',
+    ],
+    [
+        'judul' => 'Locks & Accessories',
+    ],
+    [
+        'judul' => 'Bathroom Accessories',
+    ]
+];
+?>
+
+<div class="kategori-produk">
+    <div class="prelative container">
+        <ul>
+            <?php foreach ($mod_kategori as $key => $value): ?>
+                <li><a href="#"><?php echo $value['judul'] ?></a></li>
+            <?php endforeach ?>
+        </ul>
+    </div>
+</div>
+
+
 <section class="breadcrumb-det">
     <div class="prelative container">
-
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="#">Home</a></li>
                 <li class="breadcrumb-item"><a href="#">Our Product Collections</a></li>
                 <li class="breadcrumb-item"><a href="#">Digital Door Locks</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Reich EZ008 Digital Door Lock & Handle With Keypad</li>
+                <li class="breadcrumb-item active" aria-current="page"><a href="#">Reich EZ008 Digital Door Lock & Handle With Keypad</a></li>
             </ol>
             <div class="back">
                 <a href="#">
-                <p>Kembali</p>
+                <p>Back to Category</p>
                 </a>
             </div>
         </nav>
 
+    </div>
+</section>
+
+<div class="product-det">
+    <div class="prelative container">
         <div class="row">
             <div class="col-md-30">
-                <div class="image"><img class="w-100" src="<?php echo $this->assetBaseurl; ?>productdetails.jpg" alt=""></div>
+                <div class="image"><img class="w-100" src="<?php echo $this->assetBaseurl; ?>Layer-36.jpg" alt=""></div>
             </div>
             <div class="col-md-30">
                 <div class="title">
                     <p>Reich EZ008 Digital Door Lock & Handle With Keypad</p>
                 </div>
-                <div class="hr-garis"></div>
+                <div class="item-code">
+                    <p>ITEM CODE: EZ008-DAT-DL</p>
+                </div>
+                <div class="hr-garis-prod"></div>
+                <div class="product-detailsss">
+                    <div class="title">
+                        <p>PRODUCT DETAILS</p>
+                    </div>
+                    <div class="isi">
+                        <p>Digital door lock with keypad - non RF ID. External module with lever handle pointing to the right.</p>
+                    </div>
+                </div>
+                <div class="hr-garis-prod"></div>
                 <?php foreach($mod_prodisi as $key => $value): ?>
                 <div class="row no-gutters">
-                    <div class="col-md-17">
+                    <div class="col-md-10">
                         <div class="prodtit">
                             <p><?php echo $value['title'] ?></p>
                         </div>
                     </div>
-                    <div class="col-md-43">
+                    <div class="col-md-50">
                         <div class="prodisi">
                             <p><?php echo $value['isi'] ?></p>
                         </div>
                     </div>
                 </div>
+                <div class="hr-garis-prod"></div>
                 <?php endforeach ?>
+                <div class="row no-gutters">
+                    <div class="col-md-10">
+                        <div class="prodtit">
+                            <p>more images</p>
+                        </div>
+                    </div>
+                    <div class="col-md-50">
+                        <div class="prodgambar">
+                            <div class="row">
+                                <?php for ($i=0;$i<5;$i++){?>
+                                    <div class="col-md-10">
+                                        <div class="image">
+                                            <img class="w-100" src="<?php echo $this->assetBaseurl; ?>products-detail_07.jpg" alt="">
+                                        </div>
+                                    </div>
+                                <?php } ?> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hr-garis-prod"></div>
+                <button>Inquire This Product</button>
             </div>
         </div>
     </div>
-</section>
-
+</div>
 
 <?php
 $category = [
@@ -106,6 +181,24 @@ $category = [
 ];
 ?>
 
+<div class="prod-yanglain">
+    <div class="prelative container">
+        <div class="row no-gutters">
+            <div class="col-md-30">
+                <div class="isi">
+                    <p>You might consider looking at these products</p>
+                </div>
+            </div>
+            <div class="col-md-30">
+                <div class="back">
+                    <a href="#">
+                        <p>Back to Product Collections Category</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <section class="category-sec-2">
 	<div class="prelative container">
@@ -149,4 +242,5 @@ $category = [
             </div>
         </div>
     </div>
+
 </section>
