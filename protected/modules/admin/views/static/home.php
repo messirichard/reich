@@ -215,6 +215,13 @@ $this->pageHeader=array(
 					</div>
 					<?php } ?>
 				</div>
+
+				<div class="divider10"></div>
+				<?php $this->widget('bootstrap.widgets.TbButton', array(
+					'buttonType'=>'submit',
+					'type'=>'primary',
+					'label'=>'Save',
+				)); ?>
 				
 			</div>
 		</div>

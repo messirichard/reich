@@ -89,11 +89,12 @@
             <div class="col-md-60">
                 <div class="box-content">
                     <div class="interest">
-                        <p>Interested for a partnership opportunity with Reich?</p>
-                    </div>
-                    <div class="by">
+                        <h4>Interested for a partnership opportunity with Reich?</h4>
                         <p><a href="#">Click here</a> to find out many possibilities ahead.</p>
                     </div>
+                    <!-- <div class="by">
+                        <p><a href="#">Click here</a> to find out many possibilities ahead.</p>
+                    </div> -->
                 </div>
             </div>
         </div>
