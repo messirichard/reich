@@ -113,7 +113,7 @@ class PrdProduct extends CActiveRecord
 			'date_update' => 'Date Update',
 			'data[size]' => 'Size / Dimension',
 			'data[packing]' => 'Size Packing',
-			'data[material]' => 'Filter',
+			'data[material]' => 'Material',
 			'data[return]' => 'Return',
 			'data[shipping]' => 'Shipping',
 			'data[box]' => 'Weight',
