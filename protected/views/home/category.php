@@ -121,7 +121,7 @@ $category = [
 						<p><?php echo $value['judul']?></p>
 					</div>
 					<div class="subtitle">
-						<a href="<?php echo CHtml::normalizeUrl(array('/home/products_details')); ?>"><p>View product</p></a>
+						<a href="<?php echo CHtml::normalizeUrl(array('/home/productdet')); ?>"><p>View product</p></a>
 					</div>
 				</div>
 			</div>

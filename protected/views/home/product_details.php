@@ -85,7 +85,7 @@ $mod_kategori = [
             </ol>
             <div class="back">
                 <a href="#">
-                <p>Back to Category</p>
+                <p>Back to Product Collections Category</p>
                 </a>
             </div>
         </nav>
