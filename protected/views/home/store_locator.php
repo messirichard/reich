@@ -134,7 +134,7 @@ $products_display = Address::model()->findAll('type = :types', array(':types'=>'
                         <p><?php echo $value->telp ?></p>
                     </div>
                     <div class="email">
-                        <p><?php echo $value->email ?></p>
+                        <p><a href="mailto:<?php echo $value->email ?>"><?php echo $value->email ?></a></p>
                     </div>
                 </div>
             </div>

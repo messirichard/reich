@@ -14,7 +14,7 @@ $active_menu_pg = $controllers_ac.'/'.$e_activemenu;
             <ul class="list-inline text-center">
                 <li class="list-inline-item"><a href="<?php echo CHtml::normalizeUrl(array('/home/products')); ?>">Our Product Collections</a></li>
                 <li class="list-inline-item"><a href="<?php echo CHtml::normalizeUrl(array('/home/about')); ?>">About Us</a></li>
-                <li class="list-inline-item"><a href="#">Our Quality</a></li>
+                <li class="list-inline-item"><a href="<?php echo CHtml::normalizeUrl(array('/home/quality')); ?>">Our Quality</a></li>
             </ul>
         </div>
         <div class="col-md-5"></div>

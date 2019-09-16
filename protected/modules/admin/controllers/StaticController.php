@@ -164,6 +164,17 @@ class StaticController extends ControllerAdmin
 		));
 	}
 
+	public function actionQuality()
+	{
+		$model = Setting::model()->getModelSetting('data');
+
+		$model = $this->loadData($model);
+
+		$this->render('quality',array(
+			'model'=>$model,
+		));
+	}
+
 	public function actionPartner()
 	{
 		$model = Setting::model()->getModelSetting('data');

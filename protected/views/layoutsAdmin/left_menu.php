@@ -45,6 +45,7 @@
             <ul>
                 <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/static/home')); ?>">Homepage</a></li>
                 <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/static/about')); ?>">About</a></li>
+                <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/static/quality')); ?>">Quality</a></li>
                 <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/static/store')); ?>">Store</a></li>
                 <li>
                     <a href="<?php echo CHtml::normalizeUrl(array('/admin/static/partner')); ?>">Partner</a>

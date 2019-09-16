@@ -13,40 +13,11 @@
 	</div>
 </section>
 
-<?php
-$mod_kategori = [
-    1 => [
-        'judul' => 'Handles & Knobs',
-    ],
-    [
-        'judul' => 'Digital Door Locks',
-    ],
-    [
-        'judul' => 'Aluminium Related Solutions',
-    ],
-    [
-        'judul' => 'Wood Related Solutions',
-    ],
-    [
-        'judul' => 'Glass Related Solutions',
-    ],
-    [
-        'judul' => 'Slim Drawer Solution',
-    ],
-    [
-        'judul' => 'Locks & Accessories',
-    ],
-    [
-        'judul' => 'Bathroom Accessories',
-    ]
-];
-?>
-
 <div class="kategori-produk">
     <div class="prelative container">
         <ul>
-            <?php foreach ($mod_kategori as $key => $value): ?>
-                <li><a href="<?php echo CHtml::normalizeUrl(array('/home/category')); ?>"><?php echo $value['judul'] ?></li>
+            <?php foreach ($categorys as $key => $value): ?>
+                <li><a href="<?php echo CHtml::normalizeUrl(array('/product/index', 'category'=> $value->id)); ?>"><?php echo $value->description->name ?></li>
             <?php endforeach ?>
         </ul>
     </div>
@@ -57,7 +28,7 @@ $mod_kategori = [
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="#">Houseware Collection</a></li>
-                <li class="breadcrumb-item active" aria-current="page"><a href="#">Keranjang Anyam Besar</a></li>
+                <!-- <li class="breadcrumb-item active" aria-current="page"><a href="#">Keranjang Anyam Besar</a></li> -->
             </ol>
             <div class="back">
                 <!-- <a href="#"><p>Kembali</p></a> -->
@@ -65,90 +36,40 @@ $mod_kategori = [
         </nav>
 	  </div>
 </section>
+<?php 
+$tops_data = array_slice($categorys, 0, 2);
+$bottoms_data = array_slice($categorys, 2, 20);
 
+?>
 <section class="product-sec-2">
     <div class="prelative container">
         <div class="row">
+            <?php foreach ($tops_data as $key => $value): ?>
             <div class="col-md-30">
                 <div class="box-content">
-                    <a href="<?php echo CHtml::normalizeUrl(array('/home/category')); ?>">
+                    <a href="<?php echo CHtml::normalizeUrl(array('/product/index', 'category'=> $value->id)); ?>">
                         <div class="image">
-                            <img class="img img-fluid w-100" src="<?php echo $this->assetBaseurl; ?>home1.jpg" alt="">
-                            <p>Aluminium related solution</p>
+                            <img class="img img-fluid w-100" src="<?php echo Yii::app()->baseUrl.'/images/category/'. $value->image ?>" alt="">
+                            <p><?php echo $value->description->name ?></p>
                         </div>
                     </a>
                 </div>
             </div>
-            <div class="col-md-30">
-                <div class="box-content">
-                    <a href="<?php echo CHtml::normalizeUrl(array('/home/category')); ?>">
-                        <div class="image">
-                            <img class="img img-fluid w-100" src="<?php echo $this->assetBaseurl; ?>home2.jpg" alt="">
-                            <p>Digital door locks</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
+            <?php endforeach ?>
+
+            <?php foreach ($bottoms_data as $key => $value): ?>
             <div class="col-md-20">
                 <div class="box-content">
-                    <a href="<?php echo CHtml::normalizeUrl(array('/home/category')); ?>">
+                    <a href="<?php echo CHtml::normalizeUrl(array('/product/index', 'category'=> $value->id)); ?>">
                         <div class="image">
-                            <img class="img img-fluid w-100" src="<?php echo $this->assetBaseurl; ?>home3.jpg" alt="">
-                            <p>Slim drawer solution</p>
+                            <img class="img img-fluid w-100" src="<?php echo Yii::app()->baseUrl.'/images/category/'. $value->image ?>" alt="">
+                            <p><?php echo $value->description->name ?></p>
                         </div>
                     </a>
                 </div>
             </div>
-            <div class="col-md-20">
-                <div class="box-content">
-                    <a href="<?php echo CHtml::normalizeUrl(array('/home/category')); ?>">
-                        <div class="image">
-                            <img class="img img-fluid w-100" src="<?php echo $this->assetBaseurl; ?>home4.jpg" alt="">
-                            <p>Glass related solution</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-20">
-                <div class="box-content">
-                    <a href="<?php echo CHtml::normalizeUrl(array('/home/category')); ?>">
-                        <div class="image">
-                            <img class="img img-fluid w-100" src="<?php echo $this->assetBaseurl; ?>home5.jpg" alt="">
-                            <p>Wood related solution</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-20">
-              <div class="box-content">
-              <a href="<?php echo CHtml::normalizeUrl(array('/home/category')); ?>">
-                    <div class="image">
-                    <img class="img img-fluid w-100" src="<?php echo $this->assetBaseurl; ?>product1.jpg" alt="">
-                    <p>Handles & Knobs</p>
-                    </div>
-                </a>
-              </div>
-            </div>
-            <div class="col-md-20">
-              <div class="box-content">
-              <a href="<?php echo CHtml::normalizeUrl(array('/home/category')); ?>">
-                    <div class="image">
-                    <img class="img img-fluid w-100" src="<?php echo $this->assetBaseurl; ?>product2.jpg" alt="">
-                    <p>Locks & accessories</p>
-                    </div>
-                </a>
-              </div>
-            </div>
-            <div class="col-md-20">
-              <div class="box-content">
-              <a href="<?php echo CHtml::normalizeUrl(array('/home/category')); ?>">
-                    <div class="image">
-                    <img class="img img-fluid w-100" src="<?php echo $this->assetBaseurl; ?>product3.jpg" alt="">
-                    <p>Bathroom Accessories</p>
-                    </div>
-                </a>
-              </div>
-            </div>
+            <?php endforeach ?>
+
         </div>
     </div>
 </section>

@@ -22,7 +22,7 @@ class ProductController extends Controller
 			$criteria = new CDbCriteria;
 			$criteria->with = array('description');
 			$criteria->addCondition('t.id = :id');
-			$criteria->params[':id'] = $_GET['category'];
+			$criteria->params[':id'] = intval($_GET['category']);
 			$criteria->addCondition('t.type = :type');
 			$criteria->params[':type'] = 'category';
 			// $criteria->limit = 3;
@@ -32,7 +32,7 @@ class ProductController extends Controller
 			// $inArray = PrdProduct::getInArrayCategory($_GET['category']);
 			// $criteria2->addInCondition('t.category_id', $inArray);
 			$criteria2->addCondition('t.tag LIKE :category');
-			$criteria2->params[':category'] = '%category='.$_GET['category'].',%';
+			$criteria2->params[':category'] = '%category='.intval($_GET['category']).',%';
 
 		}
 		if ($strCategory !== null) {
@@ -72,7 +72,7 @@ class ProductController extends Controller
 			$criteria = new CDbCriteria;
 			$criteria->with = array('description');
 			$criteria->addCondition('t.parent_id = :parents_id');
-			$criteria->params[':parents_id'] = $_GET['category'];
+			$criteria->params[':parents_id'] = intval($_GET['category']);
 			$criteria->addCondition('t.type = :type');
 			$criteria->params[':type'] = 'category';
 			// $criteria->limit = 3;
@@ -165,7 +165,7 @@ class ProductController extends Controller
 			'dataBrand'=>$dataBrand,
 			'typeLabel'=>$typeLabel,
 		)); 
-	}	
+	}
 
 	public function actionLanding()
 	{

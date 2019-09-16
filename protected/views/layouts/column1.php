@@ -3,35 +3,49 @@
 
 <?php echo $this->renderPartial('//layouts/_header', array()); ?>
 
+<?php
+    $criteria=new CDbCriteria;
+    $criteria->with = array('description');
+    $criteria->addCondition('description.language_id = :language_id');
+    $criteria->addCondition('active = 1');
+    $criteria->params[':language_id'] = $this->languageID;
+    $criteria->group = 't.id';
+    $criteria->order = 't.id ASC';
+    $slide = Slide::model()->with(array('description'))->findAll($criteria);
+?>
+
 <div class="fcs-wrapper outers_fcs_wrapper prelatife wrapper-slide">
 
     <div id="myCarousel_home" class="carousel carousel-fade" data-ride="carousel" data-interval="4500">
-            <div class="carousel-inner">
-                <div class="carousel-item active home-slider-new">
-
-                    <img class="w-100 d-none d-sm-block" src="<?php echo $this->assetBaseurl; ?>Layer-7.jpg" alt="First slide">
-                    <img class="w-100 d-block d-sm-none" src="<?php // echo Yii::app()->baseUrl.ImageHelper::thumb(600,980, '/images/'. $value->image2 , array('method' => 'adaptiveResize', 'quality' => '90')) ?>" alt="">
-                    <ol class="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    </ol>
-                </div>
+      <div class="carousel-inner">
+        <?php foreach ($slide as $key => $value): ?>
+          <div class="carousel-item <?php if($key == 0): ?>active<?php endif ?> home-slider-new">
+              <img class="w-100 d-none d-sm-block" src="<?php echo Yii::app()->baseUrl.ImageHelper::thumb(1920,913, '/images/slide/'. $value->image , array('method' => 'adaptiveResize', 'quality' => '90')) ?>" alt="First slide">
+              <img class="w-100 d-block d-sm-none" src="<?php echo Yii::app()->baseUrl.ImageHelper::thumb(774,867, '/images/slide/'. $value->image2 , array('method' => 'adaptiveResize', 'quality' => '90')) ?>" alt="">
+          		<div class="carousel-caption caption-slider-home mx-auto">
+          			<div class="bxsl_tx_fcs">
+          				<div class="row no-gutters">
+          					<div class="col-md-60 mx-auto pt-3 text-center">
+          						<h5><?php echo $value->description->title ?></h5>
+          						<p><?php echo $value->description->content ?></p>
+          					</div>
+          					<div class="col-md-60 mx-auto pt-3">
+          						<a target="_blank" href="<?php echo $value->url ?>" class="profil mx-auto text-center d-block">Click Here</a>
+          					</div>
+          				</div>
+          			</div>
+          		</div>
+          </div>
+          <?php endforeach; ?>
 			</div>
-		<div class="carousel-caption caption-slider-home mx-auto">
-			<div class="bxsl_tx_fcs">
-				<div class="row no-gutters">
-					<div class="col-md-60 mx-auto pt-3 text-center">
-						<h5>Reich furniture accessories and mechanical hardware will bring efficiency and reliability to your home.</h5>
-							<p>Learn more about the breakthrough smart products brought by Reich furniture hardware & accessories to ease your every day daily life.</p>
-					</div>
-					<div class="col-md-60 mx-auto pt-3">
-						<a href="" class="profil mx-auto text-center d-block">Click Here</a>
-					</div>
-				</div>
-			</div>
-		</div>
+      <ol class="carousel-indicators">
+        <?php foreach ($slide as $key => $value): ?>
+          <li data-target="#myCarousel_home" data-slide-to="<?php echo $key ?>" <?php if ($key == 0): ?>class="active"<?php endif ?> ></li>
+        <?php endforeach; ?>
+      </ol>
 	</div>
+
+  <div class="clear clearfix"></div>
 </div>
 
 <?php echo $content ?>

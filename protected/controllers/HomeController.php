@@ -527,6 +527,15 @@ class HomeController extends Controller
 		));
 	}
 
+	public function actionQuality()
+	{
+		$this->pageTitle = 'About Us - '.$this->pageTitle;
+		$this->layout='//layouts/column2';
+
+		$this->render('quality', array(	
+		));
+	}
+
 	public function actionProducthw()
 	{
 		$this->pageTitle = 'About Us - '.$this->pageTitle;
@@ -868,33 +877,20 @@ class HomeController extends Controller
 	{
 		$this->pageTitle = 'Products - '. $this->pageTitle;
 
-		$criteria=new CDbCriteria;
-		$criteria->with = array('description', 'category', 'categories');
-		$criteria->order = 'date DESC';
-		$criteria->addCondition('status = "1"');
-		$criteria->addCondition('description.language_id = :language_id');
-		// $criteria->addCondition('categoryView.language_id = :language_id');
-		// $criteria->addCondition('categoryTitle.language_id = :language_id');
-		$criteria->params[':language_id'] = $this->languageID;
-
-		$criteria->addCondition('categories.category_id = :category');
-		$criteria->params['category'] = 1;
-
-		$pageSize = 12;
-
-		$product = new CActiveDataProvider('PrdProduct', array(
-			'criteria'=>$criteria,
-		    'pagination'=>array(
-		        'pageSize'=>$pageSize,
-		    ),
-		));
+		$criteria = new CDbCriteria;
+		$criteria->with = array('description');
+		$criteria->addCondition('t.type = :type');
+		$criteria->params[':type'] = 'category';
+		// $criteria->limit = 3;
+		$criteria->order = 'sort ASC';
+		$categorys = PrdCategory::model()->findAll($criteria);
 
 		$model = new ContactForm;
 		$model->scenario = 'insert';
 
 		$this->layout='//layouts/column2';
 		$this->render('product', array(
-			'product'=>$product,
+			'categorys'=>$categorys,
 			'model'=>$model,
 		));
 	}
