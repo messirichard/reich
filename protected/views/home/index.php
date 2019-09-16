@@ -7,12 +7,12 @@
                         <h4>Reich Architecture & Hardware Accessories Category</h4>
                     </div>
                     <div class="subtitle">
-                        <p><a href="#">Click here to view all products.</a></p>
+                        <p><a href="<?php echo CHtml::normalizeUrl(array('/home/products')); ?>">Click here to view all products.</a></p>
                     </div>
                 </div>
             </div>
             <div class="col-md-30">
-                <a href="#">
+                <a href="<?php echo CHtml::normalizeUrl(array('/home/products')); ?>">
                     <div class="box-content">
                         <div class="image">
                             <img class="img img-fluid w-100" src="<?php echo $this->assetBaseurl; ?>home1.jpg" alt="">
@@ -22,7 +22,7 @@
                 </a>
             </div>
             <div class="col-md-30">
-                <a href="#">
+                <a href="<?php echo CHtml::normalizeUrl(array('/home/products')); ?>">
                     <div class="box-content">
                         <div class="image">
                             <img class="img img-fluid w-100" src="<?php echo $this->assetBaseurl; ?>home2.jpg" alt="">
@@ -32,7 +32,7 @@
                 </a>
             </div>
             <div class="col-md-20">
-                <a href="#">
+                <a href="<?php echo CHtml::normalizeUrl(array('/home/products')); ?>">
                     <div class="box-content">
                         <div class="image bottom">
                             <img class="img img-fluid w-100" src="<?php echo $this->assetBaseurl; ?>home3.jpg" alt="">
@@ -42,7 +42,7 @@
                 </a>
             </div>
             <div class="col-md-20">
-                <a href="#">
+                <a href="<?php echo CHtml::normalizeUrl(array('/home/products')); ?>">
                     <div class="box-content">
                         <div class="image bottom">
                             <img class="img img-fluid w-100" src="<?php echo $this->assetBaseurl; ?>home4.jpg" alt="">
@@ -52,7 +52,7 @@
                 </a>
             </div>
             <div class="col-md-20">
-                <a href="#">
+                <a href="<?php echo CHtml::normalizeUrl(array('/home/products')); ?>">
                     <div class="box-content">
                         <div class="image bottom">
                             <img class="img img-fluid w-100" src="<?php echo $this->assetBaseurl; ?>home5.jpg" alt="">
