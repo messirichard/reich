@@ -1,3 +1,13 @@
+<section class="cover-insides">
+	<div class="prelative container">
+		<div class="text-cover">
+            <h3>How To Buy</h3>
+            <div class="hr-insides"></div>
+            <p>Get Reich hardware appliances product easily</p>
+		</div>
+	</div>
+</section>
+
 <section class="howtobuy-sec-1">
     <div class="prelative container">
         <div class="row">

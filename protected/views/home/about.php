@@ -1,3 +1,14 @@
+<section class="cover-insides">
+	<div class="prelative container">
+		<div class="text-cover">
+            <h3>About</h3>
+            <div class="hr-insides"></div>
+            <p>Experience and passion towards efficiency brought us to where we are right now</p>
+		</div>
+	</div>
+</section>
+
+
 <section class="about-sec-1">
     <div class="prelative container">
         <div class="row">

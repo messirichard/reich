@@ -13,39 +13,53 @@
         <div class="row">
             <div class="col-md-8">
                 <div class="box-content menu">
-                    <p>Our Product Collections</p>
+                    <a href="<?php echo CHtml::normalizeUrl(array('/home/products')); ?>">
+                        <p>Our Product Collections</p>
+                    </a>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="box-content menu">
-                    <p>About Us</p>
+                    <a href="<?php echo CHtml::normalizeUrl(array('/home/about')); ?>">
+                        <p>About Us</p>
+                    </a>
                 </div>
             </div>
             <div class="col-md-5">
                 <div class="box-content menu">
-                    <p>Our Quality</p>
+                    <a href="#">
+                        <p>Our Quality</p>
+                    </a>
                 </div>
             </div>
             <div class="col-md-5">
                 <div class="box-content menu">
-                    <p>Hot To Buy</p>
+                    <a href="<?php echo CHtml::normalizeUrl(array('/home/howtobuy')); ?>">
+                        <p>How To Buy</p>
+                    </a>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="box-content menu">
-                    <p>Stores</p>
+                    <a href="<?php echo CHtml::normalizeUrl(array('/home/store_locator')); ?>">
+                        <p>Stores</p>
+                    </a>
                 </div>
             </div>
             <div class="col-md-5">
                 <div class="box-content menu">
-                    <p>Partnership</p>
+                    <a href="<?php echo CHtml::normalizeUrl(array('/home/partner')); ?>">
+                        <p>Partnership</p>
+                    </a>
                 </div>
             </div>
             <div class="col-md-30">
                 <div class="box-content wa">
-                    <p>Whatsapp Hotline & Chat</p>
-                    <img class="wa-footer" src="<?php echo $this->assetBaseurl; ?>wa-logo-footer.png" alt="">
-                    <p>081 5530 78875 (Click To Chat)</p>
+                    <a href="">
+                        <p>Whatsapp Hotline & Chat</p>
+                        <img class="wa-footer" src="<?php echo $this->assetBaseurl; ?>wa-logo-footer.png" alt="">
+                        <p>081 5530 78875 (Click To Chat)</p>
+                    </a>
                 </div>
             </div>
         </div>
@@ -54,9 +68,15 @@
             <div class="col-md-30">
                 <div class="box-content socialmedia">
                     <p>Reich Social Media</p>
-                    <img src="<?php echo $this->assetBaseurl; ?>ig-footer.png" alt="">
-                    <img src="<?php echo $this->assetBaseurl; ?>fb-footer.png" alt="">
-                    <img src="<?php echo $this->assetBaseurl; ?>in-footer.png" alt="">
+                    <a href="#">
+                        <img src="<?php echo $this->assetBaseurl; ?>ig-footer.png" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="<?php echo $this->assetBaseurl; ?>fb-footer.png" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="<?php echo $this->assetBaseurl; ?>in-footer.png" alt="">
+                    </a>
                 </div>
             </div>
             <div class="col-md-30">

@@ -1,3 +1,14 @@
+<section class="cover-insides">
+	<div class="prelative container">
+		<div class="text-cover">
+            <h3>Partnership</h3>
+            <div class="hr-insides"></div>
+            <p>Let’s grow together with Reich</p>
+		</div>
+	</div>
+</section>
+
+
 <section class="partner-sec-1">
     <div class="prelative container">
         <div class="row">
