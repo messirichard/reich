@@ -11,58 +11,49 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-30">
-                <a href="<?php echo CHtml::normalizeUrl(array('/home/products')); ?>">
-                    <div class="box-content">
-                        <div class="image">
-                            <img class="img img-fluid w-100" src="<?php echo $this->assetBaseurl; ?>home1.jpg" alt="">
-                            <p>Aluminium related solution</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-30">
-                <a href="<?php echo CHtml::normalizeUrl(array('/home/products')); ?>">
-                    <div class="box-content">
-                        <div class="image">
-                            <img class="img img-fluid w-100" src="<?php echo $this->assetBaseurl; ?>home2.jpg" alt="">
-                            <p>Digital door locks</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-20">
-                <a href="<?php echo CHtml::normalizeUrl(array('/home/products')); ?>">
-                    <div class="box-content">
-                        <div class="image bottom">
-                            <img class="img img-fluid w-100" src="<?php echo $this->assetBaseurl; ?>home3.jpg" alt="">
-                            <p>Slim drawer solution</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-20">
-                <a href="<?php echo CHtml::normalizeUrl(array('/home/products')); ?>">
-                    <div class="box-content">
-                        <div class="image bottom">
-                            <img class="img img-fluid w-100" src="<?php echo $this->assetBaseurl; ?>home4.jpg" alt="">
-                            <p>Glass related solution</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-20">
-                <a href="<?php echo CHtml::normalizeUrl(array('/home/products')); ?>">
-                    <div class="box-content">
-                        <div class="image bottom">
-                            <img class="img img-fluid w-100" src="<?php echo $this->assetBaseurl; ?>home5.jpg" alt="">
-                            <p>Wood related solution</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
 
+            <?php 
+            $criteria = new CDbCriteria;
+            $criteria->with = array('description');
+            $criteria->addCondition('t.type = :type');
+            $criteria->params[':type'] = 'category';
+            // $criteria->limit = 3;
+            $criteria->order = 'sort ASC';
+            $categorys = PrdCategory::model()->findAll($criteria);
+            ?>
+            <?php 
+            $tops_data = array_slice($categorys, 0, 2);
+            $bottoms_data = array_slice($categorys, 2, 3);
+            ?>
+            
+            <?php foreach ($tops_data as $key => $value): ?>
+            <div class="col-md-30">
+                <div class="box-content">
+                    <a href="<?php echo CHtml::normalizeUrl(array('/product/index', 'category'=> $value->id)); ?>">
+                        <div class="image">
+                            <img class="img img-fluid w-100" src="<?php echo Yii::app()->baseUrl.'/images/category/'. $value->image ?>" alt="">
+                            <p><?php echo $value->description->name ?></p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <?php endforeach ?>
+
+            <?php foreach ($bottoms_data as $key => $value): ?>
+            <div class="col-md-20">
+                <div class="box-content">
+                    <a href="<?php echo CHtml::normalizeUrl(array('/product/index', 'category'=> $value->id)); ?>">
+                        <div class="image">
+                            <img class="img img-fluid w-100" src="<?php echo Yii::app()->baseUrl.'/images/category/'. $value->image ?>" alt="">
+                            <p><?php echo $value->description->name ?></p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <?php endforeach ?>
+
+        </div>
+        <div class="py-4"></div>
         <div class="clearfix clear"></div>
     </div>
 </section>

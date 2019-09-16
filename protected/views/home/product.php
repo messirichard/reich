@@ -39,7 +39,6 @@
 <?php 
 $tops_data = array_slice($categorys, 0, 2);
 $bottoms_data = array_slice($categorys, 2, 20);
-
 ?>
 <section class="product-sec-2">
     <div class="prelative container">
