@@ -93,66 +93,68 @@ $mod_kategori = [
     </div>
 </section>
 
-<div class="product-det">
+<div class="product-det outers_blockdetail_inprddetail">
     <div class="prelative container">
         <div class="row">
             <div class="col-md-30">
-                <div class="image"><img class="w-100" src="<?php echo $this->assetBaseurl; ?>Layer-36.jpg" alt=""></div>
+                <div class="image box-image"><img class="w-100" src="<?php echo $this->assetBaseurl; ?>Layer-36.jpg" alt=""></div>
             </div>
             <div class="col-md-30">
-                <div class="title">
-                    <p>Reich EZ008 Digital Door Lock & Handle With Keypad</p>
-                </div>
-                <div class="item-code">
-                    <p>ITEM CODE: EZ008-DAT-DL</p>
-                </div>
-                <div class="hr-garis-prod"></div>
-                <div class="product-detailsss">
+                <div class="descriptions">
                     <div class="title">
-                        <p>PRODUCT DETAILS</p>
+                        <p>Reich EZ008 Digital Door Lock & Handle With Keypad</p>
                     </div>
-                    <div class="isi">
-                        <p>Digital door lock with keypad - non RF ID. External module with lever handle pointing to the right.</p>
+                    <div class="item-code">
+                        <p>ITEM CODE: EZ008-DAT-DL</p>
                     </div>
-                </div>
-                <div class="hr-garis-prod"></div>
-                <?php foreach($mod_prodisi as $key => $value): ?>
-                <div class="row no-gutters">
-                    <div class="col-md-10">
-                        <div class="prodtit">
-                            <p><?php echo $value['title'] ?></p>
+                    <div class="hr-garis-prod"></div>
+                    <div class="product-detailsss">
+                        <div class="title">
+                            <p>PRODUCT DETAILS</p>
+                        </div>
+                        <div class="isi">
+                            <p>Digital door lock with keypad - non RF ID. External module with lever handle pointing to the right.</p>
                         </div>
                     </div>
-                    <div class="col-md-50">
-                        <div class="prodisi">
-                            <p><?php echo $value['isi'] ?></p>
+                    <div class="hr-garis-prod"></div>
+                    <?php foreach($mod_prodisi as $key => $value): ?>
+                    <div class="row no-gutters">
+                        <div class="col-md-10">
+                            <div class="prodtit">
+                                <p><?php echo $value['title'] ?></p>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="hr-garis-prod"></div>
-                <?php endforeach ?>
-                <div class="row no-gutters">
-                    <div class="col-md-10">
-                        <div class="prodtit">
-                            <p>more images</p>
-                        </div>
-                    </div>
-                    <div class="col-md-50">
-                        <div class="prodgambar">
-                            <div class="row">
-                                <?php for ($i=0;$i<5;$i++){?>
-                                    <div class="col-md-10">
-                                        <div class="image">
-                                            <img class="w-100" src="<?php echo $this->assetBaseurl; ?>products-detail_07.jpg" alt="">
-                                        </div>
-                                    </div>
-                                <?php } ?> 
+                        <div class="col-md-50">
+                            <div class="prodisi">
+                                <p><?php echo $value['isi'] ?></p>
                             </div>
                         </div>
                     </div>
+                    <div class="hr-garis-prod"></div>
+                    <?php endforeach ?>
+                    <div class="row no-gutters">
+                        <div class="col-md-10">
+                            <div class="prodtit">
+                                <p>more images</p>
+                            </div>
+                        </div>
+                        <div class="col-md-50">
+                            <div class="prodgambar">
+                                <div class="row">
+                                    <?php for ($i=0;$i<5;$i++){?>
+                                        <div class="col-md-10">
+                                            <div class="image">
+                                                <img class="w-100" src="<?php echo $this->assetBaseurl; ?>products-detail_07.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    <?php } ?> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hr-garis-prod"></div>
+                    <button class="btn btn-info">Inquire This Product</button>
                 </div>
-                <div class="hr-garis-prod"></div>
-                <button>Inquire This Product</button>
             </div>
         </div>
     </div>
@@ -183,7 +185,7 @@ $category = [
 
 <div class="prod-yanglain">
     <div class="prelative container">
-        <div class="row no-gutters">
+        <div class="row no-gutters py-5">
             <div class="col-md-30">
                 <div class="isi">
                     <p>You might consider looking at these products</p>
