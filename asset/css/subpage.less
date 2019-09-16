@@ -1,4 +1,7 @@
 
+@color_red: #ed1c24;
+@border_grey: #e7e7e7;
+
 .outers_blockdetail_inprddetail{
 	
 	.box-image{
@@ -26,27 +29,101 @@
 		.item-code{
 			font-size: 14px; font-weight: 400; color: rgba(0,0,0, 0.7);
 		}
+		.title.titles_prd{
+			font-family: @play;
+			font-size: 13px;
+			font-weight: 700;
+			letter-spacing: 1px;
+			color: #4e4e4e;	
+			text-transform: uppercase;
+			p{
+			font-family: @play;
+			font-size: 13px;
+			font-weight: 700;
+			letter-spacing: 1px;
+			color: #4e4e4e;		
+			}
+		}
 		
 		.product-detailsss{
 			.title{
-				font-size: 13px;
-				font-weight: 700;
-				letter-spacing: 1px;
-				color: #4e4e4e;	
+				p{
+					font-family: @play;
+					font-size: 13px;
+					font-weight: 700;
+					letter-spacing: 1px;
+					color: #4e4e4e;		
+					text-transform: uppercase;	
+				}
 			}
 			.isi{
-				font-size: 13px; font-weight: 400; color: rgba(0,0,0, 0.7);
+				font-size: 14px; font-weight: 400; color: rgba(0,0,0, 0.7);
 			}
 		}
+
 		.hr-garis-prod{
 			background-color: #e7e7e7;
 			height: 1px;
 			width: 100%;
 			margin: 1rem 0;
 		}
-		.prodtit{}
-		.prodisi{}
+		.prodtit{
+			p{
+				font-family: @play;
+				font-size: 13px;
+				font-weight: 700;
+				letter-spacing: 1px;
+				color: #4e4e4e;	
+				text-transform: uppercase;
+			}
+		}
+		.prodisi{
+			font-size: 14px; font-weight: 400; color: rgba(0,0,0, 0.7);
+		}
+
+		button{
+			display: block;
+			background-color: #ed1c24;
+			font-size: 15px; 
+			font-weight: 700;
+
+			padding: 0.5rem 1.3rem;
+
+			color: #fff;
+			border-radius: 0px;
+			border: 0px;
+		}
 		clear: both;
 	}
 
+}
+
+.prod-yanglain{
+	.prelative{
+		border-top: 1px solid @border_grey;
+		border-bottom: 1px solid @border_grey;
+		padding-top: 0.8rem;
+		padding-bottom: 0.8rem;
+	}
+	.isi{
+		p{
+			color: @color_red;
+			font-size: 18px;
+			font-weight: 700;
+		}
+	}
+	.back{
+		a.backs_categr_collect{
+			font-size: 14px; 
+			font-weight: 700;
+			color: rgba(0,0,0, 0.7);
+			text-decoration: none;
+		}
+		a.backs_categr_collect:hover,
+		a.backs_categr_collect:focus{
+			text-decoration: underline;
+		}
+	}
+
+	clear: both;
 }

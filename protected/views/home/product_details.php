@@ -109,7 +109,7 @@ $mod_kategori = [
                     </div>
                     <div class="hr-garis-prod"></div>
                     <div class="product-detailsss">
-                        <div class="title">
+                        <div class="title titles_prd">
                             <p>PRODUCT DETAILS</p>
                         </div>
                         <div class="isi">
@@ -119,12 +119,12 @@ $mod_kategori = [
                     <div class="hr-garis-prod"></div>
                     <?php foreach($mod_prodisi as $key => $value): ?>
                     <div class="row no-gutters">
-                        <div class="col-md-10">
+                        <div class="col-md-12">
                             <div class="prodtit">
                                 <p><?php echo $value['title'] ?></p>
                             </div>
                         </div>
-                        <div class="col-md-50">
+                        <div class="col-md-48">
                             <div class="prodisi">
                                 <p><?php echo $value['isi'] ?></p>
                             </div>
@@ -133,22 +133,23 @@ $mod_kategori = [
                     <div class="hr-garis-prod"></div>
                     <?php endforeach ?>
                     <div class="row no-gutters">
-                        <div class="col-md-10">
+                        <div class="col-md-12">
                             <div class="prodtit">
                                 <p>more images</p>
                             </div>
                         </div>
-                        <div class="col-md-50">
+                        <div class="col-md-48">
                             <div class="prodgambar">
-                                <div class="row">
+                                <ul class="list-inline">
                                     <?php for ($i=0;$i<5;$i++){?>
-                                        <div class="col-md-10">
+                                        <li class="list-inline-item">
                                             <div class="image">
-                                                <img class="w-100" src="<?php echo $this->assetBaseurl; ?>products-detail_07.jpg" alt="">
+                                                <img class="img img-fluid" src="<?php echo $this->assetBaseurl; ?>products-detail_07.jpg" alt="">
                                             </div>
-                                        </div>
+                                        </li>
                                     <?php } ?> 
-                                </div>
+                                </ul>
+
                             </div>
                         </div>
                     </div>
@@ -182,25 +183,27 @@ $category = [
     ]
 ];
 ?>
+<div class="py-5"></div>
 
 <div class="prod-yanglain">
     <div class="prelative container">
-        <div class="row no-gutters py-5">
+        <div class="row no-gutters">
             <div class="col-md-30">
                 <div class="isi">
                     <p>You might consider looking at these products</p>
                 </div>
             </div>
             <div class="col-md-30">
-                <div class="back">
-                    <a href="#">
-                        <p>Back to Product Collections Category</p>
+                <div class="back text-right">
+                    <a href="#" class="backs_categr_collect">
+                        Back to Product Collections Category
                     </a>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<div class="py-4"></div>
 
 <section class="category-sec-2">
 	<div class="prelative container">
