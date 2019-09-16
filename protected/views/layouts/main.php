@@ -16,8 +16,7 @@
 
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->baseUrl.Yii::app()->theme->baseUrl; ?>/asset/css/screen.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->baseUrl.Yii::app()->theme->baseUrl; ?>/asset/css/comon.css" />
-    <!-- <title><?php //echo CHtml::encode($this->pageTitle); ?></title>     -->
-    <title>Arsimetris</title>
+    <title><?php echo CHtml::encode($this->pageTitle); ?></title>
     
 
     <!-- Bootstrap -->

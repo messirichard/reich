@@ -105,14 +105,14 @@ $this->pageHeader=array(
 						<?php foreach (Language::model()->getLanguage() as $key => $value): ?>
 						<div class="pj-multilang-wrap myLanguage control-group" style="display: <?php if ($value->code==$this->setting['lang_deff']): ?>block<?php else: ?>none<?php endif ?>;" data-id="<?php echo $value->id ?>">
 						<label class="control-label required" for="Setting_<?php echo $type ?>_<?php echo $value->code ?>"><?php echo $model[$type]['data']->label ?><span class="required"></span></label>
-						<textarea id="Setting_<?php echo $type ?>_<?php echo $value->code ?>" name="Setting[<?php echo $type ?>][<?php echo $value->code ?>]" class="span10" rows="2"><?php echo $model[$type]['desc'][$value->code]->value ?></textarea>
+						<textarea id="Setting_<?php echo $type ?>_<?php echo $value->code ?>" name="Setting[<?php echo $type ?>][<?php echo $value->code ?>]" class="span10 redactor" rows="2"><?php echo $model[$type]['desc'][$value->code]->value ?></textarea>
 
 						<span class="pj-multilang-input"><img src="<?php echo Yii::app()->baseUrl.'/asset/backend/language/'.$value->code.'.png' ?>"></span>
 						<span class="help-inline _em_" style="display: none;">Please correct the error</span>
 						</div>
 						<?php endforeach ?>
 
-						<?php $type = 'home2_content'; ?>
+						<?php /*$type = 'home2_content'; ?>
 						<?php Common::createSetting($type, 'Content', 'text', 'y') ?>
 						<?php foreach (Language::model()->getLanguage() as $key => $value): ?>
 						<div class="pj-multilang-wrap myLanguage control-group" style="display: <?php if ($value->code==$this->setting['lang_deff']): ?>block<?php else: ?>none<?php endif ?>;" data-id="<?php echo $value->id ?>">
@@ -122,7 +122,7 @@ $this->pageHeader=array(
 						<span class="pj-multilang-input"><img src="<?php echo Yii::app()->baseUrl.'/asset/backend/language/'.$value->code.'.png' ?>"></span>
 						<span class="help-inline _em_" style="display: none;">Please correct the error</span>
 						</div>
-						<?php endforeach ?>
+						<?php endforeach*/ ?>
 						
 					</div>
 					<div class="span6">

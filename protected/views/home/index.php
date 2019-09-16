@@ -4,10 +4,10 @@
             <div class="col-md-60">
                 <div class="box-content top">
                     <div class="title">
-                        <h4>Reich Architecture & Hardware Accessories Category</h4>
+                        <h4><?php echo $this->setting['home_content_1'] ?></h4>
                     </div>
                     <div class="subtitle">
-                        <p><a href="<?php echo CHtml::normalizeUrl(array('/home/products')); ?>">Click here to view all products.</a></p>
+                        <p><a href="<?php echo CHtml::normalizeUrl(array('/home/products')); ?>"><?php echo $this->setting['home_subtitle_1'] ?></a></p>
                     </div>
                 </div>
             </div>
@@ -72,11 +72,12 @@
             <div class="col-md-30">
                 <div class="box-content">
                     <div class="caption">
-                        <p>Want to become our partner in distributing<br><b>Reich hardware & accessories products?</b></p>
-                    </div>
-                    <div class="subtitle">
+                        <h3>Want to become our partner in distributing<br><b>Reich hardware & accessories products?</b></h3>
                         <p>Reich Architectural & Interior accessories will bring you an excellent plan to market and distribute smart and technological solution products. Expect a profitable business plan that can help construct and build your relationship with modern customers and furniture makers. Come and join us, our representative will be ready to answer your inquiries.</p>
                     </div>
+                    <!-- <div class="subtitle">
+                        <p>Reich Architectural & Interior accessories will bring you an excellent plan to market and distribute smart and technological solution products. Expect a profitable business plan that can help construct and build your relationship with modern customers and furniture makers. Come and join us, our representative will be ready to answer your inquiries.</p>
+                    </div> -->
                     <div class="click">
                         <p><a href="<?php echo CHtml::normalizeUrl(array('/home/partner')); ?>">CLICK HERE</a></p>
                     </div>
