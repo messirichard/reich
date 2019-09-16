@@ -1,11 +1,17 @@
-<section class="cover-insides">
-	<div class="prelative container">
-		<div class="text-cover">
-            <h3>How To Buy</h3>
+<?php
+    $ill_page = '';
+    if ($this->setting['how_hero_image'] != ''): 
+        $ill_page = Yii::app()->baseUrl.ImageHelper::thumb(1920,566, '/images/static/'. $this->setting['how_hero_image'] , array('method' => 'adaptiveResize', 'quality' => '90'));
+    endif; 
+?>
+<section class="cover-insides" <?php if ($ill_page): ?>style="background-image: url(<?php echo $ill_page ?>)" <?php endif ?>>
+    <div class="prelative container">
+        <div class="text-cover">
+            <h3><?php echo $this->setting['how_hero_title'] ?></h3>
             <div class="hr-insides"></div>
-            <p>Get Reich hardware appliances product easily</p>
-		</div>
-	</div>
+            <p><?php echo $this->setting['how_hero_subtitle'] ?></p>
+        </div>
+    </div>
 </section>
 
 <section class="howtobuy-sec-1">
@@ -14,7 +20,7 @@
             <div class="col-md-60">
                 <div class="box-content">
                     <div class="title">
-                        <h3>Get Reich Architectural Hardware & Appliances through our distribution stores and our online merchant partners.</h3>
+                        <h3><?php echo $this->setting['how_content_1'] ?></h3>
                     </div>
                 </div>
             </div>
@@ -38,10 +44,13 @@
                     </div>
                     <div class="image">
                         <img class="img img-fluid" src="<?php echo $this->assetBaseurl; ?>wa-logo-footer.png" alt="">
-                        <p>081 5530 78875</p>
+                        <p><?php echo $this->setting['how_wa_contacts'] ?></p>
                     </div>
                     <div class="clicktochat">
-                        <a href="#"><p>Click to chat</p></a>
+                        <?php 
+                        $n_wa = str_replace('08', '62', str_replace(' ', '', $this->setting['how_wa_contacts']) );
+                        ?>
+                        <a href="https://wa.me/<?php echo $n_wa ?>"><p>Click to chat</p></a>
                     </div>
                 </div>
             </div>
@@ -62,7 +71,7 @@
                                 <p>Tokopedia</p>
                             </div>
                             <div class="clickhere">
-                                <a href="#"><p>Click Here</p></a>
+                                <a target="_blank" href="<?php echo $this->setting['url_tokopedia'] ?>"><p>Click Here</p></a>
                             </div>
                         </div>
                     </div>
@@ -73,7 +82,7 @@
                                 <p>Bukalapak</p>
                             </div>
                             <div class="clickhere">
-                                <a href="#"><p>Click Here</p></a>
+                                <a target="_blank" href="<?php echo $this->setting['url_bukalapak'] ?>"><p>Click Here</p></a>
                             </div>
                         </div>
                     </div>
@@ -89,12 +98,8 @@
             <div class="col-md-60">
                 <div class="box-content">
                     <div class="interest">
-                        <h4>Interested for a partnership opportunity with Reich?</h4>
-                        <p><a href="#">Click here</a> to find out many possibilities ahead.</p>
+                        <?php echo $this->setting['how_content_bottom_2'] ?>
                     </div>
-                    <!-- <div class="by">
-                        <p><a href="#">Click here</a> to find out many possibilities ahead.</p>
-                    </div> -->
                 </div>
             </div>
         </div>

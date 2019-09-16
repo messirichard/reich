@@ -62,6 +62,8 @@
                 </a>
             </div>
         </div>
+
+        <div class="clearfix clear"></div>
     </div>
 </section>
 
@@ -72,12 +74,12 @@
             <div class="col-md-30">
                 <div class="box-content">
                     <div class="caption">
-                        <h3>Want to become our partner in distributing<br><b>Reich hardware & accessories products?</b></h3>
-                        <p>Reich Architectural & Interior accessories will bring you an excellent plan to market and distribute smart and technological solution products. Expect a profitable business plan that can help construct and build your relationship with modern customers and furniture makers. Come and join us, our representative will be ready to answer your inquiries.</p>
+                        <!-- <h3>Want to become our partner in distributing<br><b>Reich hardware & accessories products?</b></h3>
+                        <p>Reich Architectural & Interior accessories will bring you an excellent plan to market and distribute smart and technological solution products. Expect a profitable business plan that can help construct and build your relationship with modern customers and furniture makers. Come and join us, our representative will be ready to answer your inquiries.</p> -->
+
+                        <?php echo $this->setting['home2_subtitle'] ?>
                     </div>
-                    <!-- <div class="subtitle">
-                        <p>Reich Architectural & Interior accessories will bring you an excellent plan to market and distribute smart and technological solution products. Expect a profitable business plan that can help construct and build your relationship with modern customers and furniture makers. Come and join us, our representative will be ready to answer your inquiries.</p>
-                    </div> -->
+
                     <div class="click">
                         <p><a href="<?php echo CHtml::normalizeUrl(array('/home/partner')); ?>">CLICK HERE</a></p>
                     </div>
@@ -93,53 +95,26 @@
             <div class="col-md-60">
                 <div class="box-content quality">
                     <div class="title">
-                        <h4>Reich Standard Quality & Advantage</h4>
+                        <h4><?php echo $this->setting['home3_title'] ?></h4>
                     </div>
                     <div class="subtitle">
-                        <p>4 basic concepts that act as a company and product characteristicof Reich.</p>
+                        <p><?php echo $this->setting['home3_subtitle'] ?></p>
                     </div>
                 </div>
             </div>
+            <?php for ($i=1; $i < 5; $i++) { ?>
             <div class="col-md-15">
                 <div class="box-content">
                     <div class="image">
-                        <img src="<?php echo $this->assetBaseurl; ?>quality1.png" alt="">
+                        <img class="img img-fluid" src="<?php echo Yii::app()->baseUrl.'/images/static/'.$this->setting['home3_icons_picture_'. $i] ?>" alt="">
                     </div>
                     <div class="caption">
-                        <p>Never ending creative Inovation, development and creation.</p>
+                        <p><?php echo $this->setting['home3_icons_title_'. $i] ?></p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-15">
-                <div class="box-content">
-                    <div class="image">
-                        <img src="<?php echo $this->assetBaseurl; ?>quality2.png" alt="">
-                    </div>
-                    <div class="caption">
-                        <p>Consistency in quality and international standard checking.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-15">
-                <div class="box-content">
-                    <div class="image">
-                        <img src="<?php echo $this->assetBaseurl; ?>quality3.png" alt="">
-                    </div>
-                    <div class="caption">
-                        <p>Good business plan for profitable partnership and distribution.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-15">
-                <div class="box-content">
-                    <div class="image">
-                        <img src="<?php echo $this->assetBaseurl; ?>quality4.png" alt="">
-                    </div>
-                    <div class="caption">
-                        <p>Optimum value that exceeds price and expectations.</p>
-                    </div>
-                </div>
-            </div>
+            <?php } ?>
+
         </div>
     </div>
 </section>

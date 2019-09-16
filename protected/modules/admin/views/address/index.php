@@ -73,7 +73,14 @@ $this->menu=array(
 		'prov',
 		'kota',
 		'nama',
+		
 		'type',
+		// array(
+		// 	'header' => 'Type',
+		// 	'type' => 'raw',
+		// 	'value' => '($data->type == "store-showroom")? "Store Showroom" : "Product Display"',
+		// ),
+
 		// 'fax',
 		'email',
 		'sort',

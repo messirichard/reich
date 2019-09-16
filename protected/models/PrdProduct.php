@@ -59,9 +59,9 @@ class PrdProduct extends CActiveRecord
 			array('kode', 'length', 'max'=>50),
 			array('tag, data[size], data[packing], data[return], data[shipping], data[color], data[feature], data[qty_pack], data[garansi_teks], data[garansi_nilai], data[warna], data[kemasan], data[finish], data[download], filter, harga_coret, image2, gallery_id, urutan', 'safe'),
 
-			array('image, image2', 'file', 'types'=>'jpg, gif, png', 'allowEmpty'=>FALSE, 'on'=>'insert', 'except'=>array('createTemp', 'copy')),
-			array('image, image2', 'file', 'types'=>'jpg, gif, png', 'allowEmpty'=>TRUE, 'on'=>'update', 'except'=>array('createTemp', 'copy')),
-
+			array('image', 'file', 'types'=>'jpg, gif, png', 'allowEmpty'=>FALSE, 'on'=>'insert', 'except'=>array('createTemp', 'copy')),
+			array('image', 'file', 'types'=>'jpg, gif, png', 'allowEmpty'=>TRUE, 'on'=>'update', 'except'=>array('createTemp', 'copy')),
+			array('image2', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, category_id, brand_id, image, image2, kode, harga, harga_coret, stock, berat, terbaru, terlaris, out_stock, status, date, date_input, date_update, name, urutan', 'safe', 'on'=>'search'),

@@ -29,6 +29,8 @@ $store_showroom = [
         'email' => ''
 	]
 ];
+
+$stores_shoroom = Address::model()->findAll('type = :types', array(':types'=>'store-showroom'));
 ?>
 
 <section class="store-sec-1">
@@ -43,24 +45,24 @@ $store_showroom = [
                 </div>
             </div>
         </div>
-        <div class="row">
-            <?php foreach($store_showroom as $key => $value): ?>
+        <div class="row justify-content-center">
+            <?php foreach($stores_shoroom as $key => $value): ?>
             <div class="col-md-15">
                 <div class="box-content-bawah">
                     <div class="kota">
-                        <p><?php echo $value['kota'] ?></p>
+                        <p><?php echo $value->kota ?></p>
                     </div>
                     <div class="name_store">
-                        <p><?php echo $value['name_store'] ?></p>
+                        <p><?php echo $value->nama ?></p>
                     </div>
                     <div class="alamat">
-                        <p><?php echo $value['alamat'] ?></p>
+                        <p><?php echo $value->address_1 ?></p>
                     </div>
                     <div class="phone">
-                        <p><?php echo $value['phone'] ?></p>
+                        <p><?php echo $value->telp ?></p>
                     </div>
                     <div class="email">
-                        <p><?php echo $value['email'] ?></p>
+                        <p><a href="mailto:<?php echo $value->email ?>"><?php echo $value->email ?></a></p>
                     </div>
                 </div>
             </div>
@@ -100,6 +102,8 @@ $product_display = [
         'email' => 'Email. bandung@the-reich.com'
 	]
 ];
+
+$products_display = Address::model()->findAll('type = :types', array(':types'=>'product-display'));
 ?>
 
 <section class="store-sec-2">
@@ -114,23 +118,23 @@ $product_display = [
             </div>
         </div>
         <div class="row">
-            <?php foreach($product_display as $key => $value): ?>
+            <?php foreach($products_display as $key => $value): ?>
             <div class="col-md-15">
                 <div class="box-content-bawah">
                     <div class="kota">
-                        <p><?php echo $value['kota'] ?></p>
+                        <p><?php echo $value->kota ?></p>
                     </div>
                     <div class="name_store">
-                        <p><?php echo $value['name_store'] ?></p>
+                        <p><?php echo $value->nama ?></p>
                     </div>
                     <div class="alamat">
-                        <p><?php echo $value['alamat'] ?></p>
+                        <p><?php echo $value->address_1 ?></p>
                     </div>
                     <div class="phone">
-                        <p><?php echo $value['phone'] ?></p>
+                        <p><?php echo $value->telp ?></p>
                     </div>
                     <div class="email">
-                        <p><?php echo $value['email'] ?></p>
+                        <p><?php echo $value->email ?></p>
                     </div>
                 </div>
             </div>
@@ -148,7 +152,7 @@ $product_display = [
                         <p>Interested for a partnership opportunity with Reich?</p>
                     </div>
                     <div class="by">
-                        <p><a href="#">Click here</a> to find out many possibilities ahead.</p>
+                        <p><a href="<?php echo CHtml::normalizeUrl(array('/home/store_locator')); ?>">Click here</a> to find out many possibilities ahead.</p>
                     </div>
                 </div>
             </div>

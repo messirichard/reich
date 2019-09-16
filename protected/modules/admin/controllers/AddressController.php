@@ -65,8 +65,10 @@ class AddressController extends ControllerAdmin
 				try
 				{
 					// $image->saveAs(Yii::getPathOfAlias('webroot').'/images/address/'.$model->image);
-					$model->type = 'dealer';
+					
+					// $model->type = 'dealer';
 					$model->save();
+
 					Log::createLog("Address Controller Create $model->id");
 					Yii::app()->user->setFlash('success','Data has been inserted');
 				    $transaction->commit();
@@ -115,6 +117,7 @@ class AddressController extends ControllerAdmin
 					// 	$image->saveAs(Yii::getPathOfAlias('webroot').'/images/address/'.$model->image);
 					// }
 					$model->save();
+					
 					Log::createLog("Address Controller Update $model->id");
 					Yii::app()->user->setFlash('success','Data Edited');
 				    $transaction->commit();
