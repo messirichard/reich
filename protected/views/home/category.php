@@ -49,7 +49,7 @@ $mod_kategori = [
     <div class="prelative container">
         <ul>
             <?php foreach ($mod_kategori as $key => $value): ?>
-                <li><a href="#"><?php echo $value['judul'] ?></a></li>
+                <li><a href="<?php echo CHtml::normalizeUrl(array('/home/category')); ?>"><?php echo $value['judul'] ?></a></li>
             <?php endforeach ?>
         </ul>
     </div>
@@ -115,10 +115,14 @@ $category = [
 			<div class="col-md-15">
 				<div class="box-content">
 					<div class="image">
-						<img class="img img-fluid w-100" src="<?php echo $this->assetBaseurl; ?><?php echo $value['gambar'] ?>" alt="">
+                        <a href="<?php echo CHtml::normalizeUrl(array('/home/productdet')); ?>">
+                            <img class="img img-fluid w-100" src="<?php echo $this->assetBaseurl; ?><?php echo $value['gambar'] ?>" alt="">
+                        </a>
 					</div>
 					<div class="title">
-						<p><?php echo $value['judul']?></p>
+                        <a href="<?php echo CHtml::normalizeUrl(array('/home/productdet')); ?>">
+                            <p><?php echo $value['judul']?></p>
+                        </a>
 					</div>
 					<div class="subtitle">
 						<a href="<?php echo CHtml::normalizeUrl(array('/home/productdet')); ?>"><p>View product</p></a>
