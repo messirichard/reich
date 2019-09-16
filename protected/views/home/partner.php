@@ -14,7 +14,10 @@
         <div class="row">
             <div class="col-md-60">
                 <div class="box-content">
-                    <div class="title">
+                    <h3>We believe that by growing together we are stronger</h3>
+                    <h5>Reich invites you to join our successful sales plan, and let’s grow it together. Whether you are an interior furniture maket, a contractor or furnishing industry applicator, an architect, or professional consultant for buildings and interiors, we have so many business models that you can take benefits from to your side.</h5>
+                    <p>With our strong Reich brand that will be seen as the benchmark of smart efficent and high quality product, we will be covering all areas of infrastructure development and interior furnishings for all sorts of buildings. Working towards a partnership with Reich ensures your upcoming business projects and sales to increase and to be successful - For sure.</p>
+                    <!-- <div class="title">
                         <h3>We believe that by growing together we are stronger</h3>
                     </div>
                     <div class="subtitle">
@@ -22,7 +25,7 @@
                     </div>
                     <div class="caption">
                         <p>With our strong Reich brand that will be seen as the benchmark of smart efficent and high quality product, we will be covering all areas of infrastructure development and interior furnishings for all sorts of buildings. Working towards a partnership with Reich ensures your upcoming business projects and sales to increase and to be successful - For sure.</p>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
