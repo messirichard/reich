@@ -57,7 +57,7 @@ $mod_kategori = [
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="#">Houseware Collection</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Keranjang Anyam Besar</li>
+                <li class="breadcrumb-item active" aria-current="page"><a href="#">Keranjang Anyam Besar</a></li>
             </ol>
             <div class="back">
                 <!-- <a href="#"><p>Kembali</p></a> -->
